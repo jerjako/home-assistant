@@ -1,0 +1,13 @@
+light.salle_a_manger:
+  hidden: true
+light.salle_a_manger_1:
+  friendly_name: 'Dining room 1'
+light.salle_a_manger_2:
+  friendly_name: 'Dining room 2'
+light.salle_a_manger_3:
+  friendly_name: 'Spot'
+
+sensor.family_room_thermostat_temperature:
+  friendly_name: 'Dining room Temp.'
+sensor.family_room_thermostat_humidity:
+  friendly_name: 'Dining room Humidity'

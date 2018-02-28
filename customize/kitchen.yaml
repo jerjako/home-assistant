@@ -1,0 +1,11 @@
+sensor.xiaomi_aqara__kitchen__temperature:
+  friendly_name: 'Kitchen Temp.'
+sensor.xiaomi_aqara__kitchen__humidity:
+  friendly_name: 'Kitchen Humidity'
+
+light.cuisine:
+  hidden: true
+light.cuisine_1:
+  friendly_name: 'Kitchen 1'
+light.cuisine_2:
+  friendly_name: 'Kitchen 2'

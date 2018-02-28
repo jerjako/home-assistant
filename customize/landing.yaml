@@ -1,0 +1,9 @@
+light.escalier:
+  friendly_name: 'Landing'
+light.escalier_2:
+  hidden: true
+
+sensor.xiaomi_aqara__landing__temperature:
+  friendly_name: 'Landing Temp.'
+sensor.xiaomi_aqara__landing__humidity:
+  friendly_name: 'Landing Humidity'

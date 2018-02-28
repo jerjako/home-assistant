@@ -1,0 +1,78 @@
+zwave_home:
+  name: Home
+  view: no
+  entities:
+    - zwave.razberry_controller
+
+zwave_hallway:
+  name: Hallway
+  view: no
+  entities:
+
+zwave_living_room:
+  name: Living room
+  view: no
+  entities:
+    - zwave.fibaro_fgs213__living_room__box
+    - zwave.fibaro_fgs213__living_room__tv
+
+zwave_dining_room:
+  name: Dining room
+  view: no
+  entities:
+
+zwave_kitchen:
+  name: Kitchen
+  view: no
+  entities:
+
+zwave_bathroom:
+  name: Bathroom
+  view: no
+  entities:
+    - zwave.fibaro_fgd212__bathroom
+    - zwave.qubino_zmnhud1__bathroom
+
+zwave_wc:
+  name: WC
+  view: no
+  entities:
+
+zwave_landing:
+  name: Landing
+  view: no
+  entities:
+
+zwave_bedroom:
+  name: Bedroom
+  view: no
+  entities:
+
+zwave_desk:
+  name: Desk
+  view: no
+  entities:
+
+zwave_loft:
+  name: Loft
+  view: no
+  entities:
+    - zwave.fibaro_fgd212__loft
+    - zwave.qubino_zmnhjd1__loft
+
+zwave:
+  name: Z-Wave
+  icon: mdi:radio-tower
+  view: yes
+  entities:
+    - group.zwave_home
+    - group.zwave_hallway
+    - group.zwave_living_room
+    - group.zwave_dining_room
+    - group.zwave_kitchen
+    - group.zwave_bathroom
+    - group.zwave_wc
+    - group.zwave_landing
+    - group.zwave_bedroom
+    - group.zwave_desk
+    - group.zwave_loft

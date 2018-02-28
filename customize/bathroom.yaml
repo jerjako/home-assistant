@@ -1,0 +1,22 @@
+binary_sensor.xiaomi_aqara__bathroom__motion_sensor:
+  friendly_name: 'Bathroom Detector'
+  device_class: moving
+
+sensor.xiaomi_aqara__bathroom__temperature:
+  friendly_name: 'Bathroom Temp.'
+sensor.xiaomi_aqara__bathroom__humidity:
+  friendly_name: 'Bathroom Humidity'
+
+light.fibaro_fgd212__bathroom__level:
+  friendly_name: 'Bathroom Glass'
+
+sensor.fibaro_fgd212__bathroom__power:
+  friendly_name: 'Bathroom Glass'
+
+light.qubino_zmnhud1__bathroom__level:
+  hidden: true
+
+light.salle_de_bain:
+  hidden: true
+light.salle_de_bain_2:
+  friendly_name: 'Bathroom'

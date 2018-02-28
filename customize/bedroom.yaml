@@ -1,0 +1,11 @@
+sensor.xiaomi_aqara__bedroom__temperature:
+  friendly_name: 'Bedroom Temp.'
+sensor.xiaomi_aqara__bedroom__humidity:
+  friendly_name: 'Bedroom Humidity'
+
+light.chambre:
+  friendly_name: 'Bedroom'
+light.chambre_2:
+  hidden: true
+light.group_for_wakeup:
+  hidden: true

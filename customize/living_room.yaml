@@ -1,0 +1,80 @@
+light.hue_lightstrip_plus_1:
+  friendly_name: 'Living room Strip'
+
+switch.fibaro_fgs213__living_room__box__switch:
+  friendly_name: 'Box'
+  control: hidden
+sensor.fibaro_fgs213__living_room__box__power:
+  friendly_name: 'Box'
+sensor.fibaro_fgs213__living_room__box__energy:
+  friendly_name: 'Box'
+
+switch.fibaro_fgs213__living_room__tv__switch:
+  friendly_name: 'TV'
+sensor.fibaro_fgs213__living_room__tv__power:
+  friendly_name: 'TV'
+sensor.fibaro_fgs213__living_room__tv__energy:
+  friendly_name: 'TV'
+
+sensor.xiaomi_aqara__living_room__temperature:
+  friendly_name: 'Living room Temp.'
+sensor.xiaomi_aqara__living_room__humidity:
+  friendly_name: 'Living room Humidity'
+
+scene.light_movie_paused:
+  friendly_name: 'Movie paused'
+scene.light_movie_playing:
+  friendly_name: 'Movie playing'
+
+light.salon:
+  hidden: true
+
+input_text.dummy_tiles:
+  custom_ui_state_card: state-card-tiles
+  config:
+    columns: 3
+    column_width: 75px
+    row_height: 75px
+    color: '#455A64'
+    color_on: '#4bb050'
+    color_off: '#da4040'
+    text_color: #FFF
+    text_color_on: #FFF
+    text_color_off: #FFF
+    entities:
+      - entity: script.press_button
+        icon: mdi:numeric-1-box
+        column: 1
+        row: 1
+      - entity: script.press_button
+        icon: mdi:numeric-2-box
+        column: 2
+        row: 1
+      - entity: script.press_button
+        icon: mdi:numeric-4-box
+        column: 3
+        row: 1
+      - entity: script.press_button
+        icon: mdi:numeric-4-box
+        column: 1
+        row: 2
+      - entity: script.press_button
+        icon: mdi:numeric-5-box
+        column: 2
+        row: 2
+      - entity: script.press_button
+        icon: mdi:numeric-6-box
+        column: 3
+        row: 2
+      - entity: script.press_button
+        icon: mdi:numeric-7-box
+        column: 1
+        row: 3
+      - entity: script.press_button
+        icon: mdi:numeric-8-box
+        column: 2
+        row: 3
+      - entity: script.press_button
+        icon: mdi:numeric-9-box
+        column: 3
+        row: 3

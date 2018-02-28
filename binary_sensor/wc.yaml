@@ -1,0 +1,11 @@
+- platform: template
+  sensors:
+    wc_detector:
+      friendly_name: 'Detector'
+      value_template: >-
+        {% if states("sensor.capteur_motion_toilettes") == 'on' %}
+          true
+        {% else %}
+          false
+        {% endif %}
+      device_class: moving

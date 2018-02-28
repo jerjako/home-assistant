@@ -1,0 +1,21 @@
+desk_white_ambiances:
+  name: White ambiances
+  view: no
+  entities:
+    - light.bureau_1
+    - light.bureau_2
+
+desk_lights:
+  name: Lights
+  view: no
+  entities:
+    - group.desk_white_ambiances
+
+
+desk:
+  name: Desk
+  view: yes
+  entities:
+    - group.desk_lights
+    - sensor.xiaomi_aqara__desk__temperature
+    - sensor.xiaomi_aqara__desk__humidity

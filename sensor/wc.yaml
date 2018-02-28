@@ -1,0 +1,35 @@
+- platform: template
+  sensors:
+    wc_temp:
+      friendly_name: 'Temp.'
+      unit_of_measurement: °C
+      value_template: '{{ states.sensor.capteur_motion_toilettes.attributes.temperature }}'
+
+- platform: template
+  sensors:
+    wc_detector_battery:
+      friendly_name: 'Detector'
+      unit_of_measurement: '%'
+      value_template: '{{ states.sensor.capteur_motion_toilettes.attributes.battery }}'
+      icon_template: >-
+        {% if states.sensor.capteur_motion_toilettes.attributes.battery <= 10 %}
+          mdi:battery-10
+        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 20 %}
+          mdi:battery-20
+        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 30 %}
+          mdi:battery-30
+        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 40 %}
+          mdi:battery-40
+        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 50 %}
+          mdi:battery-50
+        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 60 %}
+          mdi:battery-60
+        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 70 %}
+          mdi:battery-70
+        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 80 %}
+          mdi:battery-80
+        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 90 %}
+          mdi:battery-90
+        {% else %}
+          mdi:battery
+        {% endif %}

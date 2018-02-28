@@ -1,0 +1,50 @@
+group.home:
+  order: 1
+group.hallway:
+  order: 2
+group.living_room:
+  order: 3
+group.dining_room:
+  order: 4
+group.kitchen:
+  order: 5
+group.bathroom:
+  order: 6
+group.wc:
+  order: 7
+group.landing:
+  order: 8
+group.bedroom:
+  order: 9
+group.desk:
+  order: 10
+group.loft:
+  order: 11
+group.battery:
+  order: 12
+group.system:
+  order: 13
+group.zwave:
+  order: 14
+
+sensor.yr_symbol:
+  friendly_name: 'Weather'
+
+group.all_lights:
+  friendly_name: 'Lights'
+  hidden: false
+
+sensor.speedtest_ping:
+  friendly_name: Ping
+  icon: mdi:pulse
+sensor.speedtest_download:
+  friendly_name: Download
+  icon: mdi:arrow-down-bold
+sensor.speedtest_upload:
+  friendly_name: Upload
+  icon: mdi:arrow-up-bold
+
+history_graph.home_humidities:
+  friendly_name: 'Humidities'
+history_graph.home_temperatures:
+  friendly_name: 'Temperatures'

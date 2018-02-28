@@ -1,0 +1,21 @@
+kitchen_white_ambiances:
+  name: White ambiances
+  view: no
+  entities:
+    - light.cuisine_1
+    - light.cuisine_2
+
+kitchen_lights:
+  name: Lights
+  view: no
+  entities:
+    - group.kitchen_white_ambiances
+
+
+kitchen:
+   name: Kitchen
+   view: yes
+   entities:
+     - group.kitchen_lights
+     - sensor.xiaomi_aqara__kitchen__temperature
+     - sensor.xiaomi_aqara__kitchen__humidity

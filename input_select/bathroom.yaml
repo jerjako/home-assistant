@@ -1,0 +1,11 @@
+bathroom_radiator:
+  name: Radiator
+  icon: mdi:radiator
+  options:
+    - Off
+    - Anti-Freeze
+    - Eco
+    - Comfort -2
+    - Comfort -1
+    - Comfort
+

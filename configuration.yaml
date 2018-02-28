@@ -1,0 +1,124 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: Europe/Paris
+  customize: !include_dir_merge_named customize/
+
+# Enables the frontend
+frontend:
+  extra_html_url:
+    - /local/custom_ui/state-card-tiles.html
+  extra_html_url_es5:
+    - /local/custom_ui/state-card-tiles_es5.html
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret http_api_password  
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# Checks for available updates
+updater:
+  include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Enables support for tracking state changes over time
+history:
+
+recorder:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+# Components
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+xiaomi_aqara:
+  discovery_retry: 10
+  gateways:
+    - host: !secret xiaomi_aqara_gateways_host
+      mac: !secret xiaomi_aqara_gateways_mac
+      key: !secret xiaomi_aqara_gateways_key
+
+hue:
+  bridges:
+   - host: !secret hue_bridges_host
+     allow_unreachable: true
+
+zwave:
+   usb_path: /dev/ttyAMA0
+   network_key: !secret zwave_network_key
+
+notify:
+  - name: sms
+    platform: free_mobile
+    username: !secret notify_username
+    access_token: !secret notify_access_token
+  - name: ios
+    platform: ios
+    service: !secret notify_ios_service
+
+ios:
+
+mqtt:
+  broker: core-mosquitto
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
+device_tracker:
+  - platform: icloud
+    username: !secret device_tracker_icloud_username
+    password: !secret device_tracker_icloud_password
+    account_name: !secret device_tracker_icloud_account_name
+
+remote:
+  - platform: harmony
+    name: Living Room
+    host: !secret remote_host
+
+media_player:
+  - platform: yamaha
+    host: !secret media_player_yamaha_host
+
+logger:
+  default: info
+  logs:
+    homeassistant.components.media_player.yamaha: fatal
+
+homekit:
+#  pincode: !secret homekit_pincode
+
+# Config
+zone: !include_dir_merge_list zone/
+sensor: !include_dir_merge_list sensor/
+binary_sensor: !include_dir_merge_list binary_sensor/
+input_select: !include_dir_merge_named input_select/
+input_text: !include_dir_merge_named input_text/
+input_boolean: !include_dir_merge_named input_boolean/
+group: !include_dir_merge_named groups/
+automation: !include_dir_merge_list automations/
+script: !include scripts.yaml
+scene: !include_dir_merge_list scenes/
+history_graph: !include_dir_merge_named history_graphs/

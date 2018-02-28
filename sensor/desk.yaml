@@ -1,0 +1,28 @@
+- platform: template
+  sensors:
+    desk_thermometer_battery:
+      friendly_name: 'Thermometer'
+      unit_of_measurement: '%'
+      value_template: '{{ states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level }}'
+      icon_template: >-
+        {% if states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level <= 10 %}
+          mdi:battery-10
+        {% elif states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level <= 20 %}
+          mdi:battery-20
+        {% elif states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level <= 30 %}
+          mdi:battery-30
+        {% elif states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level <= 40 %}
+          mdi:battery-40
+        {% elif states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level <= 50 %}
+          mdi:battery-50
+        {% elif states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level <= 60 %}
+          mdi:battery-60
+        {% elif states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level <= 70 %}
+          mdi:battery-70
+        {% elif states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level <= 80 %}
+          mdi:battery-80
+        {% elif states.sensor.xiaomi_aqara__desk__temperature.attributes.battery_level <= 90 %}
+          mdi:battery-90
+        {% else %}
+          mdi:battery
+        {% endif %}

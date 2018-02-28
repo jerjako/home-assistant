@@ -1,0 +1,19 @@
+- id: send_sms_when_the_nest_go_on_eco_mode
+  alias: 'Send SMS when the Nest go on eco mode'
+  trigger:
+    - platform: template
+      value_template: "{% if is_state_attr('climate.family_room', 'operation_mode', 'eco') %}true{% endif %}"
+  action:
+    - service: notify.ios
+      data:
+        message: "Nest - Eco"
+
+- id: send_sms_when_the_nest_go_on_heat_mode
+  alias: 'Send SMS when the Nest go on heat mode'
+  trigger:
+    - platform: template
+      value_template: "{% if is_state_attr('climate.family_room', 'operation_mode', 'heat') %}true{% endif %}"
+  action:
+    - service: notify.ios
+      data:
+        message: "Nest - Heat"

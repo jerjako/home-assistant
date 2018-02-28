@@ -1,0 +1,77 @@
+battery_hallway:
+  name: Hallway
+  view: no
+  entities:
+    - sensor.hallway_thermometer_battery
+    - sensor.hallway_door_battery
+
+battery_living_room:
+  name: Living room
+  view: no
+  entities:
+    - sensor.living_room_thermometer_battery
+
+battery_dining_room:
+  name: Dining room
+  view: no
+  entities:
+
+battery_kitchen:
+  name: Kitchen
+  view: no
+  entities:
+    - sensor.kitchen_thermometer_battery
+
+battery_bathroom:
+  name: Bathroom
+  view: no
+  entities:
+    - sensor.bathroom_thermometer_battery
+    - sensor.bathroom_detector_battery
+
+battery_wc:
+  name: WC
+  view: no
+  entities:
+    - sensor.wc_detector_battery
+
+battery_landing:
+  name: Landing
+  view: no
+  entities:
+    - sensor.landing_thermometer_battery
+
+battery_bedroom:
+  name: Bedroom
+  view: no
+  entities:
+    - sensor.bedroom_thermometer_battery
+
+battery_desk:
+  name: Desk
+  view: no
+  entities:
+    - sensor.desk_thermometer_battery
+
+battery_loft:
+  name: Loft
+  view: no
+  entities:
+    - sensor.loft_thermometer_battery
+
+
+battery:
+  name: Battery
+  icon: mdi:battery-charging
+  view: yes
+  entities:
+    - group.battery_hallway
+    - group.battery_living_room
+    - group.battery_dining_room
+    - group.battery_kitchen
+    - group.battery_bathroom
+    - group.battery_wc
+    - group.battery_landing
+    - group.battery_bedroom
+    - group.battery_desk
+    - group.battery_loft

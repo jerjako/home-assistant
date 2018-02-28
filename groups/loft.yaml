@@ -1,0 +1,30 @@
+loft_lights:
+  name: Lights
+  view: no
+  entities:
+    - light.fibaro_fgd212__loft__level
+
+loft_radiators:
+  name: Radiator
+  view: no
+  entities:
+    - input_select.loft_radiator
+
+loft_automations:
+  name: Automations
+  view: no
+  entities:
+    - automation.loft_radiator
+    - automation.change_loft_radiator_to_eco_mode
+    - automation.change_loft_radiator_to_heat_mode
+
+loft:
+  name: Loft
+  view: yes
+  entities:
+    - group.loft_lights
+    - group.loft_radiators
+    - group.loft_automations
+    - sensor.xiaomi_aqara__loft__temperature
+    - sensor.xiaomi_aqara__loft__humidity
+    - sensor.fibaro_fgd212__loft__power

@@ -1,0 +1,21 @@
+home_lights:
+  name: All lights
+  view: no
+  entities:
+    - group.all_lights
+
+default_view:
+  name: Home
+  icon: mdi:home
+  view: yes
+  entities:
+    - sun.sun
+    - sensor.yr_symbol
+    - device_tracker.iphone
+    - history_graph.home_temperatures
+    - history_graph.home_humidities
+    - group.all_automations
+    - group.all_devices
+    - group.all_lights
+    - group.all_scripts
+    - group.all_switches

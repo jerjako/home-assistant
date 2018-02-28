@@ -1,0 +1,20 @@
+landing_white:
+  name: White
+  view: no
+  entities:
+    - light.escalier_2
+
+landing_lights:
+  name: Lights
+  view: no
+  entities:
+    - group.landing_white
+
+
+landing:
+  name: Landing
+  view: yes
+  entities:
+    - group.landing_lights
+    - sensor.xiaomi_aqara__landing__temperature
+    - sensor.xiaomi_aqara__landing__humidity

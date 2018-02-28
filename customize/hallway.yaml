@@ -1,0 +1,14 @@
+light.entree:
+  hidden: true
+light.entree_2:
+  friendly_name: 'Spot'
+
+light.xiaomi_gateway__hallway__light:
+  friendly_name: 'Xiaomi Gateway'
+binary_sensor.xiaomi_aqara__hallway__door_window_sensor:
+  friendly_name: 'Hallway Door'
+
+sensor.xiaomi_aqara__hallway__humidity:
+  friendly_name: 'Hallway Humidity'
+sensor.xiaomi_aqara__hallway__temperature:
+  friendly_name: 'Hallway Temp.'

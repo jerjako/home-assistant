@@ -1,0 +1,5 @@
+- name: Xee
+  latitude: !secret work_xee_latitude
+  longitude: !secret work_xee_longitude
+  radius: 100
+  icon: mdi:worker

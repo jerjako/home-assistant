@@ -1,0 +1,12 @@
+living_room_tv_power:
+  name: TV
+  initial: off
+  icon: mdi:television
+
+living_room_box_power:
+  name: Box
+  initial: off
+  icon: mdi:box
+
+switch1:
+switch2:

@@ -1,0 +1,45 @@
+bathroom_white_ambiance:
+  name: White ambiances
+  view: no
+  entities:
+    - light.salle_de_bain_2
+
+bathroom_lights:
+  name: Lights
+  view: no
+  entities:
+    - group.bathroom_white_ambiance
+    - light.fibaro_fgd212__bathroom__level
+
+
+bathroom_radiators:
+  name: Radiator
+  view: no
+  entities:
+    - input_select.bathroom_radiator
+
+bathroom_automations:
+  name: Automations
+  view: no
+  entities:
+    - automation.turn_on_lights_when_there_is_movement
+    - automation.turn_on_lights_when_humidity_is_over_the_normal
+    - automation.turn_off_lights_when_there_is_no_movement
+    - automation.turn_off_lights_when_humidity_is_low
+    - automation.change_radiator_to_heat_mode
+    - automation.change_radiator_to_eco_mode
+    - automation.bathroom_radiator_heat
+    - automation.pair_glass_and_hue_lights__on
+    - automation.pair_glass_and_hue_lights__off
+
+bathroom:
+  name: Bathroom
+  view: yes
+  entities:
+    - group.bathroom_lights
+    - group.bathroom_automations
+    - group.bathroom_radiators
+    - binary_sensor.xiaomi_aqara__bathroom__motion_sensor
+    - sensor.xiaomi_aqara__bathroom__temperature
+    - sensor.xiaomi_aqara__bathroom__humidity
+    - sensor.fibaro_fgd212__bathroom__power

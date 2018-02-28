@@ -1,0 +1,131 @@
+- alias: 'Apple TV - Playing'
+  trigger:
+    platform: state
+    entity_id: media_player.apple_tv
+    to: 'playing'
+  condition:
+    - condition: sun
+      after: sunset
+  action:
+    service: scene.turn_on
+    entity_id: scene.light_movie_playing
+
+- alias: 'Apple TV - Paused'
+  trigger:
+    platform: state
+    entity_id: media_player.apple_tv
+    to: 'paused'
+  condition:
+    - condition: sun
+      after: sunset
+  action:
+    service: scene.turn_on
+    entity_id: scene.light_movie_paused
+
+- id: living_room_tv_power_on
+  alias: TV On
+  trigger:
+    - platform: state
+      entity_id: input_boolean.living_room_tv_power
+      to: 'on'
+  action:
+    - service: remote.send_command
+      data:
+        command:
+          - PowerOn
+        device: 52559649 # Yamaha
+    - service: remote.send_command
+      data:
+        command:
+          - PowerOn
+        device: 51571119 # TV
+    
+- id: living_room_tv_power_off
+  alias: TV Off
+  trigger:
+    - platform: state
+      entity_id: input_boolean.living_room_tv_power
+      to: 'off'
+  action:
+    - service: remote.send_command
+      data:
+        command:
+          - PowerOff
+        device: 52559649 # Yamaha
+    - service: remote.send_command
+      data:
+        command:
+          - PowerOff
+        device: 51571119 # TV
+
+- id: living_room_box_power_toggle
+  alias: Box Toggle
+  trigger:
+    - platform: state
+      entity_id: input_boolean.living_room_box_power
+  action:
+    - service: remote.send_command
+      data:
+        command:
+          - PowerToggle
+        device: 51572296
+
+- id: living_room_tv_cec_power_toggle
+  alias: TV CEC Power
+  trigger:
+    - platform: state
+      entity_id: media_player.yamaha_receiver
+  action:
+    - condition: state
+      entity_id: media_player.yamaha_receiver
+      state: 'on'
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.living_room_tv_power
+    - condition: state
+      entity_id: media_player.yamaha_receiver
+      state: 'off'
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.living_room_tv_power
+
+#- id: living_room_tv_auto_power_on
+#  alias: TV auto on
+#  trigger:
+#    - platform: event
+#      event_type: click
+#      event_data:
+#        entity_id: binary_sensor.switch_158d000xxxxxc2
+#        click_type: single
+#  condition:
+#    - platform: state
+#      entity_id: input_boolean.living_room_tv_power
+#      state: 'off'
+#  action:
+#    - service: switch.turn_on
+#      entity_id: switch.fibaro_fgs213__living_room__tv__switch
+#    - delay: '00:00:03'
+#    - service: input_boolean.turn_on
+#      data:
+#        entity_id: input_boolean.living_room_tv_power
+#
+#- id: living_room_tv_auto_power_off
+#  alias: TV auto off
+#  trigger:
+#    - platform: event
+#      event_type: click
+#      event_data:
+#        entity_id: binary_sensor.switch_158d000xxxxxc2
+#        click_type: single
+#  condition:
+#    - platform: state
+#      entity_id: input_boolean.living_room_tv_power
+#      state: 'on'
+#  action:
+#    - service: input_boolean.turn_off
+#      data:
+#        entity_id: input_boolean.living_room_tv_power
+#    - delay: '00:00:03'
+#    - service: switch.turn_off
+#      entity_id: switch.fibaro_fgs213__living_room__tv__switch
+#

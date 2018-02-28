@@ -1,0 +1,20 @@
+wc_white:
+  name: White
+  view: no
+  entities:
+    - light.toilettes_2
+
+wc_lights:
+  name: Lights
+  view: no
+  entities:
+    - group.wc_white
+
+
+wc:
+  name: WC
+  view: yes
+  entities:
+    - group.wc_lights
+    - binary_sensor.wc_detector
+    - sensor.wc_temp

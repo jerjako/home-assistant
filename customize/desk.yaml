@@ -1,0 +1,11 @@
+light.bureau:
+  hidden: true
+light.bureau_1:
+  friendly_name: 'Desk 1'
+light.bureau_2:
+  friendly_name: 'Desk 2'
+
+sensor.xiaomi_aqara__desk__temperature:
+  friendly_name: 'Desk Temp.'
+sensor.xiaomi_aqara__desk__humidity:
+  friendly_name: 'Desk Humidity'

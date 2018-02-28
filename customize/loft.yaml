@@ -1,0 +1,12 @@
+sensor.xiaomi_aqara__loft__temperature:
+  friendly_name: 'Loft Temp.'
+sensor.xiaomi_aqara__loft__humidity:
+  friendly_name: 'Loft Humidity'
+
+sensor.fibaro_fgd212__loft__power:
+  friendly_name: 'Loft lights'
+light.fibaro_fgd212__loft__level:
+  friendly_name: 'Loft lights'
+
+light.qubino_zmnhjd1__loft__level:
+  hidden: true

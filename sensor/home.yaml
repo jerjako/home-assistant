@@ -1,0 +1,26 @@
+- platform: yr
+- platform: hue # Custom components for Hue motion detector
+- platform: speedtest
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+  server_id: !secret speedtest_server_id
+
+- platform: systemmonitor
+  resources:
+  - type: disk_use_percent
+    arg: /
+  - type: load_1m
+  - type: load_5m
+  - type: load_15m
+  - type: memory_free
+  - type: memory_use
+  - type: processor_use
+  - type: network_in
+    arg: eth0
+  - type: network_out
+    arg: eth0
+  - type: ipv4_address
+    arg: eth0
+  - type: last_boot

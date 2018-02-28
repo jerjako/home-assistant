@@ -1,0 +1,25 @@
+dining_room_white_ambiance:
+  name: White ambiances
+  view: no
+  entities:
+    - light.salle_a_manger_1
+    - light.salle_a_manger_2
+
+dining_room_lights:
+  name: Lights
+  view: no
+  entities:
+    - group.dining_room_white_ambiance
+    - light.salle_a_manger_3
+
+
+dining_room:
+  name: Dining room
+  view: yes
+  entities:
+    - group.dining_room_lights
+    - climate.family_room
+    - sensor.family_room_thermostat_temperature
+    - automation.send_sms_when_the_nest_go_on_eco_mode
+    - automation.send_sms_when_the_nest_go_on_heat_mode
+    - sensor.family_room_thermostat_humidity

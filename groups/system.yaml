@@ -1,0 +1,40 @@
+system_breaches:
+  name: Breaches
+  view: no
+  entities:
+    - sensor.breaches_contactjerjakocom
+    - sensor.breaches_jeremy59540hotmailcom
+    - sensor.breaches_jjacquemin59gmailcom
+
+system_speedtest:
+  name: Speedtest
+  view: no
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+
+system_system_monitor:
+  name: System Monitor
+  view: no
+  entities:
+    - sensor.disk_use_percent_
+    - sensor.network_in_eth0
+    - sensor.network_out_eth0
+    - sensor.received_eth0
+    - sensor.memory_free
+    - sensor.load_1m
+    - sensor.load_5m
+    - sensor.load_15m
+    - sensor.processor_use
+    - sensor.ipv4_address_eth0
+    - sensor.last_boot
+
+system:
+  name: System
+  icon: mdi:chip
+  view: yes
+  entities:
+    - group.system_system_monitor
+    - group.system_speedtest
+    - group.system_breaches

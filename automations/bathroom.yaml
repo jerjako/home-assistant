@@ -1,0 +1,138 @@
+- id: turn_on_lights_when_there_is_movement
+  alias: 'Turn on lights when there is movement'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.xiaomi_aqara__bathroom__motion_sensor
+      to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.salle_de_bain
+
+- id: turn_off_lights_when_there_is_no_movement
+  alias: 'Turn off lights when there is no movement'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.xiaomi_aqara__bathroom__motion_sensor
+      to: 'off'
+      for:
+        minutes: 1 # default Xiaomi rearm is 2mn
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.xiaomi_aqara__bathroom__humidity
+      value_template: '{{ float(state.state) }}'
+      below: 65
+  action:
+    - service: light.turn_off
+      entity_id: light.salle_de_bain
+
+- id: turn_on_lights_when_humidity_is_over_the_normal 
+  alias: 'Turn on lights when humidity is over the normal'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.xiaomi_aqara__bathroom__humidity
+      value_template: '{{ state.state }}'
+      above: 55
+  action:
+    - service: light.turn_on
+      entity_id: light.salle_de_bain
+
+- id: turn_off_lights_when_humidity_is_low
+  alias: 'Turn off lights when humidity is low'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.xiaomi_aqara__bathroom__humidity
+      value_template: '{{ state.state }}'
+      below: 70
+  condition:
+    - condition: state
+      entity_id: binary_sensor.xiaomi_aqara__bathroom__motion_sensor
+      state: 'off'
+  action:
+    - service: light.turn_off
+      entity_id: light.salle_de_bain
+
+- id: glass_on
+  alias: 'Pair glass and Hue lights - On'
+  trigger:
+    - platform: state
+      entity_id: light.salle_de_bain
+      to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.fibaro_fgd212__bathroom__level
+
+- id: glass_off
+  alias: 'Pair glass and Hue lights - Off'
+  trigger:
+    - platform: state
+      entity_id: light.salle_de_bain
+      to: 'off'
+  action:
+    - service: light.turn_off
+      entity_id: light.fibaro_fgd212__bathroom__level
+
+- id: bathroom_radiator
+  alias: 'Bahroom radiator'
+  trigger:
+    platform: state
+    entity_id: input_select.bathroom_radiator
+  action:
+    entity_id: light.qubino_zmnhud1__bathroom__level
+    service_template: >
+      {% if is_state("input_select.bathroom_radiator", "Comfort") %}
+        light.turn_on
+      {% elif is_state("input_select.bathroom_radiator", "Comfort -1") %}
+        light.turn_on
+      {% elif is_state("input_select.bathroom_radiator", "Comfort -2") %}
+        light.turn_on
+      {% elif is_state("input_select.bathroom_radiator", "Eco") %}
+        light.turn_on
+      {% elif is_state("input_select.bathroom_radiator", "Anti-Freeze") %}
+        light.turn_on
+      {% elif is_state("input_select.bathroom_radiator", "Off") %}
+        light.turn_off
+      {% else %}
+        light.turn_off
+      {% endif %}
+    data_template:
+      brightness: >
+        {% if is_state("input_select.bathroom_radiator", "Comfort") %}
+          130
+        {% elif is_state("input_select.bathroom_radiator", "Comfort -1") %}
+          105
+        {% elif is_state("input_select.bathroom_radiator", "Comfort -2") %}
+          79
+        {% elif is_state("input_select.bathroom_radiator", "Eco") %}
+          54
+        {% elif is_state("input_select.bathroom_radiator", "Anti-Freeze") %}
+          28
+        {% elif is_state("input_select.bathroom_radiator", "Off") %}
+          0
+        {% else %}
+          0
+        {% endif %}
+
+- id: bathroom_radiator_eco
+  alias: Change radiator to eco mode
+  trigger:
+    - platform: template
+      value_template: "{% if is_state_attr('climate.family_room', 'operation_mode', 'eco') %}true{% endif %}"
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.bathroom_radiator
+        option: 'Eco'
+
+- id: bathroom_radiator_heat
+  alias: Change radiator to heat mode
+  trigger:
+    - platform: template
+      value_template: "{% if is_state_attr('climate.family_room', 'operation_mode', 'heat') %}true{% endif %}"
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.bathroom_radiator
+        option: 'Comfort'
+
+
+
