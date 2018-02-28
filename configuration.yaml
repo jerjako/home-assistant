@@ -97,6 +97,7 @@ remote:
   - platform: harmony
     name: Living Room
     host: !secret remote_host
+    activity: ""
 
 media_player:
   - platform: yamaha
