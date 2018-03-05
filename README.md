@@ -8,7 +8,6 @@ Welcome to my Home Assistant configuration.
         - *On* = Light living room ON
         - *Off* = House lights off
 - **Living room**
-    - Power on TV - Use Xiaomy switch
     - Create a custom remote
 - **Kitchen**
     - Door - Add sensor and battery

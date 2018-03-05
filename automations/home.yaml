@@ -39,3 +39,28 @@
       data:
         message: "Login failed"
 
+- id: xiaomi_switch_1
+  alias: Switch 1
+  trigger:
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.xiaomi_aqara__home__switch_1
+        click_type: single
+  action:
+    - service: notify.ios
+      data:
+        message: "Switch 1"
+
+- id: xiaomi_switch_2
+  alias: Switch 2
+  trigger:
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.xiaomi_aqara__home__switch_2
+        click_type: single
+  action:
+    - service: notify.ios
+      data:
+        message: "Switch 2"

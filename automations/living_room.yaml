@@ -89,43 +89,43 @@
       data:
         entity_id: input_boolean.living_room_tv_power
 
-#- id: living_room_tv_auto_power_on
-#  alias: TV auto on
-#  trigger:
-#    - platform: event
-#      event_type: click
-#      event_data:
-#        entity_id: binary_sensor.switch_158d000xxxxxc2
-#        click_type: single
-#  condition:
-#    - platform: state
-#      entity_id: input_boolean.living_room_tv_power
-#      state: 'off'
-#  action:
-#    - service: switch.turn_on
-#      entity_id: switch.fibaro_fgs213__living_room__tv__switch
-#    - delay: '00:00:03'
-#    - service: input_boolean.turn_on
-#      data:
-#        entity_id: input_boolean.living_room_tv_power
-#
-#- id: living_room_tv_auto_power_off
-#  alias: TV auto off
-#  trigger:
-#    - platform: event
-#      event_type: click
-#      event_data:
-#        entity_id: binary_sensor.switch_158d000xxxxxc2
-#        click_type: single
-#  condition:
-#    - platform: state
-#      entity_id: input_boolean.living_room_tv_power
-#      state: 'on'
-#  action:
-#    - service: input_boolean.turn_off
-#      data:
-#        entity_id: input_boolean.living_room_tv_power
-#    - delay: '00:00:03'
-#    - service: switch.turn_off
-#      entity_id: switch.fibaro_fgs213__living_room__tv__switch
-#
+- id: living_room_tv_auto_power_on
+  alias: TV auto on
+  trigger:
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.xiaomi_aqara__living_room__switch
+        click_type: single
+  condition:
+    - condition: state
+      entity_id: input_boolean.living_room_tv_power
+      state: 'off'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.fibaro_fgs213__living_room__tv__switch
+    - delay: '00:00:03'
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.living_room_tv_power
+
+- id: living_room_tv_auto_power_off
+  alias: TV auto off
+  trigger:
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.xiaomi_aqara__living_room__switch
+        click_type: double
+  condition:
+    - condition: state
+      entity_id: input_boolean.living_room_tv_power
+      state: 'on'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.living_room_tv_power
+    - delay: '00:00:03'
+    - service: switch.turn_off
+      entity_id: switch.fibaro_fgs213__living_room__tv__switch
+
