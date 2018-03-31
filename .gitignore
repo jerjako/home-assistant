@@ -1,6 +1,7 @@
 *.pyc
 .HA_VERSION
 .cloud
+.homekit.state
 .ios.conf
 .uuid
 OZW_Log.txt
