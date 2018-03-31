@@ -11,7 +11,7 @@ default_view:
   entities:
     - sun.sun
     - sensor.yr_symbol
-    - device_tracker.iphone
+    - device_tracker.iphonejerjako
     - history_graph.home_temperatures
     - history_graph.home_humidities
     - group.all_automations
