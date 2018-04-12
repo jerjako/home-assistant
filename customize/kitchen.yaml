@@ -3,6 +3,9 @@ sensor.xiaomi_aqara__kitchen__temperature:
 sensor.xiaomi_aqara__kitchen__humidity:
   friendly_name: 'Kitchen Humidity'
 
+binary_sensor.xiaomi_aqara__kitchen__water_leak:
+  friendly_name: 'Kitchen Water leak'
+
 light.cuisine:
   hidden: true
 light.cuisine_1:
