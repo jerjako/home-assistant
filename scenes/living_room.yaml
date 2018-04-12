@@ -4,7 +4,7 @@
     light.salon_2: off
     light.hue_lightstrip_plus_1:
       state: on
-      brightness: 25
+      brightness: 75
       rgb_color: [177,137,75]
 - name: light_movie_paused
   entities:
