@@ -117,6 +117,9 @@ influxdb:
   password: !secret influxdb_password
   database: !secret influxdb_database
 
+ifttt:
+  key: !secret ifttt_key
+
 # Config
 zone: !include_dir_merge_list zone/
 sensor: !include_dir_merge_list sensor/
