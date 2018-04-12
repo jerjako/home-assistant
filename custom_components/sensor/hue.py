@@ -6,17 +6,14 @@ https://home-assistant.io/components/sensor.hue/
 """
 import logging
 from datetime import timedelta
-
-import homeassistant.components.hue as hue
+import requests
 
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
 
-DEPENDENCIES = ['hue']
-
 _LOGGER = logging.getLogger(__name__)
 SCAN_INTERVAL = timedelta(seconds=0.1)
-
+URL = "http://192.168.1.9/api/Cb0XWInYL3-QUWFqSNNUyvQG2970MrmL3d0QNEn2/sensors"
 
 def parse_hue_api_response(response):
     """Take in the Hue API json response."""
@@ -80,6 +77,8 @@ def parse_sml(response):
                 'name': name,
                 'state': state,
                 'battery': response['config']['battery'],
+                'on': response['config']['on'],
+                'reachable': response['config']['reachable'],
                 'last_updated': response['state']['lastupdated'].split('T')}
     return data
 
@@ -113,6 +112,8 @@ def parse_rwl(response):
             'name': response['name'],
             'state': button,
             'battery': response['config']['battery'],
+            'on': response['config']['on'],
+            'reachable': response['config']['reachable'],
             'last_updated': response['state']['lastupdated'].split('T')}
     return data
 
@@ -125,20 +126,15 @@ def parse_geofence(response):
     else:
         state = 'off'
     data = {'name': response['name'],
-            'model': 'GEO',
+            'model': 'Geofence',
             'state': state}
     return data
 
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Set up the Hue sensors."""
-    if discovery_info is None or 'bridge_id' not in discovery_info:
-        return
 
-    bridge_id = discovery_info['bridge_id']
-    bridge = hass.data[hue.DOMAIN][bridge_id]
-
-    data = HueSensorData(bridge, parse_hue_api_response)
+    data = HueSensorData(parse_hue_api_response)
     data.update()
     sensors = []
     for key in data.data.keys():
@@ -149,9 +145,9 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
 class HueSensorData(object):
     """Get the latest sensor data."""
 
-    def __init__(self, bridge, parse_hue_api_response):
+    def __init__(self, parse_hue_api_response):
         """Initialize the data object."""
-        self.bridge = bridge
+        self.url = URL
         self.data = None
         self.parse_hue_api_response = parse_hue_api_response
 
@@ -159,8 +155,11 @@ class HueSensorData(object):
     @Throttle(SCAN_INTERVAL)
     def update(self):
         """Get the latest data."""
-        response = self.bridge.get_sensor()
-        self.data = self.parse_hue_api_response(response)
+        response = requests.get(self.url)
+        if response.status_code != 200:
+            _LOGGER.warning("Invalid response from API")
+        else:
+            self.data = self.parse_hue_api_response(response.json())
 
 
 class HueSensor(Entity):
@@ -218,12 +217,20 @@ class HueSensor(Entity):
                 self._hue_id]['daylight']
             self._attributes['temperature'] = self._data.data[
                 self._hue_id]['temperature']
+            self._attributes['on'] = self._data.data[
+                self._hue_id]['on']
+            self._attributes['reachable'] = self._data.data[
+                self._hue_id]['reachable']
         elif self._model == 'RWL':
             self._icon = 'mdi:remote'
             self._attributes['last_updated'] = self._data.data[
                 self._hue_id]['last_updated']
             self._attributes['battery'] = self._data.data[
                 self._hue_id]['battery']
+            self._attributes['on'] = self._data.data[
+                self._hue_id]['on']
+            self._attributes['reachable'] = self._data.data[
+                self._hue_id]['reachable']
         elif self._model == 'ZGP':
             self._icon = 'mdi:remote'
             self._attributes['last_updated'] = self._data.data[
