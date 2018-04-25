@@ -11,11 +11,15 @@ Welcome to my Home Assistant configuration.
     - Create a custom remote
 - **Kitchen**
     - Door - Add sensor and battery
+    - Fridge - Alert for low and hight threshold temp
+    - Water Leak alert and battery level
 - **Bathroom**
     - Lights - Slow brightness down before lights off
+    - Water Leak alert and battey level
+    - Update light on automation with other room humidity level
 - **WC**
     - Move sensor events from Hue App to HA
-    - *Use a Xiaomi sensor for testing*
+    - Xiaomi sensor - Battery level and light automation
 - **Bedroom**
     - Wake up Go - Move event from Hue App to HA
 ----
