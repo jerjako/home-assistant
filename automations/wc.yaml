@@ -1,0 +1,11 @@
+- id: wc_water_leak
+  alias: WC Water leak
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.xiaomi_aqara__wc__water_leak
+      to: 'on'
+  action:
+    - service: notify.ios
+      data:
+        message: "WC - Water leak detected"
+
