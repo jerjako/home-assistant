@@ -10,11 +10,20 @@ wc_lights:
   entities:
     - group.wc_white
 
+wc_automations:
+  name: Automations
+  view: no
+  entities:
+    - automation.wc_water_leak
 
 wc:
   name: WC
   view: yes
   entities:
     - group.wc_lights
+    - group.wc_automations
     - binary_sensor.wc_detector
     - sensor.wc_temp
+    - sensor.xiaomi_aqara__wc__temperature
+    - sensor.xiaomi_aqara__wc__humidity
+    - binary_sensor.xiaomi_aqara__wc__water_leak

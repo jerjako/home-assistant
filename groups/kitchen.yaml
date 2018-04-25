@@ -13,10 +13,12 @@ kitchen_lights:
 
 
 kitchen:
-   name: Kitchen
-   view: yes
-   entities:
-     - group.kitchen_lights
-     - sensor.xiaomi_aqara__kitchen__temperature
-     - sensor.xiaomi_aqara__kitchen__humidity
-     - binary_sensor.xiaomi_aqara__kitchen__water_leak
+  name: Kitchen
+  view: yes
+  entities:
+    - group.kitchen_lights
+    - sensor.xiaomi_aqara__kitchen__temperature
+    - sensor.xiaomi_aqara__kitchen__humidity
+    - sensor.xiaomi_aqara__fridge__temperature
+    - sensor.xiaomi_aqara__fridge__humidity
+    - binary_sensor.xiaomi_aqara__kitchen__water_leak

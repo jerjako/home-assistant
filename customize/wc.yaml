@@ -5,3 +5,11 @@ light.toilettes_2:
 
 sensor.wc_temp:
   friendly_name: 'WC Temp.'
+
+sensor.xiaomi_aqara__wc__temperature:
+  friendly_name: 'WC Temp.'
+sensor.xiaomi_aqara__wc__humidity:
+  friendly_name: 'WC Humidity'
+
+binary_sensor.xiaomi_aqara__wc__water_leak:
+  friendly_name: 'WC Water leak'
