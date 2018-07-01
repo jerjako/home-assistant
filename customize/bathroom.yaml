@@ -23,3 +23,6 @@ light.salle_de_bain:
   hidden: true
 light.salle_de_bain_2:
   friendly_name: 'Bathroom'
+
+switch.sonoff_1:
+  friendly_name: 'Bathroom CMV'

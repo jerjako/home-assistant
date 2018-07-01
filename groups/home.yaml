@@ -9,6 +9,7 @@ default_view:
   icon: mdi:home
   view: yes
   entities:
+    - camera.xiaomi_mijia
     - sun.sun
     - sensor.yr_symbol
     - device_tracker.iphonejerjako

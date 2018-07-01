@@ -18,6 +18,12 @@ bathroom_radiators:
   entities:
     - input_select.bathroom_radiator
 
+bathroom_switches:
+  name: Switches
+  view: no
+  entities:
+    - switch.sonoff_1
+
 bathroom_automations:
   name: Automations
   view: no
@@ -38,6 +44,7 @@ bathroom:
   entities:
     - group.bathroom_lights
     - group.bathroom_automations
+    - group.bathroom_switches
     - group.bathroom_radiators
     - binary_sensor.xiaomi_aqara__bathroom__motion_sensor
     - sensor.xiaomi_aqara__bathroom__temperature

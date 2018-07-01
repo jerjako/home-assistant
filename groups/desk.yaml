@@ -19,3 +19,4 @@ desk:
     - group.desk_lights
     - sensor.xiaomi_aqara__desk__temperature
     - sensor.xiaomi_aqara__desk__humidity
+    - cover.fibaro__fgrm222__desk__level

@@ -26,3 +26,5 @@ kitchen:
     - binary_sensor.xiaomi_aqara__kitchen__water_leak
     - binary_sensor.pop__kitchen__smoke_sensor__sensor
     - sensor.pop__kitchen__smoke_sensor__temperature
+    - cover.fibaro__fgrm222__kitchen__level
+

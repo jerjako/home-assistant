@@ -85,3 +85,4 @@ living_room:
     - sensor.fibaro_fgs213__living_room__tv__energy
     - sensor.xiaomi_aqara__living_room__temperature
     - sensor.xiaomi_aqara__living_room__humidity
+    - cover.fibaro__fgrm222__living_room__level

@@ -13,3 +13,6 @@ sensor.xiaomi_aqara__wc__humidity:
 
 binary_sensor.xiaomi_aqara__wc__water_leak:
   friendly_name: 'WC Water leak'
+
+switch.sonoff_2:
+  friendly_name: 'WC CMV'
