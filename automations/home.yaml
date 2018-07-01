@@ -39,6 +39,20 @@
       data:
         message: "Login failed"
 
+- id: daily_backup_and_cleaning
+  alias: Daily Backup
+  trigger:
+    platform: time
+    at: '03:00:00'
+  action:
+    - service: hassio.snapshot_full
+      data_template:
+        name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
+    - service: notify.ios
+      data_template:
+        message: Creating backup named "Automated Backup {{ now().strftime('%Y-%m-%d') }}"
+    - service: shell_command.delete_old_snapshots
+
 - id: xiaomi_switch_1
   alias: Switch 1
   trigger:
