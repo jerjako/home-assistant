@@ -8,6 +8,11 @@ sensor.xiaomi_aqara__fridge__temperature:
 sensor.xiaomi_aqara__fridge__humidity:
   friendly_name: 'Fridge Humidity'
 
+sensor.xiaomi_aqara__freezer__temperature:
+  friendly_name: 'Freezer Temp.'
+sensor.xiaomi_aqara__freezer__humidity:
+  friendly_name: 'Freezer Humidity'
+
 binary_sensor.xiaomi_aqara__kitchen__water_leak:
   friendly_name: 'Kitchen Water leak'
 
@@ -17,3 +22,8 @@ light.cuisine_1:
   friendly_name: 'Kitchen 1'
 light.cuisine_2:
   friendly_name: 'Kitchen 2'
+
+binary_sensor.pop__kitchen__smoke_sensor__sensor:
+  friendly_name: 'Kitchen Smoke sensor'
+sensor.pop__kitchen__smoke_sensor__temperature:
+  friendly_name: 'Kitchen Smoke sensor Temp.'

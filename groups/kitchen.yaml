@@ -21,4 +21,8 @@ kitchen:
     - sensor.xiaomi_aqara__kitchen__humidity
     - sensor.xiaomi_aqara__fridge__temperature
     - sensor.xiaomi_aqara__fridge__humidity
+    - sensor.xiaomi_aqara__freezer__temperature
+    - sensor.xiaomi_aqara__freezer__humidity
     - binary_sensor.xiaomi_aqara__kitchen__water_leak
+    - binary_sensor.pop__kitchen__smoke_sensor__sensor
+    - sensor.pop__kitchen__smoke_sensor__temperature
