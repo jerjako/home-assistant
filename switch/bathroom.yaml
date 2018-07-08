@@ -1,0 +1,10 @@
+
+- platform: mqtt
+  icon: "mdi:fan"
+  name: "SonOff 1"
+  command_topic: "cmnd/sonoff1/POWER"
+  state_topic: "stat/sonoff1/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
