@@ -132,4 +132,4 @@ automation: !include_dir_merge_list automations/
 script: !include scripts.yaml
 scene: !include_dir_merge_list scenes/
 history_graph: !include_dir_merge_named history_graphs/
-shell_command: !include_dir_merge_list shell_command/
+shell_command: !include_dir_merge_named shell_command/
