@@ -26,3 +26,10 @@ light.salle_de_bain_2:
 
 switch.sonoff_1:
   friendly_name: 'Bathroom CMV'
+
+input_boolean.bathroom_humidity_high:
+  friendly_name: 'Humidity high'
+  control: hidden
+
+script.bathroom_cmv:
+  icon: mdi:air-conditioner

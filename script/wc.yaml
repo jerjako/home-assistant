@@ -1,0 +1,12 @@
+wc_cmv:
+  alias: Trigger
+  sequence:
+    - service: mqtt.publish
+      data_template:
+        topic: 'cmnd/sonoff2/POWER'
+        payload: 'ON'
+    - delay: '00:00:03'
+    - service: mqtt.publish
+      data_template:
+        topic: 'cmnd/sonoff2/POWER'
+        payload: 'OFF'

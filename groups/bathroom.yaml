@@ -11,18 +11,26 @@ bathroom_lights:
     - group.bathroom_white_ambiance
     - light.fibaro_fgd212__bathroom__level
 
-
 bathroom_radiators:
   name: Radiator
   view: no
   entities:
     - input_select.bathroom_radiator
 
-bathroom_switches:
-  name: Switches
+bathroom_cmv:
+  name: CMV
   view: no
+  control: hidden
   entities:
     - switch.sonoff_1
+    - script.bathroom_cmv
+
+bathroom_status:
+  name: Status
+  view: no
+  control: hidden
+  entities:
+    - input_boolean.bathroom_humidity_high
 
 bathroom_automations:
   name: Automations
@@ -43,9 +51,10 @@ bathroom:
   view: yes
   entities:
     - group.bathroom_lights
-    - group.bathroom_automations
-    - group.bathroom_switches
+    - group.bathroom_cmv
     - group.bathroom_radiators
+    - group.bathroom_status
+    - group.bathroom_automations
     - binary_sensor.xiaomi_aqara__bathroom__motion_sensor
     - sensor.xiaomi_aqara__bathroom__temperature
     - sensor.xiaomi_aqara__bathroom__humidity

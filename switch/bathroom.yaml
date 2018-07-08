@@ -1,4 +1,3 @@
-
 - platform: mqtt
   icon: "mdi:fan"
   name: "SonOff 1"

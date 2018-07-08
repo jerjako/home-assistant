@@ -16,3 +16,6 @@ binary_sensor.xiaomi_aqara__wc__water_leak:
 
 switch.sonoff_2:
   friendly_name: 'WC CMV'
+
+script.wc_cmv:
+  icon: mdi:air-conditioner

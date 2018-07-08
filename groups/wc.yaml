@@ -10,11 +10,13 @@ wc_lights:
   entities:
     - group.wc_white
 
-wc_switches:
-  name: Switches
+wc_cmv:
+  name: CMV
   view: no
+  control: hidden
   entities:
     - switch.sonoff_2
+    - script.wc_cmv
 
 wc_automations:
   name: Automations
@@ -27,7 +29,7 @@ wc:
   view: yes
   entities:
     - group.wc_lights
-    - group.wc_switches
+    - group.wc_cmv
     - group.wc_automations
     - binary_sensor.wc_detector
     - sensor.wc_temp
