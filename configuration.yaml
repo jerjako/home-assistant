@@ -121,15 +121,16 @@ ifttt:
   key: !secret ifttt_key
 
 # Config
-zone: !include_dir_merge_list zone/
-sensor: !include_dir_merge_list sensor/
+automation: !include_dir_merge_list automations/
 binary_sensor: !include_dir_merge_list binary_sensor/
+group: !include_dir_merge_named groups/
+history_graph: !include_dir_merge_named history_graphs/
+input_boolean: !include_dir_merge_named input_boolean/
 input_select: !include_dir_merge_named input_select/
 input_text: !include_dir_merge_named input_text/
-input_boolean: !include_dir_merge_named input_boolean/
-group: !include_dir_merge_named groups/
-automation: !include_dir_merge_list automations/
-script: !include scripts.yaml
 scene: !include_dir_merge_list scenes/
-history_graph: !include_dir_merge_named history_graphs/
+script: !include scripts.yaml
+sensor: !include_dir_merge_list sensor/
 shell_command: !include_dir_merge_named shell_command/
+switch: !include_dir_merge_list switch/
+zone: !include_dir_merge_list zone/

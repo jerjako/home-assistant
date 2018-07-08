@@ -1,0 +1,32 @@
+living_room_fan_on:
+  alias: ON
+  sequence:
+    - service: remote.send_command
+      data:
+        command:
+          - PowerOn
+        device: 54538715 # Fan
+living_room_fan_off:
+  alias: OFF
+  sequence:
+    - service: remote.send_command
+      data:
+        command:
+          - PowerOff
+        device: 54538715 # Fan
+living_room_fan_rotate:
+  alias: Rotate
+  sequence:
+    - service: remote.send_command
+      data:
+        command:
+          - Oscillation
+        device: 54538715 # Fan
+living_room_fan_speed:
+  alias: Speed
+  sequence:
+    - service: remote.send_command
+      data:
+        command:
+          - Speed
+        device: 54538715 # Fan

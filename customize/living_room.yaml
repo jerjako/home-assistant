@@ -29,6 +29,15 @@ scene.light_movie_playing:
 light.salon:
   hidden: true
 
+script.living_room_fan_on:
+  icon: mdi:fan
+script.living_room_fan_off:
+  icon: mdi:fan-off
+script.living_room_fan_rotate:
+  icon: mdi:rotate-3d
+script.living_room_fan_speed:
+  icon: mdi:speedometer
+
 input_text.dummy_tiles:
   custom_ui_state_card: state-card-tiles
   config:
