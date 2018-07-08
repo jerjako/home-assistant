@@ -1,6 +1,7 @@
 *.pyc
 .HA_VERSION
 .cloud
+.config_entries.json
 .homekit.state
 .ios.conf
 .uuid
