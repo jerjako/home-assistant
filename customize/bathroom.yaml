@@ -12,6 +12,8 @@ light.fibaro_fgd212__bathroom__level:
 
 sensor.fibaro_fgd212__bathroom__power:
   friendly_name: 'Bathroom Glass'
+binary_sensor.bathroom_humidity_high:
+  device_class: moisture
 
 binary_sensor.xiaomi_aqara__bathroom__water_leak:
   friendly_name: 'Bathroom Water leak'

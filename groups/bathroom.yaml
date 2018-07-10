@@ -58,5 +58,6 @@ bathroom:
     - binary_sensor.xiaomi_aqara__bathroom__motion_sensor
     - sensor.xiaomi_aqara__bathroom__temperature
     - sensor.xiaomi_aqara__bathroom__humidity
+    - binary_sensor.bathroom_humidity_high
     - sensor.fibaro_fgd212__bathroom__power
     - binary_sensor.xiaomi_aqara__bathroom__water_leak

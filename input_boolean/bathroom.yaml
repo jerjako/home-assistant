@@ -1,0 +1,4 @@
+bathroom_humidity_high:
+  name: Humidity high
+  initial: off
+  icon: mdi:water-percent
