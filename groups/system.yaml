@@ -38,3 +38,4 @@ system:
     - group.system_system_monitor
     - group.system_speedtest
     - group.system_breaches
+    - automation.daily_backup
