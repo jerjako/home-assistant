@@ -27,3 +27,9 @@ binary_sensor.pop__kitchen__smoke_sensor__sensor:
   friendly_name: 'Kitchen Smoke sensor'
 sensor.pop__kitchen__smoke_sensor__temperature:
   friendly_name: 'Kitchen Smoke sensor Temp.'
+
+light.hgrp0000012288:
+  hidden: true
+light.hgrp0000262138:
+  hidden: true
+
