@@ -1,0 +1,9 @@
+- platform: yeelight
+  devices:
+    192.168.1.34:
+      name: Living Room 1
+      transition: 1000
+      use_music_mode: False
+      save_on_change: True
+    192.168.1.33:
+      name: Living Room 2

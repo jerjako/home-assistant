@@ -28,6 +28,10 @@ scene.light_movie_playing:
 
 light.salon:
   hidden: true
+light.yeelight_color2_7c49ebacc4ba:
+  friendly_name: Living room 2
+light.yeelight_color2_7c49ebacd16b:
+  friendly_name: Living room 1
 
 script.living_room_fan_on:
   icon: mdi:fan
@@ -87,3 +91,6 @@ input_text.dummy_tiles:
         icon: mdi:numeric-9-box
         column: 3
         row: 3
+
+light.hgrp0000000768:
+  hidden: true

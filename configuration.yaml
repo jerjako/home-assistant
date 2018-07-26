@@ -128,6 +128,7 @@ history_graph: !include_dir_merge_named history_graphs/
 input_boolean: !include_dir_merge_named input_boolean/
 input_select: !include_dir_merge_named input_select/
 input_text: !include_dir_merge_named input_text/
+light: !include_dir_merge_named light/
 scene: !include_dir_merge_list scenes/
 script: !include_dir_merge_named script/
 sensor: !include_dir_merge_list sensor/

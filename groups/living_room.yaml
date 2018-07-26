@@ -5,10 +5,18 @@ living_room_white_ambiance:
     - light.salon_1
     - light.salon_2
 
+living_room_colors:
+  name: Colors
+  view: no
+  entities:
+    - light.yeelight_color2_7c49ebacd16b
+    - light.yeelight_color2_7c49ebacc4ba
+
 living_room_lights:
   name: Lights
   view: no
   entities:
+    - group.living_room_colors
     - group.living_room_white_ambiance
     - light.hue_lightstrip_plus_1
 
