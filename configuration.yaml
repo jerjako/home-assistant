@@ -109,7 +109,12 @@ logger:
     homeassistant.components.media_player.yamaha: fatal
 
 homekit:
-#  pincode: !secret homekit_pincode
+  auto_start: False
+  filter:
+    exclude_domains:
+      - automation
+    exclude_entities:
+      - binary_sensor.bathroom_humidity_high
 
 influxdb:
   host: !secret influxdb_host
