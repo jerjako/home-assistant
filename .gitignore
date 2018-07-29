@@ -4,6 +4,7 @@
 .config_entries.json
 .homekit.state
 .ios.conf
+.storage
 .uuid
 OZW_Log.txt
 deps
