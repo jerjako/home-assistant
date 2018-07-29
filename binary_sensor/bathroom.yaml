@@ -2,6 +2,6 @@
   sensors:
     bathroom_humidity_high:
       friendly_name: 'Bathroom humidity high'
-      value_template: '{{ (states.sensor.xiaomi_aqara__bathroom__humidity.state|float - 5) >
+      value_template: '{{ (states.sensor.xiaomi_aqara__bathroom__humidity.state|float - 3) >
 (states.sensor.xiaomi_aqara__kitchen__humidity.state|float)  }}'
       device_class: moisture

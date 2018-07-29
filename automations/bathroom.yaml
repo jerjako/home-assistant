@@ -17,10 +17,9 @@
       for:
         minutes: 1 # default Xiaomi rearm is 2mn
   condition:
-    - condition: numeric_state
-      entity_id: sensor.xiaomi_aqara__bathroom__humidity
-      value_template: '{{ float(state.state) }}'
-      below: 65
+    - condition: state
+      entity_id: binary_sensor.bathroom_humidity_high
+      state: 'off'
   action:
     - service: light.turn_off
       entity_id: light.salle_de_bain
@@ -28,21 +27,27 @@
 - id: turn_on_lights_when_humidity_is_over_the_normal 
   alias: 'Turn on lights when humidity is over the normal'
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.xiaomi_aqara__bathroom__humidity
-      value_template: '{{ state.state }}'
-      above: 55
+    - platform: state
+      entity_id: binary_sensor.bathroom_humidity_high
+      to: 'on'
   action:
     - service: light.turn_on
       entity_id: light.salle_de_bain
+    - service: mqtt.publish
+      data_template:
+        topic: 'cmnd/sonoff1/POWER'
+        payload: 'ON'
+    - service: mqtt.publish
+      data_template:
+        topic: 'cmnd/sonoff2/POWER'
+        payload: 'ON'
 
 - id: turn_off_lights_when_humidity_is_low
   alias: 'Turn off lights when humidity is low'
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.xiaomi_aqara__bathroom__humidity
-      value_template: '{{ state.state }}'
-      below: 70
+    - platform: state
+      entity_id: binary_sensor.bathroom_humidity_high
+      to: 'off'
   condition:
     - condition: state
       entity_id: binary_sensor.xiaomi_aqara__bathroom__motion_sensor
@@ -50,6 +55,14 @@
   action:
     - service: light.turn_off
       entity_id: light.salle_de_bain
+    - service: mqtt.publish
+      data_template:
+        topic: 'cmnd/sonoff1/POWER'
+        payload: 'OFF'
+    - service: mqtt.publish
+      data_template:
+        topic: 'cmnd/sonoff2/POWER'
+        payload: 'OFF'
 
 - id: glass_on
   alias: 'Pair glass and Hue lights - On'
