@@ -21,6 +21,8 @@ battery_kitchen:
   view: no
   entities:
     - sensor.kitchen_thermometer_battery
+    - sensor.fridge_thermometer_battery
+    - sensor.freezer_thermometer_battery
 
 battery_bathroom:
   name: Bathroom
