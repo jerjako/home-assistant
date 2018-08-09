@@ -29,3 +29,9 @@
   - type: ipv4_address
     arg: eth0
   - type: last_boot
+
+- platform: waze_travel_time
+  origin: device_tracker.iphone_jerjako
+  destination: zone.home
+  region: 'EU'
+  name: 'Travel time to home'

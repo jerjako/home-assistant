@@ -13,6 +13,7 @@ default_view:
     - sun.sun
     - sensor.yr_symbol
     - device_tracker.iphonejerjako
+    - sensor.travel_time_to_home
     - history_graph.home_temperatures
     - history_graph.home_humidities
     - group.all_automations
