@@ -20,8 +20,6 @@ Welcome to my Home Assistant configuration.
 - **WC**
     - Move sensor events from Hue App to HA
     - Xiaomi sensor - Battery level and light automation
-- **Bedroom**
-    - Wake up Go - Move event from Hue App to HA
 ----
 - **Home**
     - Push notif for low battery Xiaomy sensors

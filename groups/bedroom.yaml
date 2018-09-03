@@ -11,12 +11,26 @@ bedroom_lights:
     - group.bedroom_white_ambiances
     - light.go
 
+bedroom_automations:
+  name: Automations
+  view: no
+  entities:
+    - automation.bedroom_wake_up
+
+bedroom_scenes:
+  name: Scenes
+  view: no
+  entities:
+    - scene.bedroom_wake_up
+
 
 bedroom:
   name: Bedroom
   view: yes
   entities:
     - group.bedroom_lights
+    - group.bedroom_automations
+    - group.bedroom_scenes
     - sensor.xiaomi_aqara__bedroom__temperature
     - sensor.xiaomi_aqara__bedroom__humidity
     - cover.fibaro__fgrm222__bedroom__level
