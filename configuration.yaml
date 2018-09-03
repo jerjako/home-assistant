@@ -125,6 +125,21 @@ influxdb:
 ifttt:
   key: !secret ifttt_key
 
+emulated_hue:
+  host_ip: !secret emulated_hue_host_ip
+  listen_port: !secret emulated_hue_listen_port
+  off_maps_to_on_domains:
+    - script
+    - scene
+  expose_by_default: true
+  exposed_domains:
+    - light
+  entities:
+    light.yeelight_color2_7c49ebacd16b:
+      name: "Living room 1"
+    light.yeelight_color2_7c49ebacc4ba:
+      name: "Living room 2"
+
 # Config
 automation: !include_dir_merge_list automations/
 binary_sensor: !include_dir_merge_list binary_sensor/
