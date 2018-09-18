@@ -135,6 +135,7 @@ emulated_hue:
   expose_by_default: true
   exposed_domains:
     - light
+    - cover
   entities:
     light.yeelight_color2_7c49ebacd16b:
       name: "Living room 1"
