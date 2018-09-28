@@ -17,7 +17,6 @@ living_room_lights:
   view: no
   entities:
     - group.living_room_colors
-    - group.living_room_white_ambiance
     - light.hue_lightstrip_plus_1
 
 

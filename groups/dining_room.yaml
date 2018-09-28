@@ -5,12 +5,18 @@ dining_room_white_ambiance:
     - light.salle_a_manger_1
     - light.salle_a_manger_2
 
+dining_room_colors:
+  name: Colors
+  view: no
+  entities:
+    - light.yeelight_color2_7c49ebb72e7a
+    - light.yeelight_color2_7c49ebb72e78
+
 dining_room_lights:
   name: Lights
   view: no
   entities:
-    - group.dining_room_white_ambiance
-    - light.salle_a_manger_3
+    - group.dining_room_colors
 
 
 dining_room:

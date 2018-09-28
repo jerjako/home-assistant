@@ -5,11 +5,18 @@ kitchen_white_ambiances:
     - light.cuisine_1
     - light.cuisine_2
 
+kitchen_colors:
+  name: Colors
+  view: no
+  entities:
+    - light.yeelight_color2_7c49ebb734cd
+    - light.yeelight_color2_7c49ebb76848
+
 kitchen_lights:
   name: Lights
   view: no
   entities:
-    - group.kitchen_white_ambiances
+    - group.kitchen_colors
 
 
 kitchen:
