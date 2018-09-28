@@ -1,0 +1,32 @@
+- id: bedroom_wake_up
+  alias: 'Bedroom wake up'
+  trigger:
+    - platform: time
+      at: !secret automation_week_wakeup_hour
+    - platform: time
+      at: !secret automation_weekend_wakeup_hour
+  condition:
+    - condition: or
+      conditions:
+        - condition: time
+          after: !secret automation_week_wakeup_hour
+          before: !secret automation_weekend_wakeup_hour
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+        - condition: time
+          after: !secret automation_weekend_wakeup_hour
+          weekday:
+            - sat
+            - sun
+  action:
+    - service: scene.turn_on
+      entity_id: scene.bedroom_wake_up
+    - delay: '01:30:00'
+    - service: light.turn_off
+      data:
+         entity_id:
+           - light.go
