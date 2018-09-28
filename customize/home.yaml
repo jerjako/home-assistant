@@ -33,6 +33,8 @@ sensor.yr_symbol:
 group.all_lights:
   friendly_name: 'Lights'
   hidden: false
+light.hgrp0000261306:
+  hidden: true
 
 sensor.speedtest_ping:
   friendly_name: Ping
