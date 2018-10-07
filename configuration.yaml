@@ -112,10 +112,76 @@ logger:
 homekit:
   auto_start: False
   filter:
-    exclude_domains:
-      - automation
-    exclude_entities:
-      - binary_sensor.bathroom_humidity_high
+    include_entities:
+      # Hallway
+      - light.entree_2
+      # Living room
+      - light.living_room_lights
+      - cover.fibaro__fgrm222__living_room__level
+      # Dining room
+      - light.dining_room_lights
+      # Kitchen
+      - light.kitchen_lights
+      - cover.fibaro__fgrm222__kitchen__level
+      # Bathroom
+      - light.bathroom_lights
+      # WC
+      - light.wc_lights
+      # Landing
+      - light.escalier_2
+      - cover.fibaro__fgrm222__landing__level
+      # Bedroom
+      - light.chambre
+      - light.go
+      - cover.fibaro__fgrm222__bedroom__level
+      # Desk
+      - light.bureau
+      - cover.fibaro__fgrm222__desk__level
+      # Loft
+      - light.fibaro_fgd212__loft__level
+  entity_config:
+    # Hallway
+    light.entree_2:
+      name: Hallway lights
+    # Living room
+    light.living_room_lights:
+      name: Living room lights
+    cover.fibaro__fgrm222__living_room__level:
+      name: Living room cover
+    # Dining room
+    light.dining_room_lights:
+      name: Dining room lights
+    # Kitchen
+    light.kitchen_lights:
+      name: Kitchen lights
+    cover.fibaro__fgrm222__kitchen__level:
+      name: Kitchen cover
+    # Bathroom
+    light.bathroom_lights:
+      name: Bathroom lihgts
+    # WC
+    light.wc_lights:
+      name: WC lights
+    # Landing
+    light.escalier_2:
+      name: Landing lights
+    cover.fibaro__fgrm222__landing__level:
+      name: Landing cover
+    # Bedroom
+    light.chambre:
+      name: Bedroom lights
+    light.go:
+      name: Bedroom bedside lamp
+    cover.fibaro__fgrm222__bedroom__level:
+      name: Bedroom cover
+    # Desk
+    light.bureau:
+      name: Desk lights
+    cover.fibaro__fgrm222__desk__level:
+      name: Desk cover
+    # Loft
+    light.fibaro_fgd212__loft__level:
+      name: Loft lights
 
 influxdb:
   host: !secret influxdb_host
@@ -132,15 +198,50 @@ emulated_hue:
   off_maps_to_on_domains:
     - script
     - scene
-  expose_by_default: true
-  exposed_domains:
-    - light
-    - cover
+  expose_by_default: false
   entities:
-    light.yeelight_color2_7c49ebacd16b:
-      name: "Living room 1"
-    light.yeelight_color2_7c49ebacc4ba:
-      name: "Living room 2"
+    # Hallway
+    light.entree_2:
+      name: Hallway lights
+    # Living room
+    light.living_room_lights:
+      name: Living room lights
+    cover.fibaro__fgrm222__living_room__level:
+      name: Living room cover
+    # Dining room
+    light.dining_room_lights:
+      name: Dining room lights
+    # Kitchen
+    light.kitchen_lights:
+      name: Kitchen lights
+    cover.fibaro__fgrm222__kitchen__level:
+      name: Kitchen cover
+    # Bathroom
+    light.bathroom_lights:
+      name: Bathroom lihgts
+    # WC
+    light.wc_lights:
+      name: WC lights
+    # Landing
+    light.escalier_2:
+      name: Landing lights
+    cover.fibaro__fgrm222__landing__level:
+      name: Landing cover
+    # Bedroom
+    light.chambre:
+      name: Bedroom lights
+    light.go:
+      name: Bedroom bedside lamp
+    cover.fibaro__fgrm222__bedroom__level:
+      name: Bedroom cover
+    # Desk
+    light.bureau:
+      name: Desk lights
+    cover.fibaro__fgrm222__desk__level:
+      name: Desk cover
+    # Loft
+    light.fibaro_fgd212__loft__level:
+      name: Loft lights
 
 # Config
 automation: !include_dir_merge_list automations/
@@ -150,10 +251,11 @@ history_graph: !include_dir_merge_named history_graphs/
 input_boolean: !include_dir_merge_named input_boolean/
 input_select: !include_dir_merge_named input_select/
 input_text: !include_dir_merge_named input_text/
-light: !include_dir_merge_named light/
+light: !include_dir_merge_list light/
 scene: !include_dir_merge_list scenes/
 script: !include_dir_merge_named script/
 sensor: !include_dir_merge_list sensor/
 shell_command: !include_dir_merge_named shell_command/
 switch: !include_dir_merge_list switch/
 zone: !include_dir_merge_list zone/
+
