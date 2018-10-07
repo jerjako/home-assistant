@@ -1,29 +1,8 @@
-dining_room_white_ambiance:
-  name: White ambiances
-  view: no
-  entities:
-    - light.salle_a_manger_1
-    - light.salle_a_manger_2
-
-dining_room_colors:
-  name: Colors
-  view: no
-  entities:
-    - light.yeelight_color2_7c49ebb72e7a
-    - light.yeelight_color2_7c49ebb72e78
-
-dining_room_lights:
-  name: Lights
-  view: no
-  entities:
-    - group.dining_room_colors
-
-
 dining_room:
   name: Dining room
   view: yes
   entities:
-    - group.dining_room_lights
+    - light.dining_room_lights
     - climate.family_room
     - sensor.family_room_thermostat_temperature
     - automation.send_sms_when_the_nest_go_on_eco_mode

@@ -16,11 +16,13 @@ sensor.xiaomi_aqara__freezer__humidity:
 binary_sensor.xiaomi_aqara__kitchen__water_leak:
   friendly_name: 'Kitchen Water leak'
 
-light.cuisine:
+light.kitchen_lights:
+  friendly_name: 'Lights'
+light.yeelight_color2_7c49ebb734cd:
   hidden: true
-light.cuisine_1:
   friendly_name: 'Kitchen 1'
-light.cuisine_2:
+light.yeelight_color2_7c49ebb76848:
+  hidden: true
   friendly_name: 'Kitchen 2'
 
 binary_sensor.pop__kitchen__smoke_sensor__sensor:
@@ -28,8 +30,8 @@ binary_sensor.pop__kitchen__smoke_sensor__sensor:
 sensor.pop__kitchen__smoke_sensor__temperature:
   friendly_name: 'Kitchen Smoke sensor Temp.'
 
-light.hgrp0000012288:
-  hidden: true
-light.hgrp0000262138:
-  hidden: true
+#light.hgrp0000012288:
+#  hidden: true
+#light.hgrp0000262138:
+#  hidden: true
 

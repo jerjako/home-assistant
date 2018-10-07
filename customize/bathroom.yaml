@@ -21,10 +21,9 @@ binary_sensor.xiaomi_aqara__bathroom__water_leak:
 light.qubino_zmnhud1__bathroom__level:
   hidden: true
 
-light.salle_de_bain:
+light.yeelight_color2_7c49ebb72e4d:
   hidden: true
-light.salle_de_bain_2:
-  friendly_name: 'Bathroom'
+  friendly_name: 'Bathroom 1'
 
 switch.sonoff_1:
   friendly_name: 'Bathroom CMV'

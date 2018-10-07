@@ -1,0 +1,11 @@
+- platform: yeelight
+  devices:
+    192.168.1.34:
+      name: WC 1
+      use_music_mode: True
+      save_on_change: True
+
+- platform: group
+  name: WC Lights
+  entities:
+    - light.wc_1

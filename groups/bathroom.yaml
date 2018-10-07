@@ -1,14 +1,8 @@
-bathroom_white_ambiance:
-  name: White ambiances
-  view: no
-  entities:
-    - light.salle_de_bain_2
-
 bathroom_lights:
   name: Lights
   view: no
   entities:
-    - group.bathroom_white_ambiance
+    - light.bathroom_lights
     - light.fibaro_fgd212__bathroom__level
 
 bathroom_radiators:

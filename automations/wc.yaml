@@ -1,3 +1,25 @@
+- id: turn_on_wc_lights_when_there_is_movement
+  alias: 'Turn on WC lights when there is movement'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.xiaomi_aqara__wc__motion_sensor
+      to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.wc
+
+- id: turn_off_wc_lights_when_there_is_no_movement
+  alias: 'Turn off WC lights when there is no movement'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.xiaomi_aqara__wc__motion_sensor
+      to: 'off'
+      for:
+        minutes: 1 # default Xiaomi rearm is 2mn
+  action:
+    - service: light.turn_off
+      entity_id: light.wc_lights
+
 - id: wc_water_leak
   alias: WC Water leak
   trigger:

@@ -1,5 +1,15 @@
 light.hue_lightstrip_plus_1:
   friendly_name: 'Living room Strip'
+light.salon:
+  hidden: true
+light.yeelight_color2_7c49ebacc4ba:
+  hidden: true
+  friendly_name: Living room 2
+light.yeelight_color2_7c49ebacd16b:
+  hidden: true
+  friendly_name: Living room 1
+#light.hgrp0000000768:
+#  hidden: true
 
 switch.fibaro_fgs213__living_room__box__switch:
   friendly_name: 'Box'
@@ -25,13 +35,6 @@ scene.light_movie_paused:
   friendly_name: 'Movie paused'
 scene.light_movie_playing:
   friendly_name: 'Movie playing'
-
-light.salon:
-  hidden: true
-light.yeelight_color2_7c49ebacc4ba:
-  friendly_name: Living room 2
-light.yeelight_color2_7c49ebacd16b:
-  friendly_name: Living room 1
 
 script.living_room_fan_on:
   icon: mdi:fan
@@ -92,5 +95,3 @@ input_text.dummy_tiles:
         column: 3
         row: 3
 
-light.hgrp0000000768:
-  hidden: true

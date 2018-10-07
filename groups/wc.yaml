@@ -1,15 +1,3 @@
-wc_white:
-  name: White
-  view: no
-  entities:
-    - light.toilettes_2
-
-wc_lights:
-  name: Lights
-  view: no
-  entities:
-    - group.wc_white
-
 wc_cmv:
   name: CMV
   view: no
@@ -22,13 +10,15 @@ wc_automations:
   name: Automations
   view: no
   entities:
+    - automation.turn_on_wc_lights_when_there_is_movement
+    - automation.turn_off_wc_lights_when_there_is_no_movement
     - automation.wc_water_leak
 
 wc:
   name: WC
   view: yes
   entities:
-    - group.wc_lights
+    - light.wc_lights
     - group.wc_cmv
     - group.wc_automations
     - binary_sensor.wc_detector
