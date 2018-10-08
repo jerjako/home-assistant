@@ -1,27 +1,3 @@
-- alias: 'Apple TV - Playing'
-  trigger:
-    platform: state
-    entity_id: media_player.apple_tv
-    to: 'playing'
-  condition:
-    - condition: sun
-      after: sunset
-  action:
-    service: scene.turn_on
-    entity_id: scene.light_movie_playing
-
-- alias: 'Apple TV - Paused'
-  trigger:
-    platform: state
-    entity_id: media_player.apple_tv
-    to: 'paused'
-  condition:
-    - condition: sun
-      after: sunset
-  action:
-    service: scene.turn_on
-    entity_id: scene.light_movie_paused
-
 - id: living_room_tv_power_on
   alias: TV On
   trigger:
@@ -69,25 +45,6 @@
         command:
           - PowerToggle
         device: 51572296
-
-- id: living_room_tv_cec_power_toggle
-  alias: TV CEC Power
-  trigger:
-    - platform: state
-      entity_id: media_player.yamaha_receiver
-  action:
-    - condition: state
-      entity_id: media_player.yamaha_receiver
-      state: 'on'
-    - service: input_boolean.turn_on
-      data:
-        entity_id: input_boolean.living_room_tv_power
-    - condition: state
-      entity_id: media_player.yamaha_receiver
-      state: 'off'
-    - service: input_boolean.turn_off
-      data:
-        entity_id: input_boolean.living_room_tv_power
 
 - id: living_room_tv_auto_power_on
   alias: TV auto on
