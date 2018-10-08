@@ -25,7 +25,6 @@ living_room_apple_tv:
   name: Apple TV
   view: no
   entities:
-    - media_player.apple_tv
     - remote.apple_tv
 
 
@@ -75,7 +74,6 @@ living_room:
   entities:
     - group.living_room_lights
     - group.living_room_devices
-    - media_player.salon
     # - group.living_room_remote
     - group.living_room_fan
     - group.living_room_hdmi_cec
