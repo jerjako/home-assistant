@@ -21,5 +21,6 @@ phue.conf
 plex.conf
 pyozw.sqlite
 secrets.yaml
+tts
 zwcfg_*.xml
 zwscene.xml
