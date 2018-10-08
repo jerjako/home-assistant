@@ -4,7 +4,6 @@
     - symbol
     - pressure
     - humidity
-- platform: hue # Custom components for Hue motion detector
 - platform: speedtest
   monitored_conditions:
     - ping

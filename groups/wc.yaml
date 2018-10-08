@@ -21,8 +21,6 @@ wc:
     - light.wc_lights
     - group.wc_cmv
     - group.wc_automations
-    - binary_sensor.wc_detector
-    - sensor.wc_temp
     - sensor.xiaomi_aqara__wc__temperature
     - sensor.xiaomi_aqara__wc__humidity
     - binary_sensor.xiaomi_aqara__wc__water_leak
