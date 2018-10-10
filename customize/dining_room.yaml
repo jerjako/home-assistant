@@ -1,11 +1,11 @@
 light.dining_room_lights:
-  friendly_name: 'Lights'
+  friendly_name: Dining room Lights
 light.yeelight_color2_7c49ebb72e7a:
+  friendly_name: Dining room 1
   hidden: true
-  friendly_name: 'Dining room 1'
 light.yeelight_color2_7c49ebb72e78:
+  friendly_name: Dining room 2
   hidden: true
-  friendly_name: 'Dining room 2'
 
 sensor.family_room_thermostat_temperature:
   friendly_name: 'Dining room Temp.'

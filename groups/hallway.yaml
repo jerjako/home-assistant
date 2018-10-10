@@ -1,10 +1,3 @@
-hallway_lights:
-  name: Lights
-  view: no
-  entities:
-    - light.entree_2
-    - light.xiaomi_gateway__hallway__light
-
 hallway_automations:
   name: Automations
   view: no
@@ -15,7 +8,7 @@ hallway:
   name: Hallway
   view: yes
   entities:
-    - group.hallway_lights
+    - light.hallway_lights
     - group.hallway_automations
     - binary_sensor.xiaomi_aqara__hallway__door_window_sensor
     - sensor.xiaomi_aqara__hallway__temperature

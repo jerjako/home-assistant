@@ -1,9 +1,3 @@
-loft_lights:
-  name: Lights
-  view: no
-  entities:
-    - light.fibaro_fgd212__loft__level
-
 loft_radiators:
   name: Radiator
   view: no
@@ -22,7 +16,7 @@ loft:
   name: Loft
   view: yes
   entities:
-    - group.loft_lights
+    - light.loft_lights
     - group.loft_radiators
     - group.loft_automations
     - sensor.xiaomi_aqara__loft__temperature

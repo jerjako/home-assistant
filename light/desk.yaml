@@ -1,0 +1,5 @@
+- platform: group
+  name: Desk Lights
+  entities:
+    - light.bureau_1
+    - light.bureau_2

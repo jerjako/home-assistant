@@ -17,21 +17,18 @@ binary_sensor.xiaomi_aqara__kitchen__water_leak:
   friendly_name: 'Kitchen Water leak'
 
 light.kitchen_lights:
-  friendly_name: 'Lights'
+  friendly_name: Kitchen Lights
 light.yeelight_color2_7c49ebb734cd:
+  friendly_name: Kitchen 1
   hidden: true
-  friendly_name: 'Kitchen 1'
 light.yeelight_color2_7c49ebb76848:
+  friendly_name: Kitchen 2
   hidden: true
-  friendly_name: 'Kitchen 2'
+
+cover.fibaro__fgrm222__kitchen__level:
+  friendly_name: Kitchen Cover
 
 binary_sensor.pop__kitchen__smoke_sensor__sensor:
   friendly_name: 'Kitchen Smoke sensor'
 sensor.pop__kitchen__smoke_sensor__temperature:
   friendly_name: 'Kitchen Smoke sensor Temp.'
-
-#light.hgrp0000012288:
-#  hidden: true
-#light.hgrp0000262138:
-#  hidden: true
-

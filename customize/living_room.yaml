@@ -1,15 +1,14 @@
 light.hue_lightstrip_plus_1:
-  friendly_name: 'Living room Strip'
-light.salon:
-  hidden: true
+  friendly_name: Hue Living room Strip
 light.yeelight_color2_7c49ebacc4ba:
-  hidden: true
   friendly_name: Living room 2
-light.yeelight_color2_7c49ebacd16b:
   hidden: true
+light.yeelight_color2_7c49ebacd16b:
   friendly_name: Living room 1
-#light.hgrp0000000768:
-#  hidden: true
+  hidden: true
+
+cover.fibaro__fgrm222__living_room__level:
+  friendly_name: Living room Cover
 
 switch.fibaro_fgs213__living_room__box__switch:
   friendly_name: 'Box'

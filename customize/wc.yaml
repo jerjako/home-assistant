@@ -1,6 +1,8 @@
+light.wc_lights:
+  friendly_name: WC Lights
 light.yeelight_color2_7c49ebb734db:
+  friendly_name: WC 1
   hidden: true
-  friendly_name: 'WC 1'
 
 sensor.wc_temp:
   friendly_name: 'WC Temp.'

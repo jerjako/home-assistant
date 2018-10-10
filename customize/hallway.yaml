@@ -1,7 +1,11 @@
+light.hallway_lights:
+  friendly_name: Hallway Lights
 light.entree:
+  friendly_name: Hue Group Hallway
   hidden: true
 light.entree_2:
-  friendly_name: 'Spot'
+  friendly_name: Hue Hallway
+  hidden: true
 
 light.xiaomi_gateway__hallway__light:
   friendly_name: 'Xiaomi Gateway'

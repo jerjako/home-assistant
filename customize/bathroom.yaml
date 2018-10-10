@@ -18,12 +18,14 @@ binary_sensor.bathroom_humidity_high:
 binary_sensor.xiaomi_aqara__bathroom__water_leak:
   friendly_name: 'Bathroom Water leak'
 
+light.bathroom_lights:
+  friendly_name: Bathroom Lights
 light.qubino_zmnhud1__bathroom__level:
+  friendly_name: Bathroom Qubino Lovel
   hidden: true
-
 light.yeelight_color2_7c49ebb72e4d:
-  hidden: true
   friendly_name: 'Bathroom 1'
+  hidden: true
 
 switch.sonoff_1:
   friendly_name: 'Bathroom CMV'

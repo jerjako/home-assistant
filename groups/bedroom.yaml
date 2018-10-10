@@ -1,16 +1,3 @@
-bedroom_white_ambiances:
-  name: White ambiances
-  view: no
-  entities:
-    - light.chambre
-
-bedroom_lights:
-  name: Lights
-  view: no
-  entities:
-    - group.bedroom_white_ambiances
-    - light.go
-
 bedroom_automations:
   name: Automations
   view: no
@@ -28,7 +15,8 @@ bedroom:
   name: Bedroom
   view: yes
   entities:
-    - group.bedroom_lights
+    - light.bedroom_lights
+    - light.bedroom_bedlights
     - group.bedroom_automations
     - group.bedroom_scenes
     - sensor.xiaomi_aqara__bedroom__temperature

@@ -1,8 +1,27 @@
 home_lights:
-  name: All lights
+  name: Lights
   view: no
   entities:
-    - group.all_lights
+    - light.hallway_lights
+    - light.living_room_lights
+    - light.dining_room_lights
+    - light.kitchen_lights
+    - light.bathroom_lights
+    - light.wc_lights
+    - light.landing_lights
+    - light.bedroom_lights
+    - light.desk_lights
+    - light.loft_lights
+
+home_covers:
+  name: Covers
+  view: no
+  entities:
+    - cover.fibaro__fgrm222__living_room__level
+    - cover.fibaro__fgrm222__kitchen____level
+    - cover.fibaro__fgrm222__landing__level
+    - cover.fibaro__fgrm222__bedroom__level
+    - cover.fibaro__fgrm222__desk__level
 
 default_view:
   name: Home
@@ -18,6 +37,7 @@ default_view:
     - history_graph.home_humidities
     - group.all_automations
     - group.all_devices
-    - group.all_lights
+    - group.home_lights
+    - group.home_covers
     - group.all_scripts
     - group.all_switches

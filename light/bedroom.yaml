@@ -1,0 +1,9 @@
+- platform: group
+  name: Bedroom Lights
+  entities:
+    - light.chambre_2
+
+- platform: group
+  name: Bedroom Bedlights
+  entities:
+    - light.go

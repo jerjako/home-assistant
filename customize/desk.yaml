@@ -1,9 +1,17 @@
+light.desk_lights:
+  friendly_name: Desk Lights
 light.bureau:
+  friendly_name: Hue Group Desk
   hidden: true
 light.bureau_1:
-  friendly_name: 'Desk 1'
+  friendly_name: Hue Desk 1
+  hidden: true
 light.bureau_2:
-  friendly_name: 'Desk 2'
+  friendly_name: Hue Desk 2
+  hidden: true
+
+cover.fibaro__fgrm222__desk__level:
+  friendly_name: Desk Cover
 
 sensor.xiaomi_aqara__desk__temperature:
   friendly_name: 'Desk Temp.'

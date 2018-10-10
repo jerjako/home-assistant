@@ -1,0 +1,4 @@
+- platform: group
+  name: Loft Lights
+  entities:
+    - light.fibaro_fgd212__loft__level
