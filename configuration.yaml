@@ -201,47 +201,63 @@ emulated_hue:
   expose_by_default: false
   entities:
     # Hallway
-    light.entree_2:
+    light.hallway_lights:
       name: Hallway lights
+      hidden: false
     # Living room
     light.living_room_lights:
       name: Living room lights
+      hidden: false
     cover.fibaro__fgrm222__living_room__level:
       name: Living room cover
+      hidden: false
     # Dining room
     light.dining_room_lights:
       name: Dining room lights
+      hidden: false
     # Kitchen
     light.kitchen_lights:
       name: Kitchen lights
+      hidden: false
     cover.fibaro__fgrm222__kitchen__level:
       name: Kitchen cover
+      hidden: false
     # Bathroom
     light.bathroom_lights:
-      name: Bathroom lihgts
+      name: Bathroom lights
+      hidden: false
     # WC
     light.wc_lights:
       name: WC lights
+      hidden: false
     # Landing
-    light.escalier_2:
+    light.landing_lights:
       name: Landing lights
+      hidden: false
     cover.fibaro__fgrm222__landing__level:
       name: Landing cover
+      hidden: false
     # Bedroom
-    light.chambre:
+    light.bedroom_lights:
       name: Bedroom lights
-    light.go:
-      name: Bedroom bedside lamp
+      hidden: false
+    light.bedroom_bedlights:
+      name: Bedroom bedlights
+      hidden: false
     cover.fibaro__fgrm222__bedroom__level:
       name: Bedroom cover
+      hidden: false
     # Desk
-    light.bureau:
+    light.desk_lights:
       name: Desk lights
+      hidden: false
     cover.fibaro__fgrm222__desk__level:
       name: Desk cover
+      hidden: false
     # Loft
-    light.fibaro_fgd212__loft__level:
+    light.loft_lights:
       name: Loft lights
+      hidden: false
 
 # Config
 automation: !include_dir_merge_list automations/
@@ -258,4 +274,3 @@ sensor: !include_dir_merge_list sensor/
 shell_command: !include_dir_merge_named shell_command/
 switch: !include_dir_merge_list switch/
 zone: !include_dir_merge_list zone/
-
