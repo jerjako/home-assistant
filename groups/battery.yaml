@@ -35,6 +35,7 @@ battery_wc:
   name: WC
   view: no
   entities:
+    - sensor.wc_thermometer_battery
     - sensor.wc_detector_battery
 
 battery_landing:

@@ -1,35 +1,59 @@
 - platform: template
   sensors:
-    wc_temp:
-      friendly_name: 'Temp.'
-      unit_of_measurement: °C
-      value_template: '{{ states.sensor.capteur_motion_toilettes.attributes.temperature }}'
-
-- platform: template
-  sensors:
     wc_detector_battery:
       friendly_name: 'Detector'
       unit_of_measurement: '%'
-      value_template: '{{ states.sensor.capteur_motion_toilettes.attributes.battery }}'
+      value_template: '{{ states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level
+}}'
       icon_template: >-
-        {% if states.sensor.capteur_motion_toilettes.attributes.battery <= 10 %}
+        {% if states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level <= 10 %}
           mdi:battery-10
-        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 20 %}
+        {% elif states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level <= 20 %}
           mdi:battery-20
-        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 30 %}
+        {% elif states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level <= 30 %}
           mdi:battery-30
-        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 40 %}
+        {% elif states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level <= 40 %}
           mdi:battery-40
-        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 50 %}
+        {% elif states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level <= 50 %}
           mdi:battery-50
-        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 60 %}
+        {% elif states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level <= 60 %}
           mdi:battery-60
-        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 70 %}
+        {% elif states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level <= 70 %}
           mdi:battery-70
-        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 80 %}
+        {% elif states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level <= 80 %}
           mdi:battery-80
-        {% elif states.sensor.capteur_motion_toilettes.attributes.battery <= 90 %}
+        {% elif states.binary_sensor.xiaomi_aqara__wc__motion_sensor.attributes.battery_level <= 90 %}
           mdi:battery-90
         {% else %}
           mdi:battery
         {% endif %}
+
+- platform: template
+  sensors:
+    wc_thermometer_battery:
+      friendly_name: 'Thermometer'
+      unit_of_measurement: '%'
+      value_template: '{{ states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level }}'
+      icon_template: >-
+        {% if states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level <= 10 %}
+          mdi:battery-10
+        {% elif states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level <= 20 %}
+          mdi:battery-20
+        {% elif states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level <= 30 %}
+          mdi:battery-30
+        {% elif states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level <= 40 %}
+          mdi:battery-40
+        {% elif states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level <= 50 %}
+          mdi:battery-50
+        {% elif states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level <= 60 %}
+          mdi:battery-60
+        {% elif states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level <= 70 %}
+          mdi:battery-70
+        {% elif states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level <= 80 %}
+          mdi:battery-80
+        {% elif states.sensor.xiaomi_aqara__wc__temperature.attributes.battery_level <= 90 %}
+          mdi:battery-90
+        {% else %}
+          mdi:battery
+        {% endif %}
+

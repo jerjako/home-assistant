@@ -17,9 +17,6 @@ Welcome to my Home Assistant configuration.
     - Lights - Slow brightness down before lights off
     - Water Leak alert and battey level
     - Update light on automation with other room humidity level
-- **WC**
-    - Move sensor events from Hue App to HA
-    - Xiaomi sensor - Battery level and light automation
 ----
 - **Home**
     - Push notif for low battery Xiaomy sensors
