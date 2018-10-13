@@ -24,3 +24,4 @@ wc:
     - sensor.xiaomi_aqara__wc__temperature
     - sensor.xiaomi_aqara__wc__humidity
     - binary_sensor.xiaomi_aqara__wc__water_leak
+    - binary_sensor.xiaomi_aqara__wc__motion_sensor

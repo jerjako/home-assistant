@@ -6,7 +6,7 @@
       to: 'on'
   action:
     - service: light.turn_on
-      entity_id: light.wc
+      entity_id: light.wc_lights
 
 - id: turn_off_wc_lights_when_there_is_no_movement
   alias: 'Turn off WC lights when there is no movement'

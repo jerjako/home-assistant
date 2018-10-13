@@ -20,3 +20,7 @@ switch.sonoff_2:
 
 script.wc_cmv:
   icon: mdi:air-conditioner
+
+binary_sensor.xiaomi_aqara__wc__motion_sensor:
+  friendly_name: 'WC Detector'
+  device_class: moving
