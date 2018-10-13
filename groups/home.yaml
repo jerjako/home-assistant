@@ -18,7 +18,7 @@ home_covers:
   view: no
   entities:
     - cover.fibaro__fgrm222__living_room__level
-    - cover.fibaro__fgrm222__kitchen____level
+    - cover.fibaro__fgrm222__kitchen__level
     - cover.fibaro__fgrm222__landing__level
     - cover.fibaro__fgrm222__bedroom__level
     - cover.fibaro__fgrm222__desk__level
