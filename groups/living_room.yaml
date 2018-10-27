@@ -3,7 +3,7 @@ living_room_lights:
   view: no
   entities:
     - light.living_room_lights
-    - light.hue_lightstrip_plus_1
+    - light.living_room_lightstrip
 
 living_room_hdmi_cec:
   name: HDMI CEC
