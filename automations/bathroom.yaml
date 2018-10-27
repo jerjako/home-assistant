@@ -68,7 +68,7 @@
   alias: 'Pair glass and Hue lights - On'
   trigger:
     - platform: state
-      entity_id: light.bathroom
+      entity_id: light.bathroom_lights
       to: 'on'
   action:
     - service: light.turn_on
@@ -78,7 +78,7 @@
   alias: 'Pair glass and Hue lights - Off'
   trigger:
     - platform: state
-      entity_id: light.bathroom
+      entity_id: light.bathroom_lights
       to: 'off'
   action:
     - service: light.turn_off
