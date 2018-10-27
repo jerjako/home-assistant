@@ -85,3 +85,21 @@
     - service: notify.ios
       data:
         message: "Switch 2"
+
+- id: cover_close
+  alias: 'Cover close'
+  trigger:
+    - platform: sun
+      event: sunset
+  action:
+    - service: cover.close_cover
+      data:
+         entity_id: 
+           - cover.fibaro__fgrm222__bedroom__level
+           - cover.fibaro__fgrm222__desk__level
+           - cover.fibaro__fgrm222__kitchen__level
+           - cover.fibaro__fgrm222__landing__level
+           - cover.fibaro__fgrm222__living_room__level
+    - service: notify.ios
+      data:
+        message: "Cover closed"
