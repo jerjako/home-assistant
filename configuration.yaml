@@ -119,6 +119,7 @@ homekit:
       - light.entree_2
       # Living room
       - light.living_room_lights
+      - light.living_room_lightstrip
       - cover.fibaro__fgrm222__living_room__level
       # Dining room
       - light.dining_room_lights
@@ -209,6 +210,9 @@ emulated_hue:
     # Living room
     light.living_room_lights:
       name: Living room lights
+      hidden: false
+    light.living_room_lightstrip:
+      name: Living room lightstrip
       hidden: false
     cover.fibaro__fgrm222__living_room__level:
       name: Living room cover
