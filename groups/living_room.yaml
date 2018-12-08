@@ -68,6 +68,14 @@ living_room_fan:
     - script.living_room_fan_speed
     - script.living_room_fan_rotate
 
+living_room_window:
+  name: Window
+  view: no
+  control: hidden
+  entities:
+    - sensor.living_room_window
+    - cover.fibaro__fgrm222__living_room__level
+
 living_room:
   name: Living room
   view: yes
@@ -76,6 +84,7 @@ living_room:
     - group.living_room_devices
     # - group.living_room_remote
     - group.living_room_fan
+    - group.living_room_window
     - group.living_room_hdmi_cec
     - group.living_room_switches
     - group.living_room_scenes
@@ -86,4 +95,3 @@ living_room:
     - sensor.fibaro_fgs213__living_room__tv__energy
     - sensor.xiaomi_aqara__living_room__temperature
     - sensor.xiaomi_aqara__living_room__humidity
-    - cover.fibaro__fgrm222__living_room__level

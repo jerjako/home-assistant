@@ -26,3 +26,24 @@
         {% else %}
           mdi:battery
         {% endif %}
+
+- platform: template
+  sensors:
+    living_room_window:
+      friendly_name: Living room Window
+      value_template: >-
+        {% if is_state("binary_sensor.living_room_window_1", "off") and is_state("binary_sensor.living_room_window_2", "off") %}
+          Closed
+        {% elif is_state("binary_sensor.living_room_window_2", "on") %}
+          Open
+        {% elif is_state("binary_sensor.living_room_window_1", "on") %}
+          Half open
+        {% endif %}
+      entity_picture_template: >- # icon_template not working with entity_picture_template
+        {% if is_state("binary_sensor.living_room_window_1", "off") and is_state("binary_sensor.living_room_window_2", "off") %}
+          /local/window_closed.png
+        {% elif is_state("binary_sensor.living_room_window_2", "on") %}
+          /local/window_open.png
+        {% elif is_state("binary_sensor.living_room_window_1", "on") %}
+          /local/window_half_open.png
+        {% endif %}
