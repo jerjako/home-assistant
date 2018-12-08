@@ -2,7 +2,7 @@ hallway_automations:
   name: Automations
   view: no
   entities:
-    - automation.hallway__light_on_door_open
+    - automation.hallway_door_open
 
 hallway:
   name: Hallway

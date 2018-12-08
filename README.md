@@ -3,7 +3,6 @@ Welcome to my Home Assistant configuration.
 
 ## TODO
 - **Hallway**
-    - Move door events from Xiaomi App to HA
     - Move Hue remote events from Hue App to HA
         - *On* = Light living room ON
         - *Off* = House lights off
