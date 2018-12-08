@@ -265,6 +265,70 @@ emulated_hue:
       name: Loft lights
       hidden: false
 
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  api_key: !secret google_assistant_api_key
+  expose_by_default: false
+  entity_config:
+    # Hallway
+    light.hallway_lights:
+      name: Lumières
+      room: Entrée
+    # Living room
+    light.living_room_lights:
+      name: Lumières
+      room: Salon
+    cover.fibaro__fgrm222__living_room__level:
+      name: Volet
+      room: Salon
+    # Dining room
+    light.dining_room_lights:
+      name: Lumières
+      room: Salle à manger
+    # Kitchen
+    light.kitchen_lights:
+      name: Lumières
+      room: Cuisine
+    cover.fibaro__fgrm222__kitchen__level:
+      name: Volet
+      room: Cuisine
+    # Bathroom
+    light.bathroom_lights:
+      name: Lumières
+      room: Salle de bain
+    # WC
+    light.wc_lights:
+      name: Lumières
+      room: Toilettes
+    # Landing
+    light.landing_lights:
+      name: Lumières
+      room: Palier
+    cover.fibaro__fgrm222__landing__level:
+      name: Volet
+      room: Palier
+    # Bedroom
+    light.bedroom_lights:
+      name: Lumières
+      room: Chambre
+    light.bedroom_bedlights:
+      name: Go
+      room: Chambre
+    cover.fibaro__fgrm222__bedroom__level:
+      name: Volet
+      room: Chambre
+    # Desk
+    light.desk_lights:
+      name: Lumières
+      room: Bureau
+    cover.fibaro__fgrm222__desk__level:
+      name: Volet
+      room: Bureau
+    # Loft
+    light.loft_lights:
+      name: Lumières
+      room: Loft
+
 # Config
 automation: !include_dir_merge_list automations/
 binary_sensor: !include_dir_merge_list binary_sensor/
