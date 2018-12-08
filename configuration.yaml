@@ -102,14 +102,8 @@ remote:
     host: !secret remote_host
     activity: ""
 
-media_player:
-  - platform: yamaha
-    host: !secret media_player_yamaha_host
-
 logger:
   default: info
-  logs:
-    homeassistant.components.media_player.yamaha: fatal
 
 homekit:
   auto_start: False
