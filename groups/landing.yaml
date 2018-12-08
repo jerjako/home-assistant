@@ -3,6 +3,6 @@ landing:
   view: yes
   entities:
     - light.landing_lights
-    - sensor.xiaomi_aqara__landing__temperature
-    - sensor.xiaomi_aqara__landing__humidity
-    - cover.fibaro__fgrm222__landing__level
+    - sensor.landing_temperature
+    - sensor.landing_humidity
+    - cover.landing

@@ -3,7 +3,7 @@
   trigger:
     - platform: state
       entity_id: input_boolean.living_room_tv_power
-      to: 'on'
+      to: "on"
   action:
     - service: remote.send_command
       data:
@@ -21,7 +21,7 @@
   trigger:
     - platform: state
       entity_id: input_boolean.living_room_tv_power
-      to: 'off'
+      to: "off"
   action:
     - service: remote.send_command
       data:
@@ -52,16 +52,16 @@
     - platform: event
       event_type: click
       event_data:
-        entity_id: binary_sensor.xiaomi_aqara__living_room__switch
+        entity_id: binary_sensor.living_room_switch
         click_type: single
   condition:
     - condition: state
       entity_id: input_boolean.living_room_tv_power
-      state: 'off'
+      state: "off"
   action:
 #    - service: switch.turn_on
-#      entity_id: switch.fibaro_fgs213__living_room__tv__switch
-#    - delay: '00:00:03'
+#      entity_id: switch.living_room_tv_switch
+#    - delay: 00:00:03
     - service: input_boolean.turn_on
       data:
         entity_id: input_boolean.living_room_tv_power
@@ -72,17 +72,17 @@
     - platform: event
       event_type: click
       event_data:
-        entity_id: binary_sensor.xiaomi_aqara__living_room__switch
+        entity_id: binary_sensor.living_room_switch
         click_type: double
   condition:
     - condition: state
       entity_id: input_boolean.living_room_tv_power
-      state: 'on'
+      state: "on"
   action:
     - service: input_boolean.turn_off
       data:
         entity_id: input_boolean.living_room_tv_power
-#    - delay: '00:00:03'
+#    - delay: 00:00:03
 #    - service: switch.turn_off
-#      entity_id: switch.fibaro_fgs213__living_room__tv__switch
+#      entity_id: switch.living_room_tv_switch
 

@@ -1,7 +1,7 @@
-sensor.xiaomi_aqara__bedroom__temperature:
-  friendly_name: 'Bedroom Temp.'
-sensor.xiaomi_aqara__bedroom__humidity:
-  friendly_name: 'Bedroom Humidity'
+sensor.bedroom_temperature:
+  friendly_name: Bedroom Temp.
+sensor.bedroom_humidity:
+  friendly_name: Bedroom Humidity
 
 light.bedroom_lights:
   friendly_name: Bedroom Lights
@@ -14,11 +14,11 @@ light.chambre_2:
   friendly_name: Hue Bedroom
   hidden: true
 light.go:
-  friendly_name: Hu Go
+  friendly_name: Bedroom Bedlight
   hidden: true
 light.group_for_wakeup:
   hidden: true
 
-cover.fibaro__fgrm222__bedroom__level:
+cover.bedroom:
   friendly_name: Bedroom Cover
 

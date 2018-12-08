@@ -28,10 +28,10 @@ group.zwave:
   order: 14
 
 sensor.yr_symbol:
-  friendly_name: 'Weather'
+  friendly_name: Weather
 
 group.all_lights:
-  friendly_name: 'Lights'
+  friendly_name: Lights
   hidden: false
 
 sensor.speedtest_ping:
@@ -45,6 +45,6 @@ sensor.speedtest_upload:
   icon: mdi:arrow-up-bold
 
 history_graph.home_humidities:
-  friendly_name: 'Humidities'
+  friendly_name: Humidities
 history_graph.home_temperatures:
-  friendly_name: 'Temperatures'
+  friendly_name: Temperatures

@@ -10,10 +10,10 @@ light.bureau_2:
   friendly_name: Hue Desk 2
   hidden: true
 
-cover.fibaro__fgrm222__desk__level:
+cover.desk:
   friendly_name: Desk Cover
 
-sensor.xiaomi_aqara__desk__temperature:
-  friendly_name: 'Desk Temp.'
-sensor.xiaomi_aqara__desk__humidity:
-  friendly_name: 'Desk Humidity'
+sensor.desk_temperature:
+  friendly_name: Desk Temp.
+sensor.desk_humidity:
+  friendly_name: Desk Humidity

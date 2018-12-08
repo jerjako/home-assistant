@@ -1,27 +1,27 @@
 - platform: template
   sensors:
     kitchen_thermometer_battery:
-      friendly_name: 'Thermometer'
-      unit_of_measurement: '%'
-      value_template: '{{ states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level }}'
+      friendly_name: Thermometer
+      unit_of_measurement: "%"
+      value_template: "{{ states.sensor.kitchen_temperature.attributes.battery_level }}"
       icon_template: >-
-        {% if states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level <= 10 %}
+        {% if states.sensor.kitchen_temperature.attributes.battery_level <= 10 %}
           mdi:battery-10
-        {% elif states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level <= 20 %}
+        {% elif states.sensor.kitchen_temperature.attributes.battery_level <= 20 %}
           mdi:battery-20
-        {% elif states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level <= 30 %}
+        {% elif states.sensor.kitchen_temperature.attributes.battery_level <= 30 %}
           mdi:battery-30
-        {% elif states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level <= 40 %}
+        {% elif states.sensor.kitchen_temperature.attributes.battery_level <= 40 %}
           mdi:battery-40
-        {% elif states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level <= 50 %}
+        {% elif states.sensor.kitchen_temperature.attributes.battery_level <= 50 %}
           mdi:battery-50
-        {% elif states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level <= 60 %}
+        {% elif states.sensor.kitchen_temperature.attributes.battery_level <= 60 %}
           mdi:battery-60
-        {% elif states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level <= 70 %}
+        {% elif states.sensor.kitchen_temperature.attributes.battery_level <= 70 %}
           mdi:battery-70
-        {% elif states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level <= 80 %}
+        {% elif states.sensor.kitchen_temperature.attributes.battery_level <= 80 %}
           mdi:battery-80
-        {% elif states.sensor.xiaomi_aqara__kitchen__temperature.attributes.battery_level <= 90 %}
+        {% elif states.sensor.kitchen_temperature.attributes.battery_level <= 90 %}
           mdi:battery-90
         {% else %}
           mdi:battery
@@ -30,27 +30,27 @@
 - platform: template
   sensors:
     fridge_thermometer_battery:
-      friendly_name: 'Fridge Thermometer'
-      unit_of_measurement: '%'
-      value_template: '{{ states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level }}'
+      friendly_name: Fridge Thermometer
+      unit_of_measurement: "%"
+      value_template: "{{ states.sensor.fridge_temperature.attributes.battery_level }}"
       icon_template: >-
-        {% if states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level <= 10 %}
+        {% if states.sensor.fridge_temperature.attributes.battery_level <= 10 %}
           mdi:battery-10
-        {% elif states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level <= 20 %}
+        {% elif states.sensor.fridge_temperature.attributes.battery_level <= 20 %}
           mdi:battery-20
-        {% elif states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level <= 30 %}
+        {% elif states.sensor.fridge_temperature.attributes.battery_level <= 30 %}
           mdi:battery-30
-        {% elif states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level <= 40 %}
+        {% elif states.sensor.fridge_temperature.attributes.battery_level <= 40 %}
           mdi:battery-40
-        {% elif states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level <= 50 %}
+        {% elif states.sensor.fridge_temperature.attributes.battery_level <= 50 %}
           mdi:battery-50
-        {% elif states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level <= 60 %}
+        {% elif states.sensor.fridge_temperature.attributes.battery_level <= 60 %}
           mdi:battery-60
-        {% elif states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level <= 70 %}
+        {% elif states.sensor.fridge_temperature.attributes.battery_level <= 70 %}
           mdi:battery-70
-        {% elif states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level <= 80 %}
+        {% elif states.sensor.fridge_temperature.attributes.battery_level <= 80 %}
           mdi:battery-80
-        {% elif states.sensor.xiaomi_aqara__fridge__temperature.attributes.battery_level <= 90 %}
+        {% elif states.sensor.fridge_temperature.attributes.battery_level <= 90 %}
           mdi:battery-90
         {% else %}
           mdi:battery
@@ -59,27 +59,27 @@
 - platform: template
   sensors:
     freezer_thermometer_battery:
-      friendly_name: 'Freezer Thermometer'
-      unit_of_measurement: '%'
-      value_template: '{{ states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level }}'
+      friendly_name: Freezer Thermometer
+      unit_of_measurement: "%"
+      value_template: "{{ states.sensor.freezer_temperature.attributes.battery_level }}"
       icon_template: >-
-        {% if states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level <= 10 %}
+        {% if states.sensor.freezer_temperature.attributes.battery_level <= 10 %}
           mdi:battery-10
-        {% elif states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level <= 20 %}
+        {% elif states.sensor.freezer_temperature.attributes.battery_level <= 20 %}
           mdi:battery-20
-        {% elif states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level <= 30 %}
+        {% elif states.sensor.freezer_temperature.attributes.battery_level <= 30 %}
           mdi:battery-30
-        {% elif states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level <= 40 %}
+        {% elif states.sensor.freezer_temperature.attributes.battery_level <= 40 %}
           mdi:battery-40
-        {% elif states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level <= 50 %}
+        {% elif states.sensor.freezer_temperature.attributes.battery_level <= 50 %}
           mdi:battery-50
-        {% elif states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level <= 60 %}
+        {% elif states.sensor.freezer_temperature.attributes.battery_level <= 60 %}
           mdi:battery-60
-        {% elif states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level <= 70 %}
+        {% elif states.sensor.freezer_temperature.attributes.battery_level <= 70 %}
           mdi:battery-70
-        {% elif states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level <= 80 %}
+        {% elif states.sensor.freezer_temperature.attributes.battery_level <= 80 %}
           mdi:battery-80
-        {% elif states.sensor.xiaomi_aqara__freezer__temperature.attributes.battery_level <= 90 %}
+        {% elif states.sensor.freezer_temperature.attributes.battery_level <= 90 %}
           mdi:battery-90
         {% else %}
           mdi:battery

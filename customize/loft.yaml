@@ -1,17 +1,17 @@
-sensor.xiaomi_aqara__loft__temperature:
+sensor.loft_temperature:
   friendly_name: Loft Temp.
-sensor.xiaomi_aqara__loft__humidity:
+sensor.loft_humidity:
   friendly_name: Loft Humidity
 
 lights.loft_lights:
   friendly_name: Loft Lights
-sensor.fibaro_fgd212__loft__power:
-  friendly_name: Loft FGD212 Power
+sensor.loft_light_power:
+  friendly_name: Loft Light Power
   hidden: true
-light.fibaro_fgd212__loft__level:
-  friendly_name: Loft FGD212 Level
+light.loft_light:
+  friendly_name: Loft Light
   hidden: true
 
-light.qubino_zmnhjd1__loft__level:
-  friendly_name: Loft Qubino Level
+light.loft_radiator:
+  friendly_name: Loft Radiator
   hidden: true

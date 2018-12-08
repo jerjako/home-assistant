@@ -110,32 +110,32 @@ homekit:
   filter:
     include_entities:
       # Hallway
-      - light.entree_2
+      - light.hallway_lights
       # Living room
       - light.living_room_lights
       - light.living_room_lightstrip
-      - cover.fibaro__fgrm222__living_room__level
+      - cover.living_room
       # Dining room
       - light.dining_room_lights
       # Kitchen
       - light.kitchen_lights
-      - cover.fibaro__fgrm222__kitchen__level
+      - cover.kitchen
       # Bathroom
       - light.bathroom_lights
       # WC
       - light.wc_lights
       # Landing
-      - light.escalier_2
-      - cover.fibaro__fgrm222__landing__level
+      - light.landing_lights
+      - cover.landing
       # Bedroom
-      - light.chambre
-      - light.go
-      - cover.fibaro__fgrm222__bedroom__level
+      - light.bedroom_lights
+      - light.bedroom_bedlights
+      - cover.bedroom
       # Desk
       - light.bureau
-      - cover.fibaro__fgrm222__desk__level
+      - cover.desk
       # Loft
-      - light.fibaro_fgd212__loft__level
+      - light.loft_lights
   entity_config:
     # Hallway
     light.entree_2:
@@ -143,7 +143,7 @@ homekit:
     # Living room
     light.living_room_lights:
       name: Living room lights
-    cover.fibaro__fgrm222__living_room__level:
+    cover.living_room:
       name: Living room cover
     # Dining room
     light.dining_room_lights:
@@ -151,7 +151,7 @@ homekit:
     # Kitchen
     light.kitchen_lights:
       name: Kitchen lights
-    cover.fibaro__fgrm222__kitchen__level:
+    cover.kitchen:
       name: Kitchen cover
     # Bathroom
     light.bathroom_lights:
@@ -162,22 +162,22 @@ homekit:
     # Landing
     light.escalier_2:
       name: Landing lights
-    cover.fibaro__fgrm222__landing__level:
+    cover.landing:
       name: Landing cover
     # Bedroom
     light.chambre:
       name: Bedroom lights
     light.go:
       name: Bedroom bedside lamp
-    cover.fibaro__fgrm222__bedroom__level:
+    cover.bedroom:
       name: Bedroom cover
     # Desk
     light.bureau:
       name: Desk lights
-    cover.fibaro__fgrm222__desk__level:
+    cover.desk:
       name: Desk cover
     # Loft
-    light.fibaro_fgd212__loft__level:
+    light.loft_lights:
       name: Loft lights
 
 influxdb:
@@ -208,7 +208,7 @@ emulated_hue:
     light.living_room_lightstrip:
       name: Living room lightstrip
       hidden: false
-    cover.fibaro__fgrm222__living_room__level:
+    cover.living_room:
       name: Living room cover
       hidden: false
     # Dining room
@@ -219,7 +219,7 @@ emulated_hue:
     light.kitchen_lights:
       name: Kitchen lights
       hidden: false
-    cover.fibaro__fgrm222__kitchen__level:
+    cover.kitchen:
       name: Kitchen cover
       hidden: false
     # Bathroom
@@ -234,7 +234,7 @@ emulated_hue:
     light.landing_lights:
       name: Landing lights
       hidden: false
-    cover.fibaro__fgrm222__landing__level:
+    cover.landing:
       name: Landing cover
       hidden: false
     # Bedroom
@@ -244,14 +244,14 @@ emulated_hue:
     light.bedroom_bedlights:
       name: Bedroom bedlights
       hidden: false
-    cover.fibaro__fgrm222__bedroom__level:
+    cover.bedroom:
       name: Bedroom cover
       hidden: false
     # Desk
     light.desk_lights:
       name: Desk lights
       hidden: false
-    cover.fibaro__fgrm222__desk__level:
+    cover.desk:
       name: Desk cover
       hidden: false
     # Loft
@@ -272,7 +272,7 @@ google_assistant:
     light.living_room_lights:
       name: Lumières
       room: Salon
-    cover.fibaro__fgrm222__living_room__level:
+    cover.living_room:
       name: Volet
       room: Salon
     # Dining room
@@ -283,7 +283,7 @@ google_assistant:
     light.kitchen_lights:
       name: Lumières
       room: Cuisine
-    cover.fibaro__fgrm222__kitchen__level:
+    cover.kitchen:
       name: Volet
       room: Cuisine
     # Bathroom
@@ -298,7 +298,7 @@ google_assistant:
     light.landing_lights:
       name: Lumières
       room: Palier
-    cover.fibaro__fgrm222__landing__level:
+    cover.landing:
       name: Volet
       room: Palier
     # Bedroom
@@ -308,14 +308,14 @@ google_assistant:
     light.bedroom_bedlights:
       name: Go
       room: Chambre
-    cover.fibaro__fgrm222__bedroom__level:
+    cover.bedroom:
       name: Volet
       room: Chambre
     # Desk
     light.desk_lights:
       name: Lumières
       room: Bureau
-    cover.fibaro__fgrm222__desk__level:
+    cover.desk:
       name: Volet
       room: Bureau
     # Loft

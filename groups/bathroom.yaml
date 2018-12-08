@@ -3,7 +3,7 @@ bathroom_lights:
   view: no
   entities:
     - light.bathroom_lights
-    - light.fibaro_fgd212__bathroom__level
+    - light.bathroom_glass
 
 bathroom_radiators:
   name: Radiator
@@ -37,8 +37,8 @@ bathroom_automations:
     - automation.change_radiator_to_heat_mode
     - automation.change_radiator_to_eco_mode
     - automation.bathroom_radiator_heat
-    - automation.pair_glass_and_hue_lights__on
-    - automation.pair_glass_and_hue_lights__off
+    - automation.pair_glass_and_lights__on
+    - automation.pair_glass_and_lights__off
 
 bathroom:
   name: Bathroom
@@ -49,9 +49,9 @@ bathroom:
     - group.bathroom_radiators
     - group.bathroom_status
     - group.bathroom_automations
-    - binary_sensor.xiaomi_aqara__bathroom__motion_sensor
-    - sensor.xiaomi_aqara__bathroom__temperature
-    - sensor.xiaomi_aqara__bathroom__humidity
+    - binary_sensor.bathroom_motion_sensor
+    - sensor.bathroom_temperature
+    - sensor.bathroom_humidity
     - binary_sensor.bathroom_humidity_high
-    - sensor.fibaro_fgd212__bathroom__power
-    - binary_sensor.xiaomi_aqara__bathroom__water_leak
+    - sensor.bathroom_power
+    - binary_sensor.bathroom_water_leak

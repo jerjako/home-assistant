@@ -1,39 +1,39 @@
 - id: loft_radiator
-  alias: 'Loft radiator'
+  alias: Loft radiator
   trigger:
     platform: state
     entity_id: input_select.loft_radiator
   action:
-    entity_id: light.qubino_zmnhjd1__loft__level
+    entity_id: light.loft_radiator
     service_template: >
-      {% if is_state("input_select.loft_radiator", "Comfort") %}
+      {% if is_state('input_select.loft_radiator', 'Comfort') %}
         light.turn_on
-      {% elif is_state("input_select.loft_radiator", "Comfort -1") %}
+      {% elif is_state('input_select.loft_radiator', 'Comfort -1') %}
         light.turn_on
-      {% elif is_state("input_select.loft_radiator", "Comfort -2") %}
+      {% elif is_state('input_select.loft_radiator', 'Comfort -2') %}
         light.turn_on
-      {% elif is_state("input_select.loft_radiator", "Eco") %}
+      {% elif is_state('input_select.loft_radiator', 'Eco') %}
         light.turn_on
-      {% elif is_state("input_select.loft_radiator", "Anti-Freeze") %}
+      {% elif is_state('input_select.loft_radiator', 'Anti-Freeze') %}
         light.turn_on
-      {% elif is_state("input_select.loft_radiator", "Off") %}
+      {% elif is_state('input_select.loft_radiator', 'Off') %}
         light.turn_off
       {% else %}
         light.turn_off
       {% endif %}
     data_template:
       brightness: >
-        {% if is_state("input_select.loft_radiator", "Comfort") %}
+        {% if is_state('input_select.loft_radiator', 'Comfort') %}
           130
-        {% elif is_state("input_select.loft_radiator", "Comfort -1") %}
+        {% elif is_state('input_select.loft_radiator', 'Comfort -1') %}
           105
-        {% elif is_state("input_select.loft_radiator", "Comfort -2") %}
+        {% elif is_state('input_select.loft_radiator', 'Comfort -2') %}
           79
-        {% elif is_state("input_select.loft_radiator", "Eco") %}
+        {% elif is_state('input_select.loft_radiator', 'Eco') %}
           54
-        {% elif is_state("input_select.loft_radiator", "Anti-Freeze") %}
+        {% elif is_state('input_select.loft_radiator', 'Anti-Freeze') %}
           28
-        {% elif is_state("input_select.loft_radiator", "Off") %}
+        {% elif is_state('input_select.loft_radiator', 'Off') %}
           0
         {% else %}
           0
@@ -48,7 +48,7 @@
     - service: input_select.select_option
       data_template:
         entity_id: input_select.loft_radiator
-        option: 'Eco'
+        option: Eco
 
 - id: loft_radiator_heat
   alias: Change loft radiator to heat mode
@@ -59,7 +59,7 @@
     - service: input_select.select_option
       data_template:
         entity_id: input_select.loft_radiator
-        option: 'Comfort'
+        option: Comfort
 
 
 

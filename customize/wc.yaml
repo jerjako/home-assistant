@@ -5,22 +5,22 @@ light.yeelight_color2_7c49ebb734db:
   hidden: true
 
 sensor.wc_temp:
-  friendly_name: 'WC Temp.'
+  friendly_name: WC Temp.
 
-sensor.xiaomi_aqara__wc__temperature:
-  friendly_name: 'WC Temp.'
-sensor.xiaomi_aqara__wc__humidity:
-  friendly_name: 'WC Humidity'
+sensor.wc_temperature:
+  friendly_name: WC Temp.
+sensor.wc_humidity:
+  friendly_name: WC Humidity
 
-binary_sensor.xiaomi_aqara__wc__water_leak:
-  friendly_name: 'WC Water leak'
+binary_sensor.wc_water_leak:
+  friendly_name: WC Water leak
 
 switch.sonoff_2:
-  friendly_name: 'WC CMV'
+  friendly_name: WC CMV
 
 script.wc_cmv:
   icon: mdi:air-conditioner
 
-binary_sensor.xiaomi_aqara__wc__motion_sensor:
-  friendly_name: 'WC Detector'
+binary_sensor.wc_motion_sensor:
+  friendly_name: WC Motion sensor
   device_class: moving

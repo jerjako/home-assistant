@@ -10,6 +10,6 @@ hallway:
   entities:
     - light.hallway_lights
     - group.hallway_automations
-    - binary_sensor.xiaomi_aqara__hallway__door_window_sensor
-    - sensor.xiaomi_aqara__hallway__temperature
-    - sensor.xiaomi_aqara__hallway__humidity
+    - binary_sensor.hallway_door
+    - sensor.hallway_temperature
+    - sensor.hallway_humidity

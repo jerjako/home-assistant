@@ -1,37 +1,34 @@
-binary_sensor.xiaomi_aqara__bathroom__motion_sensor:
-  friendly_name: 'Bathroom Detector'
+binary_sensor.bathroom_motion_sensor:
+  friendly_name: Bathroom Motion sensor
   device_class: moving
-
-sensor.xiaomi_aqara__bathroom__temperature:
-  friendly_name: 'Bathroom Temp.'
-sensor.xiaomi_aqara__bathroom__humidity:
-  friendly_name: 'Bathroom Humidity'
-
-light.fibaro_fgd212__bathroom__level:
-  friendly_name: 'Bathroom Glass'
-
-sensor.fibaro_fgd212__bathroom__power:
-  friendly_name: 'Bathroom Glass'
 binary_sensor.bathroom_humidity_high:
   device_class: moisture
+binary_sensor.bathroom_water_leak:
+  friendly_name: Bathroom Water leak
 
-binary_sensor.xiaomi_aqara__bathroom__water_leak:
-  friendly_name: 'Bathroom Water leak'
+sensor.bathroom_temperature:
+  friendly_name: Bathroom Temp.
+sensor.bathroom_humidity:
+  friendly_name: Bathroom Humidity
+sensor.bathroom_glass_power:
+  friendly_name: Bathroom Glass
 
+light.bathroom_radiator:
+  friendly_name: Bathroom Radiator
 light.bathroom_lights:
   friendly_name: Bathroom Lights
-light.qubino_zmnhud1__bathroom__level:
-  friendly_name: Bathroom Qubino Lovel
+light.bathroom_glass:
+  friendly_name: Bathroom Glass
   hidden: true
 light.yeelight_color2_7c49ebb72e4d:
-  friendly_name: 'Bathroom 1'
+  friendly_name: Bathroom 1
   hidden: true
 
 switch.sonoff_1:
-  friendly_name: 'Bathroom CMV'
+  friendly_name: Bathroom CMV
 
 input_boolean.bathroom_humidity_high:
-  friendly_name: 'Humidity high'
+  friendly_name: Humidity high
   control: hidden
 
 script.bathroom_cmv:

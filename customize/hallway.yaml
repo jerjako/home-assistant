@@ -7,12 +7,12 @@ light.entree_2:
   friendly_name: Hue Hallway
   hidden: true
 
-light.xiaomi_gateway__hallway__light:
-  friendly_name: 'Xiaomi Gateway'
-binary_sensor.xiaomi_aqara__hallway__door_window_sensor:
-  friendly_name: 'Hallway Door'
+light.hallway_light:
+  friendly_name: Xiaomi Gateway
+binary_sensor.hallway_door:
+  friendly_name: Hallway Door
 
-sensor.xiaomi_aqara__hallway__humidity:
-  friendly_name: 'Hallway Humidity'
-sensor.xiaomi_aqara__hallway__temperature:
-  friendly_name: 'Hallway Temp.'
+sensor.hallway_humidity:
+  friendly_name: Hallway Humidity
+sensor.hallway_temperature:
+  friendly_name: Hallway Temp.

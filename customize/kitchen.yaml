@@ -1,20 +1,20 @@
-sensor.xiaomi_aqara__kitchen__temperature:
-  friendly_name: 'Kitchen Temp.'
-sensor.xiaomi_aqara__kitchen__humidity:
-  friendly_name: 'Kitchen Humidity'
+sensor.kitchen_temperature:
+  friendly_name: Kitchen Temp.
+sensor.kitchen_humidity:
+  friendly_name: Kitchen Humidity
 
-sensor.xiaomi_aqara__fridge__temperature:
-  friendly_name: 'Fridge Temp.'
-sensor.xiaomi_aqara__fridge__humidity:
-  friendly_name: 'Fridge Humidity'
+sensor.fridge_temperature:
+  friendly_name: Fridge Temp.
+sensor.fridge_humidity:
+  friendly_name: Fridge Humidity
 
-sensor.xiaomi_aqara__freezer__temperature:
-  friendly_name: 'Freezer Temp.'
-sensor.xiaomi_aqara__freezer__humidity:
-  friendly_name: 'Freezer Humidity'
+sensor.freezer_temperature:
+  friendly_name: Freezer Temp.
+sensor.freezer_humidity:
+  friendly_name: Freezer Humidity
 
-binary_sensor.xiaomi_aqara__kitchen__water_leak:
-  friendly_name: 'Kitchen Water leak'
+binary_sensor.kitchen_water_leak:
+  friendly_name: Kitchen Water leak
 
 light.kitchen_lights:
   friendly_name: Kitchen Lights
@@ -25,10 +25,10 @@ light.yeelight_color2_7c49ebb76848:
   friendly_name: Kitchen 2
   hidden: true
 
-cover.fibaro__fgrm222__kitchen__level:
+cover.kitchen:
   friendly_name: Kitchen Cover
 
-binary_sensor.pop__kitchen__smoke_sensor__sensor:
-  friendly_name: 'Kitchen Smoke sensor'
-sensor.pop__kitchen__smoke_sensor__temperature:
-  friendly_name: 'Kitchen Smoke sensor Temp.'
+binary_sensor.kitchen_smoke:
+  friendly_name: Kitchen Smoke sensor
+sensor.kitchen_smoke_temperature:
+  friendly_name: Kitchen Smoke sensor Temp.

@@ -3,24 +3,24 @@ home_temperatures:
   entities:
     - sensor.family_room_thermostat_temperature
     - sensor.wc_temp
-    - sensor.xiaomi_aqara__hallway__temperature
-    - sensor.xiaomi_aqara__kitchen__temperature
-    - sensor.xiaomi_aqara__bedroom__temperature
-    - sensor.xiaomi_aqara__bathroom__temperature
-    - sensor.xiaomi_aqara__loft__temperature
-    - sensor.xiaomi_aqara__living_room__temperature
-    - sensor.xiaomi_aqara__landing__temperature
-    - sensor.xiaomi_aqara__desk__temperature
+    - sensor.hallway_temperature
+    - sensor.kitchen_temperature
+    - sensor.bedroom_temperature
+    - sensor.bathroom_temperature
+    - sensor.loft_temperature
+    - sensor.living_room_temperature
+    - sensor.landing_temperature
+    - sensor.desk_temperature
 
 home_humidities:
   hours_to_show: 168
   entities:
     - sensor.family_room_thermostat_humidity
-    - sensor.xiaomi_aqara__hallway__humidity
-    - sensor.xiaomi_aqara__kitchen__humidity
-    - sensor.xiaomi_aqara__bedroom__humidity
-    - sensor.xiaomi_aqara__bathroom__humidity
-    - sensor.xiaomi_aqara__loft__humidity
-    - sensor.xiaomi_aqara__living_room__humidity
-    - sensor.xiaomi_aqara__landing__humidity
-    - sensor.xiaomi_aqara__desk__humidity
+    - sensor.hallway_humidity
+    - sensor.kitchen_humidity
+    - sensor.bedroom_humidity
+    - sensor.bathroom_humidity
+    - sensor.loft_humidity
+    - sensor.living_room_humidity
+    - sensor.landing_humidity
+    - sensor.desk_humidity

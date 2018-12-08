@@ -18,8 +18,8 @@ living_room_switches:
   view: no
   control: hidden
   entities:
-    - switch.fibaro_fgs213__living_room__box__switch
-    - switch.fibaro_fgs213__living_room__tv__switch
+    - switch.living_room_box
+    - switch.living_room_tv
 
 living_room_apple_tv:
   name: Apple TV
@@ -27,21 +27,12 @@ living_room_apple_tv:
   entities:
     - remote.apple_tv
 
-
-living_room_scenes:
-  name: Scenes
-  view: no
-  entities:
-    - scene.light_movie_paused
-    - scene.light_movie_playing
-
-
 living_room_automations:
   name: Automations
   view: no
   entities:
-    - automation.apple_tv__paused
-    - automation.apple_tv__playing
+    - automation.apple_tv_paused
+    - automation.apple_tv_playing
     - automation.tv_cec_power
     - automation.tv_on
     - automation.tv_off
@@ -74,7 +65,7 @@ living_room_window:
   control: hidden
   entities:
     - sensor.living_room_window
-    - cover.fibaro__fgrm222__living_room__level
+    - cover.living_room
 
 living_room:
   name: Living room
@@ -87,11 +78,10 @@ living_room:
     - group.living_room_window
     - group.living_room_hdmi_cec
     - group.living_room_switches
-    - group.living_room_scenes
     - group.living_room_automations
-    - sensor.fibaro_fgs213__living_room__box__power
-    - sensor.fibaro_fgs213__living_room__box__energy
-    - sensor.fibaro_fgs213__living_room__tv__power
-    - sensor.fibaro_fgs213__living_room__tv__energy
-    - sensor.xiaomi_aqara__living_room__temperature
-    - sensor.xiaomi_aqara__living_room__humidity
+    - sensor.living_room_box_power
+    - sensor.living_room_box_energy
+    - sensor.living_room_tv_power
+    - sensor.living_room_tv_energy
+    - sensor.living_room_temperature
+    - sensor.living_room_humidity

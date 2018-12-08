@@ -13,9 +13,9 @@ zwave_living_room:
   name: Living room
   view: no
   entities:
-    - zwave.fibaro__fgs213__living_room__box
-    - zwave.fibaro__fgs213__living_room__tv
-    - zwave.fibaro__fgrm222__living_room
+    - zwave.living_room_box
+    - zwave.living_room_tv
+    - zwave.living_room_cover
 
 zwave_dining_room:
   name: Dining room
@@ -26,14 +26,14 @@ zwave_kitchen:
   name: Kitchen
   view: no
   entities:
-    - zwave.fibaro__fgrm222__kitchen
+    - zwave.kitchen_cover
 
 zwave_bathroom:
   name: Bathroom
   view: no
   entities:
-    - zwave.fibaro_fgd212__bathroom
-    - zwave.qubino_zmnhud1__bathroom
+    - zwave.bathroom_glass
+    - zwave.bathroom_radiator
 
 zwave_wc:
   name: WC
@@ -44,26 +44,26 @@ zwave_landing:
   name: Landing
   view: no
   entities:
-    - zwave.fibaro__fgrm222__landing
+    - zwave.landing_cover
 
 zwave_bedroom:
   name: Bedroom
   view: no
   entities:
-    - zwave.fibaro__fgrm222__bedroom
+    - zwave.bedroom_cover
 
 zwave_desk:
   name: Desk
   view: no
   entities:
-    - zwave.fibaro__fgrm222__desk
+    - zwave.desk_cover
 
 zwave_loft:
   name: Loft
   view: no
   entities:
-    - zwave.fibaro_fgd212__loft
-    - zwave.qubino_zmnhjd1__loft
+    - zwave.loft_light
+    - zwave.loft_radiator
 
 zwave:
   name: Z-Wave

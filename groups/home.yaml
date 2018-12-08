@@ -8,7 +8,7 @@ home_lights:
     - light.dining_room_lights
     - light.kitchen_lights
     - light.bathroom_lights
-    - light.fibaro_fgd212__bathroom__level
+    - light.bathroom_glass
     - light.wc_lights
     - light.landing_lights
     - light.bedroom_lights
@@ -20,11 +20,11 @@ home_covers:
   name: Covers
   view: no
   entities:
-    - cover.fibaro__fgrm222__living_room__level
-    - cover.fibaro__fgrm222__kitchen__level
-    - cover.fibaro__fgrm222__landing__level
-    - cover.fibaro__fgrm222__bedroom__level
-    - cover.fibaro__fgrm222__desk__level
+    - cover.living_room
+    - cover.kitchen
+    - cover.landing
+    - cover.bedroom
+    - cover.desk
 
 default_view:
   name: Home

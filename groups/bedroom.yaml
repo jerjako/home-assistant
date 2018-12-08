@@ -19,6 +19,6 @@ bedroom:
     - light.bedroom_bedlights
     - group.bedroom_automations
     - group.bedroom_scenes
-    - sensor.xiaomi_aqara__bedroom__temperature
-    - sensor.xiaomi_aqara__bedroom__humidity
-    - cover.fibaro__fgrm222__bedroom__level
+    - sensor.bedroom_temperature
+    - sensor.bedroom_humidity
+    - cover.bedroom

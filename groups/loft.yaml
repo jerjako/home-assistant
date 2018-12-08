@@ -19,6 +19,6 @@ loft:
     - light.loft_lights
     - group.loft_radiators
     - group.loft_automations
-    - sensor.xiaomi_aqara__loft__temperature
-    - sensor.xiaomi_aqara__loft__humidity
-    - sensor.fibaro_fgd212__loft__power
+    - sensor.loft_temperature
+    - sensor.loft_humidity
+    - sensor.loft_radiator_power

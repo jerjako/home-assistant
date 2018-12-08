@@ -8,6 +8,6 @@ light.yeelight_color2_7c49ebb72e78:
   hidden: true
 
 sensor.family_room_thermostat_temperature:
-  friendly_name: 'Dining room Temp.'
+  friendly_name: Dining room Temp.
 sensor.family_room_thermostat_humidity:
-  friendly_name: 'Dining room Humidity'
+  friendly_name: Dining room Humidity

@@ -32,5 +32,5 @@
 - platform: waze_travel_time
   origin: device_tracker.iphone_jerjako
   destination: zone.home
-  region: 'EU'
-  name: 'Travel time to home'
+  region: EU
+  name: Travel time to home

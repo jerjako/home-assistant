@@ -7,10 +7,10 @@ light.escalier_2:
   friendly_name: Hue Landing
   hidden: true
 
-cover.fibaro__fgrm222__landing__level:
+cover.landing:
   friendly_name: Landing Cover
 
-sensor.xiaomi_aqara__landing__temperature:
-  friendly_name: 'Landing Temp.'
-sensor.xiaomi_aqara__landing__humidity:
-  friendly_name: 'Landing Humidity'
+sensor.landing_temperature:
+  friendly_name: Landing Temp.
+sensor.landing_humidity:
+  friendly_name: Landing Humidity

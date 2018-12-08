@@ -6,7 +6,7 @@
   action:
     - service: notify.ios
       data:
-        message: "System started"
+        message: System started
     - delay: 00:05  # Waits 5 minutes to starting HomeKit (Zwave and Wifi light fully ready)
     - service: homekit.start
 
@@ -18,7 +18,7 @@
   action:
     - service: notify.ios
       data:
-        message: "System shutdown"
+        message: System shutdown
 
 - id: hassio-update-notif
   alias: Update Notification
@@ -28,7 +28,7 @@
   action:
     - service: notify.ios
       data:
-        message: "Update Available"
+        message: Update Available
 
 - id: hassio-login-failed
   alias: Login Failure
@@ -39,26 +39,26 @@
   action:
     - service: notify.ios
       data:
-        message: "Login failed"
+        message: Login failed
 
 - id: daily_backup_and_cleaning
   alias: Daily Backup
   trigger:
     platform: time
-    at: '03:00:00'
+    at: 03:00:00
   action:
     - service: hassio.snapshot_full
       data_template:
         name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
     - service: notify.ios
       data_template:
-        message: Creating backup named "Automated Backup {{ now().strftime('%Y-%m-%d') }}"
+        message: "Creating backup named: Automated Backup {{ now().strftime('%Y-%m-%d') }}"
     - service: shell_command.delete_old_snapshots
-    - delay: '00:30:00'
+    - delay: 00:30:00
     - service: hassio.addon_stdin
       data:
-        addon: "7be23ff5_dropbox_sync"
-        input: {"command":"upload"}
+        addon: 7be23ff5_dropbox_sync
+        input: {'command':'upload'}
 
 - id: xiaomi_switch_1
   alias: Switch 1
@@ -66,12 +66,12 @@
     - platform: event
       event_type: click
       event_data:
-        entity_id: binary_sensor.xiaomi_aqara__home__switch_1
+        entity_id: binary_sensor.home_switch_1
         click_type: single
   action:
     - service: notify.ios
       data:
-        message: "Switch 1"
+        message: Switch 1
 
 - id: xiaomi_switch_2
   alias: Switch 2
@@ -79,15 +79,15 @@
     - platform: event
       event_type: click
       event_data:
-        entity_id: binary_sensor.xiaomi_aqara__home__switch_2
+        entity_id: binary_sensor.home_switch_2
         click_type: single
   action:
     - service: notify.ios
       data:
-        message: "Switch 2"
+        message: Switch 2
 
 - id: cover_close
-  alias: 'Cover close'
+  alias: Cover close
   trigger:
     - platform: sun
       event: sunset
@@ -95,11 +95,11 @@
     - service: cover.close_cover
       data:
          entity_id: 
-           - cover.fibaro__fgrm222__bedroom__level
-           - cover.fibaro__fgrm222__desk__level
-           - cover.fibaro__fgrm222__kitchen__level
-           - cover.fibaro__fgrm222__landing__level
-           - cover.fibaro__fgrm222__living_room__level
+           - cover.bedroom
+           - cover.desk
+           - cover.kitchen
+           - cover.landing
+           - cover.living_room
     - service: notify.ios
       data:
-        message: "Cover closed"
+        message: Cover closed
