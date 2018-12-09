@@ -1,11 +1,6 @@
 {
     "1": "light.bathroom_lights",
     "10": "light.living_room_lights",
-    "11": "cover.fibaro__fgrm222__living_room__level",
-    "12": "cover.fibaro__fgrm222__kitchen__level",
-    "13": "cover.fibaro__fgrm222__bedroom__level",
-    "14": "cover.fibaro__fgrm222__landing__level",
-    "15": "cover.fibaro__fgrm222__desk__level",
     "16": "light.bedroom_bedlights",
     "17": "light.living_room_lightstrip",
     "18": "cover.living_room",
