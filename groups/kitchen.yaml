@@ -1,10 +1,10 @@
 
-kitchen_window:
-  name: Window
+kitchen_door:
+  name: Door
   view: no
   control: hidden
   entities:
-    - sensor.kitchen_window
+    - sensor.kitchen_door
     - cover.kitchen
 
 
@@ -13,7 +13,7 @@ kitchen:
   view: yes
   entities:
     - light.kitchen_lights
-    - group.kitchen_window
+    - group.kitchen_door
     - sensor.kitchen_temperature
     - sensor.kitchen_humidity
     - sensor.fridge_temperature

@@ -87,21 +87,21 @@
 
 - platform: template
   sensors:
-    kitchen_window:
-      friendly_name: Kitchen Window
+    kitchen_door:
+      friendly_name: Kitchen Door
       value_template: >-
-        {% if is_state('binary_sensor.kitchen_window_1', 'off') and is_state('binary_sensor.kitchen_window_2', 'off') %}
+        {% if is_state('binary_sensor.kitchen_door_1', 'off') and is_state('binary_sensor.kitchen_door_2', 'off') %}
           Closed
-        {% elif is_state('binary_sensor.kitchen_window_2', 'on') %}
+        {% elif is_state('binary_sensor.kitchen_door_2', 'on') %}
           Open
-        {% elif is_state('binary_sensor.kitchen_window_1', 'on') %}
+        {% elif is_state('binary_sensor.kitchen_door_1', 'on') %}
           Half open
         {% endif %}
       entity_picture_template: >- # icon_template not working with entity_picture_template
-        {% if is_state('binary_sensor.kitchen_window_1', 'off') and is_state('binary_sensor.kitchen_window_2', 'off') %}
+        {% if is_state('binary_sensor.kitchen_door_1', 'off') and is_state('binary_sensor.kitchen_door_2', 'off') %}
           /local/window_closed.png
-        {% elif is_state('binary_sensor.kitchen_window_2', 'on') %}
+        {% elif is_state('binary_sensor.kitchen_door_2', 'on') %}
           /local/window_open.png
-        {% elif is_state('binary_sensor.kitchen_window_1', 'on') %}
+        {% elif is_state('binary_sensor.kitchen_door_1', 'on') %}
           /local/window_half_open.png
         {% endif %}
