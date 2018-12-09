@@ -25,6 +25,7 @@ battery_kitchen:
     - sensor.kitchen_thermometer_battery
     - sensor.fridge_thermometer_battery
     - sensor.freezer_thermometer_battery
+    - sensor.kitchen_water_leak_battery
     - sensor.kitchen_door_1_battery
     - sensor.kitchen_door_2_battery
 
@@ -34,6 +35,7 @@ battery_bathroom:
   entities:
     - sensor.bathroom_thermometer_battery
     - sensor.bathroom_motion_sensor_battery
+    - sensor.bathroom_water_leak_battery
 
 battery_wc:
   name: WC
@@ -41,6 +43,7 @@ battery_wc:
   entities:
     - sensor.wc_thermometer_battery
     - sensor.wc_motion_sensor_battery
+    - sensor.wc_water_leak_battery
 
 battery_landing:
   name: Landing

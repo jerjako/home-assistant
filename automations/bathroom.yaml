@@ -158,5 +158,13 @@
         entity_id: input_select.bathroom_radiator
         option: Comfort
 
-
-
+- id: bathroom_water_leak
+  alias: Bathroom Water leak
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.bathroom_water_leak
+      to: "on"
+  action:
+    - service: notify.ios
+      data:
+        message: Bathroom - Water leak detected

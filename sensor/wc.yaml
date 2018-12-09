@@ -56,3 +56,31 @@
           mdi:battery
         {% endif %}
 
+- platform: template
+  sensors:
+    wc_water_leak_battery:
+      friendly_name: Water leak
+      unit_of_measurement: "%"
+      value_template: "{{ states.binary_sensor.wc_water_leak.attributes.battery_level }}"
+      icon_template: >-
+        {% if states.binary_sensor.wc_water_leak.attributes.battery_level <= 10 %}
+          mdi:battery-10
+        {% elif states.binary_sensor.wc_water_leak.attributes.battery_level <= 20 %}
+          mdi:battery-20
+        {% elif states.binary_sensor.wc_water_leak.attributes.battery_level <= 30 %}
+          mdi:battery-30
+        {% elif states.binary_sensor.wc_water_leak.attributes.battery_level <= 40 %}
+          mdi:battery-40
+        {% elif states.binary_sensor.wc_water_leak.attributes.battery_level <= 50 %}
+          mdi:battery-50
+        {% elif states.binary_sensor.wc_water_leak.attributes.battery_level <= 60 %}
+          mdi:battery-60
+        {% elif states.binary_sensor.wc_water_leak.attributes.battery_level <= 70 %}
+          mdi:battery-70
+        {% elif states.binary_sensor.wc_water_leak.attributes.battery_level <= 80 %}
+          mdi:battery-80
+        {% elif states.binary_sensor.wc_water_leak.attributes.battery_level <= 90 %}
+          mdi:battery-90
+        {% else %}
+          mdi:battery
+        {% endif %}
