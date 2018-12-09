@@ -1,8 +1,18 @@
+
+desk_window:
+  name: Window
+  view: no
+  control: hidden
+  entities:
+    - sensor.desk_window
+    - cover.desk
+
+
 desk:
   name: Desk
   view: yes
   entities:
     - light.desk_lights
+    - group.desk_window
     - sensor.desk_temperature
     - sensor.desk_humidity
-    - cover.desk

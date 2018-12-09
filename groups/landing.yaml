@@ -1,8 +1,18 @@
+
+landing_window:
+  name: Window
+  view: no
+  control: hidden
+  entities:
+    - sensor.landing_window
+    - cover.landing
+
+
 landing:
   name: Landing
   view: yes
   entities:
     - light.landing_lights
+    - group.landing_window
     - sensor.landing_temperature
     - sensor.landing_humidity
-    - cover.landing

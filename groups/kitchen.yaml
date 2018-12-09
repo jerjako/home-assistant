@@ -1,8 +1,19 @@
+
+kitchen_window:
+  name: Window
+  view: no
+  control: hidden
+  entities:
+    - sensor.kitchen_window
+    - cover.kitchen
+
+
 kitchen:
   name: Kitchen
   view: yes
   entities:
     - light.kitchen_lights
+    - group.kitchen_window
     - sensor.kitchen_temperature
     - sensor.kitchen_humidity
     - sensor.fridge_temperature
@@ -12,5 +23,4 @@ kitchen:
     - binary_sensor.kitchen_water_leak
     - binary_sensor.kitchen_smoke
     - sensor.kitchen_smoke_temperature
-    - cover.kitchen
 

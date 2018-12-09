@@ -10,6 +10,14 @@ bedroom_scenes:
   entities:
     - scene.bedroom_wake_up
 
+bedroom_window:
+  name: Window
+  view: no
+  control: hidden
+  entities:
+    - sensor.bedroom_window
+    - cover.bedroom
+
 
 bedroom:
   name: Bedroom
@@ -17,8 +25,8 @@ bedroom:
   entities:
     - light.bedroom_lights
     - light.bedroom_bedlights
+    - group.bedroom_window
     - group.bedroom_automations
     - group.bedroom_scenes
     - sensor.bedroom_temperature
     - sensor.bedroom_humidity
-    - cover.bedroom
