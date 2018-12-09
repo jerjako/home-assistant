@@ -55,3 +55,20 @@
         {% else %}
           mdi:battery
         {% endif %}
+
+- platform: template
+  sensors:
+    hallway_door:
+      friendly_name: Hallway Door
+      value_template: >- # Prepare for lock
+        {% if is_state('binary_sensor.hallway_door', 'off') %}
+          Closed
+        {% elif is_state('binary_sensor.hallway_door', 'on') %}
+          Open
+        {% endif %}
+      icon_template: >- # icon_template not working with entity_picture_template
+        {% if is_state('binary_sensor.hallway_door', 'off') %}
+          mdi:door-closed
+        {% elif is_state('binary_sensor.hallway_door', 'on') %}
+          mdi:door-open
+        {% endif %}

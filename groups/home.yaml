@@ -16,14 +16,22 @@ home_lights:
     - light.desk_lights
     - light.loft_lights
 
-home_covers:
-  name: Covers
+home_doors_windows_covers:
+  name: Doors, Windows & Covers
   view: no
+  control: hidden
   entities:
+    - sensor.hallway_door
+    - sensor.living_room_window
+    - sensor.living_room_window
     - cover.living_room
+    - sensor.kitchen_door
     - cover.kitchen
+    - sensor.landing_window
     - cover.landing
+    - sensor.bedroom_window
     - cover.bedroom
+    - sensor.desk_window
     - cover.desk
 
 default_view:
@@ -41,6 +49,6 @@ default_view:
     - group.all_automations
     - group.all_devices
     - group.home_lights
-    - group.home_covers
+    - group.home_doors_windows_covers
     - group.all_scripts
     - group.all_switches

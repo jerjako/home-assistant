@@ -1,7 +1,7 @@
 - platform: template
   sensors:
-    wc_detector_battery:
-      friendly_name: Detector
+    wc_motion_sensor_battery:
+      friendly_name: Motion sensor
       unit_of_measurement: "%"
       value_template: "{{ states.binary_sensor.wc_motion_sensor.attributes.battery_level }}"
       icon_template: >-

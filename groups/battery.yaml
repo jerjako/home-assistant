@@ -10,6 +10,8 @@ battery_living_room:
   view: no
   entities:
     - sensor.living_room_thermometer_battery
+    - sensor.living_room_window_1_battery
+    - sensor.living_room_window_2_battery
 
 battery_dining_room:
   name: Dining room
@@ -23,44 +25,53 @@ battery_kitchen:
     - sensor.kitchen_thermometer_battery
     - sensor.fridge_thermometer_battery
     - sensor.freezer_thermometer_battery
+    - sensor.kitchen_door_1_battery
+    - sensor.kitchen_door_2_battery
 
 battery_bathroom:
   name: Bathroom
   view: no
   entities:
     - sensor.bathroom_thermometer_battery
-    - sensor.bathroom_detector_battery
+    - sensor.bathroom_motion_sensor_battery
 
 battery_wc:
   name: WC
   view: no
   entities:
     - sensor.wc_thermometer_battery
-    - sensor.wc_detector_battery
+    - sensor.wc_motion_sensor_battery
 
 battery_landing:
   name: Landing
   view: no
   entities:
     - sensor.landing_thermometer_battery
+    - sensor.landing_window_1_battery
+    - sensor.landing_window_2_battery
 
 battery_bedroom:
   name: Bedroom
   view: no
   entities:
     - sensor.bedroom_thermometer_battery
+    - sensor.bedroom_window_1_battery
+    - sensor.bedroom_window_2_battery
 
 battery_desk:
   name: Desk
   view: no
   entities:
     - sensor.desk_thermometer_battery
+    - sensor.desk_window_1_battery
+    - sensor.desk_window_2_battery
 
 battery_loft:
   name: Loft
   view: no
   entities:
     - sensor.loft_thermometer_battery
+    - sensor.loft_window_battery
 
 
 battery:

@@ -1,7 +1,7 @@
 - platform: template
   sensors:
-    bathroom_detector_battery:
-      friendly_name: Detector
+    bathroom_motion_sensor_battery:
+      friendly_name: Motion sensor
       unit_of_measurement: "%"
       value_template: "{{ states.binary_sensor.bathroom_motion_sensor.attributes.battery_level }}"
       icon_template: >-

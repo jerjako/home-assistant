@@ -59,8 +59,8 @@ living_room_fan:
     - script.living_room_fan_speed
     - script.living_room_fan_rotate
 
-living_room_window:
-  name: Window
+living_room_window_cover:
+  name: Window & Cover
   view: no
   control: hidden
   entities:
@@ -75,7 +75,7 @@ living_room:
     - group.living_room_devices
     # - group.living_room_remote
     - group.living_room_fan
-    - group.living_room_window
+    - group.living_room_window_cover
     - group.living_room_hdmi_cec
     - group.living_room_switches
     - group.living_room_automations
