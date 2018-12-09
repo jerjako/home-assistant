@@ -1,11 +1,5 @@
 light.landing_lights:
   friendly_name: Landing Lights
-light.escalier:
-  friendly_name: Hue Group Landing
-  hidden: true
-light.escalier_2:
-  friendly_name: Hue Landing
-  hidden: true
 
 cover.landing:
   friendly_name: Landing Cover

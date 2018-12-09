@@ -132,13 +132,13 @@ homekit:
       - light.bedroom_bedlights
       - cover.bedroom
       # Desk
-      - light.bureau
+      - light.desk_lights
       - cover.desk
       # Loft
       - light.loft_lights
   entity_config:
     # Hallway
-    light.entree_2:
+    light.hallway_lights:
       name: Hallway lights
     # Living room
     light.living_room_lights:
@@ -160,19 +160,19 @@ homekit:
     light.wc_lights:
       name: WC lights
     # Landing
-    light.escalier_2:
+    light.landing_lights:
       name: Landing lights
     cover.landing:
       name: Landing cover
     # Bedroom
-    light.chambre:
+    light.bedroom_lights:
       name: Bedroom lights
-    light.go:
-      name: Bedroom bedside lamp
+    light.bedroom_bedlights:
+      name: Bedroom bedlights
     cover.bedroom:
       name: Bedroom cover
     # Desk
-    light.bureau:
+    light.desk_lights:
       name: Desk lights
     cover.desk:
       name: Desk cover
