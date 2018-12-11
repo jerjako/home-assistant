@@ -2,7 +2,7 @@
   alias: Hallway Door open
   trigger:
     - platform: state
-      entity_id: binary_sensor.hallway_door_sensor
+      entity_id: binary_sensor.hallway_door
       to: "on"
   action:
     - service: notify.ios
