@@ -103,3 +103,14 @@
     - service: notify.ios
       data:
         message: Cover closed
+
+- id: leave_home
+  alias: Leave home
+  trigger:
+    - platform: state
+      entity_id: device_tracker.iphonejerjako
+      to: "not_home"
+  action:
+    - service: notify.ios
+      data:
+        message: Test - Not home

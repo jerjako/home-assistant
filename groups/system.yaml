@@ -39,3 +39,4 @@ system:
     - group.system_speedtest
     - group.system_breaches
     - automation.daily_backup
+    - automation.leave_home
