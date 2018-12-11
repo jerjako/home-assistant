@@ -4,28 +4,23 @@
       friendly_name: Thermometer
       unit_of_measurement: "%"
       value_template: "{{ states.sensor.landing_temperature.attributes.battery_level }}"
-      icon_template: >-
-        {% if states.sensor.landing_temperature.attributes.battery_level <= 10 %}
-          mdi:battery-10
-        {% elif states.sensor.landing_temperature.attributes.battery_level <= 20 %}
-          mdi:battery-20
-        {% elif states.sensor.landing_temperature.attributes.battery_level <= 30 %}
-          mdi:battery-30
-        {% elif states.sensor.landing_temperature.attributes.battery_level <= 40 %}
-          mdi:battery-40
-        {% elif states.sensor.landing_temperature.attributes.battery_level <= 50 %}
-          mdi:battery-50
-        {% elif states.sensor.landing_temperature.attributes.battery_level <= 60 %}
-          mdi:battery-60
-        {% elif states.sensor.landing_temperature.attributes.battery_level <= 70 %}
-          mdi:battery-70
-        {% elif states.sensor.landing_temperature.attributes.battery_level <= 80 %}
-          mdi:battery-80
-        {% elif states.sensor.landing_temperature.attributes.battery_level <= 90 %}
-          mdi:battery-90
-        {% else %}
-          mdi:battery
-        {% endif %}
+      device_class: battery
+
+- platform: template
+  sensors:
+    landing_window_1_battery:
+      friendly_name: Window 1
+      unit_of_measurement: "%"
+      value_template: "{{ states.binary_sensor.landing_window_1.attributes.battery_level }}"
+      device_class: battery
+
+- platform: template
+  sensors:
+    landing_window_2_battery:
+      friendly_name: Window 2
+      unit_of_measurement: "%"
+      value_template: "{{ states.binary_sensor.landing_window_2.attributes.battery_level }}"
+      device_class: battery
 
 - platform: template
   sensors:
@@ -46,62 +41,4 @@
           /local/window_open.png
         {% elif is_state('binary_sensor.landing_window_1', 'on') %}
           /local/window_half_open.png
-        {% endif %}
-
-- platform: template
-  sensors:
-    landing_window_1_battery:
-      friendly_name: Window 1
-      unit_of_measurement: "%"
-      value_template: "{{ states.binary_sensor.landing_window_1.attributes.battery_level }}"
-      icon_template: >-
-        {% if states.binary_sensor.landing_window_1.attributes.battery_level <= 10 %}
-          mdi:battery-10
-        {% elif states.binary_sensor.landing_window_1.attributes.battery_level <= 20 %}
-          mdi:battery-20
-        {% elif states.binary_sensor.landing_window_1.attributes.battery_level <= 30 %}
-          mdi:battery-30
-        {% elif states.binary_sensor.landing_window_1.attributes.battery_level <= 40 %}
-          mdi:battery-40
-        {% elif states.binary_sensor.landing_window_1.attributes.battery_level <= 50 %}
-          mdi:battery-50
-        {% elif states.binary_sensor.landing_window_1.attributes.battery_level <= 60 %}
-          mdi:battery-60
-        {% elif states.binary_sensor.landing_window_1.attributes.battery_level <= 70 %}
-          mdi:battery-70
-        {% elif states.binary_sensor.landing_window_1.attributes.battery_level <= 80 %}
-          mdi:battery-80
-        {% elif states.binary_sensor.landing_window_1.attributes.battery_level <= 90 %}
-          mdi:battery-90
-        {% else %}
-          mdi:battery
-        {% endif %}
-
-- platform: template
-  sensors:
-    landing_window_2_battery:
-      friendly_name: Window 2
-      unit_of_measurement: "%"
-      value_template: "{{ states.binary_sensor.landing_window_2.attributes.battery_level }}"
-      icon_template: >-
-        {% if states.binary_sensor.landing_window_2.attributes.battery_level <= 10 %}
-          mdi:battery-10
-        {% elif states.binary_sensor.landing_window_2.attributes.battery_level <= 20 %}
-          mdi:battery-20
-        {% elif states.binary_sensor.landing_window_2.attributes.battery_level <= 30 %}
-          mdi:battery-30
-        {% elif states.binary_sensor.landing_window_2.attributes.battery_level <= 40 %}
-          mdi:battery-40
-        {% elif states.binary_sensor.landing_window_2.attributes.battery_level <= 50 %}
-          mdi:battery-50
-        {% elif states.binary_sensor.landing_window_2.attributes.battery_level <= 60 %}
-          mdi:battery-60
-        {% elif states.binary_sensor.landing_window_2.attributes.battery_level <= 70 %}
-          mdi:battery-70
-        {% elif states.binary_sensor.landing_window_2.attributes.battery_level <= 80 %}
-          mdi:battery-80
-        {% elif states.binary_sensor.landing_window_2.attributes.battery_level <= 90 %}
-          mdi:battery-90
-        {% else %}
-          mdi:battery
         {% endif %}
