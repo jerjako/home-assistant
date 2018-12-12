@@ -19,10 +19,6 @@
       to: "off"
       for:
         minutes: 10 # default Xiaomi rearm is 2mn
-#  condition:
-#    - condition: state
-#      entity_id: binary_sensor.bathroom_humidity_high
-#      state: "off"
   action:
     - service: light.turn_on
       data:
@@ -31,6 +27,9 @@
         rgb_color: [255, 255, 0]
         transition: 5
     - delay: 00:00:30
+    - condition: state
+      entity_id: binary_sensor.bathroom_motion_sensor
+      state: "off"  # if a movement is triggered, stop turn off sequence
     - service: light.turn_off
       data:
         entity_id: light.bathroom_lights
@@ -41,9 +40,11 @@
     - platform: state
       entity_id: binary_sensor.bathroom_humidity_high
       to: "on"
+  condition:
+    - condition: state
+      entity_id: light.bathroom_lights
+      state: "on"
   action:
-    # - service: light.turn_on
-    #   entity_id: light.bathroom_lights
     - service: mqtt.publish
       data_template:
         topic: 'cmnd/sonoff1/POWER'
