@@ -20,7 +20,7 @@
       data:
         entity_id: light.hallway_lights
         brightness: 255
-        rgb_color: [255, 255, 255]
+        color_temp: 1
     - delay: 00:01:00
     - service: light.turn_off
       entity_id: light.hallway_lights

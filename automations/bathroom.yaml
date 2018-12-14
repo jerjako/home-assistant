@@ -9,7 +9,7 @@
       data:
         entity_id: light.bathroom_lights
         brightness: 255
-        rgb_color: [255, 255, 255]
+        color_temp: 1
 
 - id: turn_off_lights_when_there_is_no_movement
   alias: Turn off lights when there is no movement
