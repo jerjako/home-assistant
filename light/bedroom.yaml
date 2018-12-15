@@ -1,7 +1,7 @@
 - platform: group
   name: Bedroom Lights
   entities:
-    - light.chambre_2
+    - light.chambre
 
 - platform: group
   name: Bedroom Bedlights
