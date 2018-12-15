@@ -40,10 +40,11 @@
         {% endif %}
 
 - id: loft_radiator_eco
-  alias: Change loft radiator to eco mode
+  alias: Loft Radiator eco
   trigger:
-    - platform: template
-      value_template: "{% if is_state_attr('climate.family_room', 'operation_mode', 'eco') %}true{% endif %}"
+    - platform: state
+      entity_id: input_boolean.home_radiators
+      to: "off"
   action:
     - service: input_select.select_option
       data_template:
@@ -51,10 +52,11 @@
         option: Eco
 
 - id: loft_radiator_heat
-  alias: Change loft radiator to heat mode
+  alias: Loft Radiator heat
   trigger:
-    - platform: template
-      value_template: "{% if is_state_attr('climate.family_room', 'operation_mode', 'heat') %}true{% endif %}"
+    - platform: state
+      entity_id: input_boolean.home_radiators
+      to: "on"
   action:
     - service: input_select.select_option
       data_template:

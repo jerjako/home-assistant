@@ -9,8 +9,8 @@ loft_automations:
   view: no
   entities:
     - automation.loft_radiator
-    - automation.change_loft_radiator_to_eco_mode
-    - automation.change_loft_radiator_to_heat_mode
+    - automation.loft_radiator_eco
+    - automation.loft_radiator_heat
 
 loft:
   name: Loft

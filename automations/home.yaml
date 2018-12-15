@@ -44,8 +44,8 @@
 - id: daily_backup_and_cleaning
   alias: Daily Backup
   trigger:
-    platform: time
-    at: 03:00:00
+    - platform: time
+      at: "03:00:00"
   action:
     - service: hassio.snapshot_full
       data_template:
@@ -114,3 +114,220 @@
     - service: notify.ios
       data:
         message: Test - Not home
+
+- id: home_radiators_eco
+  alias: Home Radiators eco
+  trigger:
+    - platform: state
+      entity_id: input_boolean.home_radiators
+      to: "off"
+  action:
+    - service: notify.ios
+      data:
+        message: Radiator - Eco
+
+- id: home_radiators_heat
+  alias: Home Radiators heat
+  trigger:
+    - platform: state
+      entity_id: input_boolean.home_radiators
+      to: "on"
+  action:
+    - service: notify.ios
+      data:
+        message: Radiator - Heat
+
+# Radiator Schedule
+#  - At 3h00, 18° in the bedroom
+#  - At 7h00, 20° in the living room
+#  - At 9h30, 16° in the living room
+#  - At 17h30, 20° in the living room
+
+- id: home_radiators_schedule_eco
+  alias: Home Radiators schedule eco
+  trigger:
+    - platform: time
+      at: "03:00:00"
+    - platform: time
+      at: "07:00:00"
+    - platform: time
+      at: "09:00:00"
+    - platform: time
+      at: "17:30:00"
+
+    - platform: template # 03:00:00 - 18°
+      value_template: "{% if states.sensor.bedroom_temperature.state|float > 18 %}true{% else %}false{% endif %}"
+
+    - platform: template # 07:00:00 - 20°
+     value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+
+    - platform: template # 09:00:00 - 16°
+      value_template: "{% if states.sensor.living_room_temperature.state|float > 16 %}true{% else %}false{% endif %}"
+
+    - platform: template # 17:30:00 - 20°
+      value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+  condition:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: input_boolean.home_radiators_schedule
+          state: "on"
+        - condition: or
+          conditions:
+            - condition: template
+              value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+            - condition: and
+              conditions:
+                - condition: time
+                  after: "03:00:00"
+                  weekday:
+                    - mon
+                    - tue
+                    - wed
+                    - thu
+                    - fri
+                - condition: template
+                  value_template: "{% if states.sensor.bedroom_temperature.state|float > 18 %}true{% else %}false{% endif %}"
+            - condition: and
+              conditions:
+                - condition: time
+                  after: "07:00:00"
+                  weekday:
+                    - mon
+                    - tue
+                    - wed
+                    - thu
+                    - fri
+                - condition: template
+                  value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+            - condition: and
+              conditions:
+                - condition: time
+                  after: "09:30:00"
+                  weekday:
+                    - mon
+                    - tue
+                    - wed
+                    - thu
+                    - fri
+                - condition: template
+                  value_template: "{% if states.sensor.living_room_temperature.state|float > 16 %}true{% else %}false{% endif %}"
+            - condition: and
+              conditions:
+                - condition: time
+                  after: "17:30:00"
+                  weekday:
+                    - mon
+                    - tue
+                    - wed
+                    - thu
+                    - fri
+                - condition: template
+                  value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.home_radiators
+
+- id: home_radiators_schedule_heat
+  alias: Home Radiators schedule heat
+  trigger:
+    - platform: time
+      at: "00:00:00"
+    - platform: time
+      at: "03:00:00"
+    - platform: time
+      at: "07:00:00"
+    - platform: time
+      at: "09:00:00"
+    - platform: time
+      at: "17:30:00"
+
+    - platform: template # 00:00:00 - 20°
+      value_template: "{% if states.sensor.bedroom_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+
+    - platform: template # 03:00:00 - 18°
+      value_template: "{% if states.sensor.bedroom_temperature.state|float < 17.5 %}true{% else %}false{% endif %}"
+    
+    - platform: template # 07:00:00 - 20°
+      value_template: "{% if states.sensor.living_room_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+    
+    - platform: template # 09:00:00 - 16°
+      value_template: "{% if states.sensor.living_room_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
+    
+    - platform: template # 17:30:00 - 20°
+      value_template: "{% if states.sensor.living_room_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+  condition:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: input_boolean.home_radiators_schedule
+          state: "on"
+        - condition: or
+          conditions:
+            - condition: template
+              value_template: "{% if states.sensor.bedroom_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
+            - condition: and
+              conditions:
+                - condition: time
+                  after: "00:00:00"
+                  weekday:
+                    - mon
+                    - tue
+                    - wed
+                    - thu
+                    - fri
+                - condition: template
+                  value_template: "{% if states.sensor.bedroom_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+            - condition: and
+              conditions:
+                - condition: time
+                  after: "03:00:00"
+                  weekday:
+                    - mon
+                    - tue
+                    - wed
+                    - thu
+                    - fri
+                - condition: template
+                  value_template: "{% if states.sensor.bedroom_temperature.state|float < 17.5 %}true{% else %}false{% endif %}"
+            - condition: and
+              conditions:
+                - condition: time
+                  after: "07:00:00"
+                  weekday:
+                    - mon
+                    - tue
+                    - wed
+                    - thu
+                    - fri
+                - condition: template
+                  value_template: "{% if states.sensor.living_room_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+            - condition: and
+              conditions:
+                - condition: time
+                  after: "09:30:00"
+                  weekday:
+                    - mon
+                    - tue
+                    - wed
+                    - thu
+                    - fri
+                - condition: template
+                  value_template: "{% if states.sensor.living_room_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
+            - condition: and
+              conditions:
+                - condition: time
+                  after: "17:30:00"
+                  weekday:
+                    - mon
+                    - tue
+                    - wed
+                    - thu
+                    - fri
+                - condition: template
+                  value_template: "{% if states.sensor.living_room_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+  action:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.home_radiators

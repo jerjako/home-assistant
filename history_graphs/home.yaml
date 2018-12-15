@@ -1,26 +1,27 @@
 home_temperatures:
   hours_to_show: 168
   entities:
-    - sensor.family_room_thermostat_temperature
-    - sensor.wc_temp
     - sensor.hallway_temperature
-    - sensor.kitchen_temperature
-    - sensor.bedroom_temperature
-    - sensor.bathroom_temperature
-    - sensor.loft_temperature
     - sensor.living_room_temperature
+    - sensor.dining_room_temperature
+    - sensor.kitchen_temperature
+    - sensor.bathroom_temperature
+    - sensor.wc_temperature
     - sensor.landing_temperature
+    - sensor.bedroom_temperature
     - sensor.desk_temperature
+    - sensor.loft_temperature
 
 home_humidities:
   hours_to_show: 168
   entities:
-    - sensor.family_room_thermostat_humidity
     - sensor.hallway_humidity
-    - sensor.kitchen_humidity
-    - sensor.bedroom_humidity
-    - sensor.bathroom_humidity
-    - sensor.loft_humidity
     - sensor.living_room_humidity
+    - sensor.dining_room_humidity
+    - sensor.kitchen_humidity
+    - sensor.bathroom_humidity
+    - sensor.wc_humidity
     - sensor.landing_humidity
+    - sensor.bedroom_humidity
     - sensor.desk_humidity
+    - sensor.loft_humidity

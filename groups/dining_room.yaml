@@ -3,8 +3,5 @@ dining_room:
   view: yes
   entities:
     - light.dining_room_lights
-    - climate.family_room
-    - sensor.family_room_thermostat_temperature
-    - automation.send_sms_when_the_nest_go_on_eco_mode
-    - automation.send_sms_when_the_nest_go_on_heat_mode
-    - sensor.family_room_thermostat_humidity
+    - sensor.dining_room_temperature
+    - sensor.dining_room_humidity

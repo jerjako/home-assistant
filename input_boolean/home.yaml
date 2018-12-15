@@ -1,0 +1,9 @@
+home_radiators_schedule:
+  name: Radiators schedule
+  initial: on
+  icon: mdi:calendar-clock
+
+home_radiators:
+  name: Radiators
+  initial: off
+  icon: mdi:radiator

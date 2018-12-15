@@ -34,8 +34,8 @@ bathroom_automations:
     - automation.turn_on_lights_when_humidity_is_over_the_normal
     - automation.turn_off_lights_when_there_is_no_movement
     - automation.turn_off_lights_when_humidity_is_low
-    - automation.change_radiator_to_heat_mode
-    - automation.change_radiator_to_eco_mode
+    - automation.bathroom_radiator_heat
+    - automation.bathroom_radiator_eco
     - automation.bathroom_radiator_heat
     - automation.pair_glass_and_lights__on
     - automation.pair_glass_and_lights__off

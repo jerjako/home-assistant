@@ -34,6 +34,22 @@ home_doors_windows_covers:
     - sensor.desk_window
     - cover.desk
 
+home_radiators:
+  name: Radiators
+  view: no
+  control: hidden
+  entities:
+    - input_boolean.home_radiators_schedule
+    - input_boolean.home_radiators
+
+home_automations:
+  name: Automations
+  view: no
+  control: hidden
+  entities:
+    - automation.home_radiators_eco
+    - automation.home_radiators_heat
+
 default_view:
   name: Home
   icon: mdi:home
@@ -44,11 +60,13 @@ default_view:
     - sensor.yr_symbol
     - device_tracker.iphonejerjako
     - sensor.travel_time_to_home
+    - group.home_lights
+    - group.home_doors_windows_covers
+    - group.home_radiators
+    - group.home_automations
     - history_graph.home_temperatures
     - history_graph.home_humidities
     - group.all_automations
     - group.all_devices
-    - group.home_lights
-    - group.home_doors_windows_covers
     - group.all_scripts
     - group.all_switches

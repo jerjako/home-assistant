@@ -17,6 +17,7 @@ battery_dining_room:
   name: Dining room
   view: no
   entities:
+    - sensor.dining_room_thermometer_battery
 
 battery_kitchen:
   name: Kitchen
