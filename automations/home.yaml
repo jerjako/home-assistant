@@ -159,7 +159,7 @@
       value_template: "{% if states.sensor.bedroom_temperature.state|float > 18 %}true{% else %}false{% endif %}"
 
     - platform: template # 07:00:00 - 20°
-     value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+      value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
 
     - platform: template # 09:00:00 - 16°
       value_template: "{% if states.sensor.living_room_temperature.state|float > 16 %}true{% else %}false{% endif %}"
