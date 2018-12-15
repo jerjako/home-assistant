@@ -7,7 +7,7 @@
   action:
     - service: notify.ios
       data:
-        message: Door open
+        message: Hallway - Door open
     - service: xiaomi_aqara.play_ringtone
       data:
         gw_mac: !secret xiaomi_aqara_gateways_mac

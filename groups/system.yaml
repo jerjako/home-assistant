@@ -30,6 +30,16 @@ system_system_monitor:
     - sensor.ipv4_address_eth0
     - sensor.last_boot
 
+system_automations:
+  name: Automations
+  view: no
+  entities:
+    - automation.system_started
+    - automation.system_shutdown
+    - automation.system_update_available
+    - automation.system_login_failed
+    - automation.system_daily_backup
+
 system:
   name: System
   icon: mdi:chip
@@ -38,5 +48,4 @@ system:
     - group.system_system_monitor
     - group.system_speedtest
     - group.system_breaches
-    - automation.daily_backup
-    - automation.leave_home
+    - group.system_automations

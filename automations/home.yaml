@@ -1,67 +1,5 @@
-- id: hassio-startup
-  alias: Startup Notification
-  trigger:
-    - platform: homeassistant
-      event: start
-  action:
-    - service: notify.ios
-      data:
-        message: System started
-    - delay: 00:05  # Waits 5 minutes to starting HomeKit (Zwave and Wifi light fully ready)
-    - service: homekit.start
-
-- id: hassio-shutdown
-  alias: Shutdown Notification
-  trigger:
-    - platform: homeassistant
-      event: shutdown
-  action:
-    - service: notify.ios
-      data:
-        message: System shutdown
-
-- id: hassio-update-notif
-  alias: Update Notification
-  trigger:
-    - platform: state
-      entity_id: updater.updater
-  action:
-    - service: notify.ios
-      data:
-        message: Update Available
-
-- id: hassio-login-failed
-  alias: Login Failure
-  hide_entity: True
-  trigger:
-    - platform: template
-      value_template: "{{ states('persistent_notification.httplogin') != 'authentication' }}"
-  action:
-    - service: notify.ios
-      data:
-        message: Login failed
-
-- id: daily_backup_and_cleaning
-  alias: Daily Backup
-  trigger:
-    - platform: time
-      at: "03:00:00"
-  action:
-    - service: hassio.snapshot_full
-      data_template:
-        name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
-    - service: notify.ios
-      data_template:
-        message: "Creating backup named: Automated Backup {{ now().strftime('%Y-%m-%d') }}"
-    - service: shell_command.delete_old_snapshots
-    - delay: 00:30:00
-    - service: hassio.addon_stdin
-      data:
-        addon: 7be23ff5_dropbox_sync
-        input: {'command':'upload'}
-
 - id: xiaomi_switch_1
-  alias: Switch 1
+  alias: Xiaomi Switch 1
   trigger:
     - platform: event
       event_type: click
@@ -71,10 +9,10 @@
   action:
     - service: notify.ios
       data:
-        message: Switch 1
+        message: Test - Switch 1
 
 - id: xiaomi_switch_2
-  alias: Switch 2
+  alias: Xiaomi Switch 2
   trigger:
     - platform: event
       event_type: click
@@ -84,7 +22,7 @@
   action:
     - service: notify.ios
       data:
-        message: Switch 2
+        message: Test - Switch 2
 
 - id: cover_close
   alias: Cover close
@@ -102,7 +40,7 @@
            - cover.living_room
     - service: notify.ios
       data:
-        message: Cover closed
+        message: Covers - Closed
 
 - id: leave_home
   alias: Leave home
@@ -124,7 +62,7 @@
   action:
     - service: notify.ios
       data:
-        message: Radiator - Eco
+        message: Radiators - Eco
 
 - id: home_radiators_heat
   alias: Home Radiators heat
@@ -135,7 +73,7 @@
   action:
     - service: notify.ios
       data:
-        message: Radiator - Heat
+        message: Radiators - Heat
 
 # Radiator Schedule
 #  - At 3h00, 18° in the bedroom
