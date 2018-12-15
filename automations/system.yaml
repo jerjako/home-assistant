@@ -21,14 +21,14 @@
         message: System - Shutdown
 
 - id: system_update_available
-  alias: System Uptade available
+  alias: System Update available
   trigger:
     - platform: state
       entity_id: updater.updater
   action:
     - service: notify.ios
       data:
-        message: System - Update Available
+        message: System - Update available
 
 - id: system_login_failed
   alias: System Login failed
