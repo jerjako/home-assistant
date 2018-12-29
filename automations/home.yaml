@@ -2,7 +2,7 @@
   alias: Xiaomi Switch 1
   trigger:
     - platform: event
-      event_type: click
+      event_type: xiaomi_aqara.click
       event_data:
         entity_id: binary_sensor.home_switch_1
         click_type: single
@@ -15,7 +15,7 @@
   alias: Xiaomi Switch 2
   trigger:
     - platform: event
-      event_type: click
+      event_type: xiaomi_aqara.click
       event_data:
         entity_id: binary_sensor.home_switch_2
         click_type: single
