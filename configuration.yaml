@@ -31,6 +31,7 @@ updater:
 discovery:
   ignore:
     - yamaha
+    - harmony
 
 # Enables support for tracking state changes over time
 history:
@@ -96,11 +97,11 @@ device_tracker:
     password: !secret device_tracker_icloud_password
     account_name: !secret device_tracker_icloud_account_name
 
-remote:
-  - platform: harmony
-    name: Living Room
-    host: !secret remote_host
-    activity: ""
+# remote:
+#   - platform: harmony
+#     name: Living Room
+#     host: !secret remote_host
+#     activity: ""
 
 logger:
   default: info
