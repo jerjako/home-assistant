@@ -28,5 +28,40 @@
     - delay: 01:30:00
     - service: light.turn_off
       data:
-         entity_id:
-           - light.go
+        entity_id: light.bedroom_bedlights
+
+- id: bedroom_lights_asleep
+  alias: Bedroom lights asleep
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+        entity_id: binary_sensor.bedroom_switch
+        click_type: single
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+        entity_id: binary_sensor.bedroom_switch
+        click_type: double
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: 
+          - light.hallway_lights
+          - light.living_room_lights
+          - light.living_room_lightstrip
+          - light.dining_room_lights
+          - light.kitchen_lights
+          - light.bathroom_lights
+          - light.bathroom_glass
+          - light.wc_lights
+          - light.landing_lights
+          - light.bedroom_lights
+          - light.bedroom_bedlights
+          - light.desk_lights
+          - light.loft_lights
+    - condition: template
+      value_template: "{{ state_attr('binary_sensor.bedroom_switch', 'last_action') == 'single' }}"
+    - service: light.turn_on
+      data:
+        entity_id: light.bedroom_bedlights

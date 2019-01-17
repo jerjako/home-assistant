@@ -3,6 +3,7 @@ bedroom_automations:
   view: no
   entities:
     - automation.bedroom_wake_up
+    - automation.bedroom_lights_asleep
 
 bedroom_scenes:
   name: Scenes
