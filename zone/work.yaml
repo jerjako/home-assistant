@@ -1,9 +1,9 @@
-- name: Xee
+- name: xee
   latitude: !secret work_xee_latitude
   longitude: !secret work_xee_longitude
   radius: 100
   icon: mdi:worker
-- name: Scaleway
+- name: scaleway
   latitude: !secret work_scaleway_latitude
   longitude: !secret work_scaleway_longitude
   radius: 100

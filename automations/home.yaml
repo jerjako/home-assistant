@@ -47,11 +47,52 @@
   trigger:
     - platform: state
       entity_id: device_tracker.iphonejerjako
+      from: "home"
       to: "not_home"
+      for:
+        seconds: 10
   action:
     - service: notify.ios
       data:
-        message: Test - Not home
+        message: Test - Leave home
+
+- id: at_home
+  alias: At home
+  trigger:
+    - platform: state
+      entity_id: device_tracker.iphonejerjako
+      from: "not_home"
+      to: "home"
+  action:
+    - service: notify.ios
+      data:
+        message: Test - At home
+
+- id: leave_office
+  alias: Leave office
+  trigger:
+    - platform: state
+      entity_id: device_tracker.iphonejerjako
+      from: "scaleway"
+      to: "not_home"
+      for:
+        seconds: 10
+  action:
+    - service: notify.ios
+      data:
+        message: Test - Leave office
+
+- id: at_office
+  alias: At office
+  trigger:
+    - platform: state
+      entity_id: device_tracker.iphonejerjako
+      from: "not_home"
+      to: "scaleway"
+  action:
+    - service: notify.ios
+      data:
+        message: Test - At office
 
 - id: home_radiators_eco
   alias: Home Radiators eco

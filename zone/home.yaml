@@ -1,4 +1,4 @@
-- name: Home
+- name: home
   latitude: !secret home_latitude
   longitude: !secret home_longitude
   elevation: !secret home_elevation

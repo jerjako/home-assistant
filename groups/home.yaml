@@ -51,7 +51,10 @@ home_automations:
     - automation.xiaomi_switch_1
     - automation.xiaomi_switch_2
     - automation.cover_close
+    - automation.at_home
     - automation.leave_home
+    - automation.at_office
+    - automation.leave_office
     - automation.home_radiators_eco
     - automation.home_radiators_heat
     - automation.home_radiators_schedule_eco
