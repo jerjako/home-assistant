@@ -15,3 +15,6 @@ light.loft_light:
 light.loft_radiator:
   friendly_name: Loft Radiator
   hidden: true
+
+binary_sensor.loft_window:
+  friendly_name: Loft Window

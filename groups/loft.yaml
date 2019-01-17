@@ -19,6 +19,7 @@ loft:
     - light.loft_lights
     - group.loft_radiators
     - group.loft_automations
+    - binary_sensor.loft_window
     - sensor.loft_temperature
     - sensor.loft_humidity
     - sensor.loft_radiator_power

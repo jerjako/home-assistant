@@ -33,6 +33,7 @@ home_doors_windows_covers:
     - cover.bedroom
     - sensor.desk_window
     - cover.desk
+    - sensor.loft_window
 
 home_radiators:
   name: Radiators
