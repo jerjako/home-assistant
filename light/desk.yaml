@@ -1,5 +1,17 @@
+- platform: yeelight
+  devices:
+    192.168.1.37:
+      name: Desk 1
+      use_music_mode: False
+      save_on_change: True
+    192.168.1.36:
+      name: Desk 2
+      use_music_mode: False
+      save_on_change: True
+
+
 - platform: group
   name: Desk Lights
   entities:
-    - light.bureau_1
-    - light.bureau_2
+    - light.desk_1
+    - light.desk_2

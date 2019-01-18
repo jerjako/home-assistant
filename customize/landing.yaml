@@ -1,5 +1,11 @@
 light.landing_lights:
   friendly_name: Landing Lights
+light.yeelight_color2_04cf8c90985c:
+  friendly_name: Landing 1
+  hidden: true
+light.yeelight_color2_04cf8c8491a2:
+  friendly_name: Landing 2
+  hidden: true
 
 cover.landing:
   friendly_name: Landing Cover

@@ -5,6 +5,9 @@ sensor.bedroom_humidity:
 
 light.bedroom_lights:
   friendly_name: Bedroom Lights
+light.yeelight_color2_04cf8c87ae22:
+  friendly_name: Bedroom 1
+  hidden: true
 light.bedroom_bedlights:
   friendly_name: Bedroom Bedlights
 light.go:

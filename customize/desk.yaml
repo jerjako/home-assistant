@@ -1,5 +1,11 @@
 light.desk_lights:
   friendly_name: Desk Lights
+light.yeelight_color2_04cf8c87d2d7:
+  friendly_name: Desk 1
+  hidden: true
+light.yeelight_color2_04cf8c9093ba:
+  friendly_name: Desk 2
+  hidden: true
 
 cover.desk:
   friendly_name: Desk Cover
