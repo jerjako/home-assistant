@@ -5,6 +5,12 @@ bathroom_lights:
     - light.bathroom_lights
     - light.bathroom_glass
 
+bathroom_boiler:
+  name: Boiler
+  view: no
+  entities:
+    - switch.boiler
+
 bathroom_radiators:
   name: Radiator
   view: no
@@ -46,6 +52,7 @@ bathroom:
   entities:
     - group.bathroom_lights
     - group.bathroom_cmv
+    - group.bathroom_boiler
     - group.bathroom_radiators
     - group.bathroom_status
     - group.bathroom_automations

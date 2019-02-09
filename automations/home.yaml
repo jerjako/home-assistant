@@ -159,6 +159,7 @@
               conditions:
                 - condition: time
                   after: "03:00:00"
+                  before: "07:00:00"
                   weekday:
                     - mon
                     - tue
@@ -171,6 +172,7 @@
               conditions:
                 - condition: time
                   after: "07:00:00"
+                  before: "09:30:00"
                   weekday:
                     - mon
                     - tue
@@ -183,6 +185,7 @@
               conditions:
                 - condition: time
                   after: "09:30:00"
+                  before: "17:30:00"
                   weekday:
                     - mon
                     - tue
@@ -195,6 +198,7 @@
               conditions:
                 - condition: time
                   after: "17:30:00"
+                  before: "23:59:59"
                   weekday:
                     - mon
                     - tue
@@ -250,6 +254,7 @@
               conditions:
                 - condition: time
                   after: "00:00:00"
+                  before: "03:00:00"
                   weekday:
                     - mon
                     - tue
@@ -262,6 +267,7 @@
               conditions:
                 - condition: time
                   after: "03:00:00"
+                  before: "07:00:00"
                   weekday:
                     - mon
                     - tue
@@ -274,6 +280,7 @@
               conditions:
                 - condition: time
                   after: "07:00:00"
+                  before: "09:30:00"
                   weekday:
                     - mon
                     - tue
@@ -286,6 +293,7 @@
               conditions:
                 - condition: time
                   after: "09:30:00"
+                  before: "17:30:00"
                   weekday:
                     - mon
                     - tue
@@ -298,6 +306,7 @@
               conditions:
                 - condition: time
                   after: "17:30:00"
+                  before: "23:59:59"
                   weekday:
                     - mon
                     - tue

@@ -144,6 +144,9 @@
       entity_id: input_boolean.home_radiators
       to: "off"
   action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.boiler
     - service: input_select.select_option
       data_template:
         entity_id: input_select.bathroom_radiator
@@ -156,6 +159,9 @@
       entity_id: input_boolean.home_radiators
       to: "on"
   action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.boiler
     - service: input_select.select_option
       data_template:
         entity_id: input_select.bathroom_radiator

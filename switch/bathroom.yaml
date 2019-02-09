@@ -7,3 +7,13 @@
   payload_on: 'ON'
   payload_off: 'OFF'
   retain: true
+
+- platform: mqtt
+  icon: mdi:fire
+  name: Boiler
+  command_topic: cmnd/sonoff-heat/POWER
+  state_topic: stat/sonoff-heat/POWER
+  qos: 1
+  payload_on: 'ON'
+  payload_off: 'OFF'
+  retain: true

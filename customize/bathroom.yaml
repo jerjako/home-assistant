@@ -26,6 +26,8 @@ light.yeelight_color2_7c49ebb72e4d:
 
 switch.sonoff_1:
   friendly_name: Bathroom CMV
+switch.boiler:
+  friendly_name: Boiler
 
 input_boolean.bathroom_humidity_high:
   friendly_name: Humidity high
