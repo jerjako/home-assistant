@@ -69,6 +69,7 @@ default_view:
     - sun.sun
     - sensor.yr_symbol
     - device_tracker.iphonejerjako
+    - device_tracker.iphone_karine
     - sensor.travel_time_to_home
     - group.home_lights
     - group.home_doors_windows_covers
