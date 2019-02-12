@@ -96,6 +96,10 @@ device_tracker:
     username: !secret device_tracker_icloud_username
     password: !secret device_tracker_icloud_password
     account_name: !secret device_tracker_icloud_account_name
+  - platform: netgear
+    host: 192.168.1.1
+    username: !secret device_tracker_netgear_username
+    password: !secret device_tracker_netgear_password
 
 # remote:
 #   - platform: harmony
@@ -131,6 +135,7 @@ homekit:
       # Bedroom
       - light.bedroom_lights
       - light.bedroom_bedlights
+      - light.bedroom_desk
       - cover.bedroom
       # Desk
       - light.desk_lights
@@ -170,6 +175,8 @@ homekit:
       name: Bedroom lights
     light.bedroom_bedlights:
       name: Bedroom bedlights
+    light.bedroom_desk:
+      name: Bedroom desk
     cover.bedroom:
       name: Bedroom cover
     # Desk
@@ -245,6 +252,9 @@ emulated_hue:
     light.bedroom_bedlights:
       name: Bedroom bedlights
       hidden: false
+    light.bedroom_desk:
+      name: Bedroom desk
+      hidden: false
     cover.bedroom:
       name: Bedroom cover
       hidden: false
@@ -308,6 +318,9 @@ google_assistant:
       room: Chambre
     light.bedroom_bedlights:
       name: Go
+      room: Chambre
+    light.bedroom_desk:
+      name: Chambre bureau
       room: Chambre
     cover.bedroom:
       name: Volet
