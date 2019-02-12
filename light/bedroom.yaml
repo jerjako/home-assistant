@@ -5,6 +5,15 @@
       use_music_mode: False
       save_on_change: True
 
+- platform: mqtt
+  name: Bedroom Desk
+  command_topic: cmnd/sonoff-bedroom-desk/POWER
+  state_topic: stat/sonoff-bedroom-desk/POWER
+  qos: 1
+  payload_on: 'ON'
+  payload_off: 'OFF'
+  retain: true
+
 - platform: group
   name: Bedroom Lights
   entities:

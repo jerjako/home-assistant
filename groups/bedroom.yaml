@@ -26,6 +26,7 @@ bedroom:
   entities:
     - light.bedroom_lights
     - light.bedroom_bedlights
+    - light.bedroom_desk
     - group.bedroom_window_cover
     - group.bedroom_automations
     - group.bedroom_scenes
