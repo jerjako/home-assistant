@@ -18,7 +18,7 @@ system_system_monitor:
   name: System Monitor
   view: no
   entities:
-    - sensor.disk_use_percent_
+    - sensor.disk_use_percent
     - sensor.network_in_eth0
     - sensor.network_out_eth0
     - sensor.received_eth0

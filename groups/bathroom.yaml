@@ -43,8 +43,8 @@ bathroom_automations:
     - automation.bathroom_radiator_heat
     - automation.bathroom_radiator_eco
     - automation.bathroom_radiator_heat
-    - automation.pair_glass_and_lights__on
-    - automation.pair_glass_and_lights__off
+    - automation.pair_glass_and_lights_on
+    - automation.pair_glass_and_lights_off
 
 bathroom:
   name: Bathroom
