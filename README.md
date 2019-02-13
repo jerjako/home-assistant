@@ -8,3 +8,4 @@ Welcome to my Home Assistant configuration.
 - **Home**
     - Push notif for low battery Xiaomy sensors
     - Push notif if not home and a light, TV switch is still on or a window is open
+    - Use home presence detection for week-end radiators heat

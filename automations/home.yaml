@@ -172,7 +172,7 @@
               conditions:
                 - condition: time
                   after: "07:00:00"
-                  before: "09:30:00"
+                  before: "09:00:00"
                   weekday:
                     - mon
                     - tue
@@ -184,7 +184,7 @@
             - condition: and
               conditions:
                 - condition: time
-                  after: "09:30:00"
+                  after: "09:00:00"
                   before: "17:30:00"
                   weekday:
                     - mon
@@ -249,6 +249,8 @@
         - condition: or
           conditions:
             - condition: template
+              value_template: "{% if states.sensor.living_room_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
+            - condition: template
               value_template: "{% if states.sensor.bedroom_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
             - condition: and
               conditions:
@@ -262,7 +264,7 @@
                     - thu
                     - fri
                 - condition: template
-                  value_template: "{% if states.sensor.bedroom_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+                  value_template: "{% if states.sensor.bedroom_temperature.state|float < 18.5 %}true{% else %}false{% endif %}"
             - condition: and
               conditions:
                 - condition: time
