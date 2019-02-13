@@ -5,6 +5,9 @@
       entity_id: binary_sensor.wc_motion_sensor
       to: "on"
   action:
+    - condition: state
+      entity_id: binary_sensor.home_presence_detection
+      state: "off"
     - service: light.turn_on
       data:
         entity_id: light.wc_lights
@@ -33,4 +36,3 @@
     - service: notify.ios
       data:
         message: WC - Water leak detected
-
