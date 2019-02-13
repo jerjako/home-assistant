@@ -13,6 +13,7 @@ home_lights:
     - light.landing_lights
     - light.bedroom_lights
     - light.bedroom_bedlights
+    - light.bedroom_desk
     - light.desk_lights
     - light.loft_lights
 
