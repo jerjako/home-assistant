@@ -10,9 +10,6 @@ light.yeelight_color2_04cf8c87ae22:
   hidden: true
 light.bedroom_bedlights:
   friendly_name: Bedroom Bedlights
-light.go:
-  friendly_name: Bedroom Bedlight
-  hidden: true
 
 cover.bedroom:
   friendly_name: Bedroom Cover

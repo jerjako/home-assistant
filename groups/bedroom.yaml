@@ -5,12 +5,6 @@ bedroom_automations:
     - automation.bedroom_wake_up
     - automation.bedroom_lights_asleep
 
-bedroom_scenes:
-  name: Scenes
-  view: no
-  entities:
-    - scene.bedroom_wake_up
-
 bedroom_window_cover:
   name: Window & Cover
   view: no

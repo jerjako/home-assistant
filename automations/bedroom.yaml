@@ -23,8 +23,13 @@
             - sat
             - sun
   action:
-    - service: scene.turn_on
-      entity_id: scene.bedroom_wake_up
+    - service: light.turn_on
+      data:
+        entity_id: light.bedroom_bedlights
+        state: on
+        brightness: 255
+        rgb_color: [221,167,79]
+        transition: 1800
     - delay: 01:30:00
     - service: light.turn_off
       data:

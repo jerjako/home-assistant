@@ -1,8 +1,0 @@
-- id: bedroom_wake_up
-  name: Bedroom Wake Up
-  entities:
-    light.go:
-      state: on
-      rgb_color: [221,167,79]
-      brightness: 254
-      transition: 1800
