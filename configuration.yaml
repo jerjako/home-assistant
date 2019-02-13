@@ -41,6 +41,8 @@ recorder:
 # View all events in a logbook
 logbook:
 
+system_health:
+
 # Enables a map showing the location of tracked devices
 map:
 
@@ -279,63 +281,80 @@ google_assistant:
     light.hallway_lights:
       name: Lumières
       room: Entrée
+      expose: true
     # Living room
     light.living_room_lights:
       name: Lumières
       room: Salon
+      expose: true
     cover.living_room:
       name: Volet
       room: Salon
+      expose: true
     # Dining room
     light.dining_room_lights:
       name: Lumières
       room: Salle à manger
+      expose: true
     # Kitchen
     light.kitchen_lights:
       name: Lumières
       room: Cuisine
+      expose: true
     cover.kitchen:
       name: Volet
       room: Cuisine
+      expose: true
     # Bathroom
     light.bathroom_lights:
       name: Lumières
       room: Salle de bain
+      expose: true
     # WC
     light.wc_lights:
       name: Lumières
       room: Toilettes
+      expose: true
     # Landing
     light.landing_lights:
       name: Lumières
       room: Palier
+      expose: true
     cover.landing:
       name: Volet
       room: Palier
+      expose: true
     # Bedroom
     light.bedroom_lights:
       name: Lumières
       room: Chambre
+      expose: true
     light.bedroom_bedlights:
-      name: Go
+      name: Lampe de chevet
       room: Chambre
+      expose: true
     light.bedroom_desk:
-      name: Chambre bureau
+      name: Bureau
       room: Chambre
+      expose: true
     cover.bedroom:
       name: Volet
       room: Chambre
+      expose: true
     # Desk
     light.desk_lights:
       name: Lumières
       room: Bureau
+      expose: true
     cover.desk:
       name: Volet
       room: Bureau
+      expose: true
     # Loft
     light.loft_lights:
       name: Lumières
       room: Loft
+      expose: true
 
 # Config
 automation: !include_dir_merge_list automations/
