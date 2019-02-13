@@ -48,3 +48,6 @@ history_graph.home_humidities:
   friendly_name: Humidities
 history_graph.home_temperatures:
   friendly_name: Temperatures
+
+#binary_sensor.home_presence_detection:
+#  device_class: presence

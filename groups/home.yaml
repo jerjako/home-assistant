@@ -70,7 +70,8 @@ default_view:
     - sun.sun
     - sensor.yr_symbol
     - device_tracker.iphonejerjako
-    - device_tracker.iphone_karine
+    - device_tracker.karine_iphone
+    - binary_sensor.home_presence_detection
     - sensor.travel_time_to_home
     - group.home_lights
     - group.home_doors_windows_covers
