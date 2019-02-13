@@ -25,13 +25,6 @@ bathroom_cmv:
     - switch.sonoff_1
     - script.bathroom_cmv
 
-bathroom_status:
-  name: Status
-  view: no
-  control: hidden
-  entities:
-    - input_boolean.bathroom_humidity_high
-
 bathroom_automations:
   name: Automations
   view: no

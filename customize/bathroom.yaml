@@ -29,9 +29,5 @@ switch.sonoff_1:
 switch.boiler:
   friendly_name: Boiler
 
-input_boolean.bathroom_humidity_high:
-  friendly_name: Humidity high
-  control: hidden
-
 script.bathroom_cmv:
   icon: mdi:air-conditioner
