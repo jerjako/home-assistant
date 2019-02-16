@@ -7,7 +7,7 @@
   action:
     - condition: state
       entity_id: binary_sensor.home_presence_detection
-      state: "off"
+      state: "on"
     - service: light.turn_on
       data:
         entity_id: light.wc_lights
