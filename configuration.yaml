@@ -85,6 +85,11 @@ notify:
   - name: ios
     platform: ios
     service: !secret notify_ios_service
+  - platform: html5
+    name: html5
+    vapid_pub_key: !secret notify_html5_vapid_pub_key
+    vapid_prv_key: !secret notify_html5_vapid_prv_key
+    vapid_email: !secret notify_html5_vapid_email
 
 ios:
 
@@ -355,6 +360,13 @@ google_assistant:
       name: Lumières
       room: Loft
       expose: true
+
+speedtestdotnet:
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+  server_id: !secret speedtest_server_id
 
 # Config
 automation: !include_dir_merge_list automations/

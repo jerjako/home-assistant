@@ -4,12 +4,6 @@
     - symbol
     - pressure
     - humidity
-- platform: speedtest
-  monitored_conditions:
-    - ping
-    - download
-    - upload
-  server_id: !secret speedtest_server_id
 
 - platform: systemmonitor
   resources:

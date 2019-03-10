@@ -13,6 +13,7 @@ harmony_*.conf
 home-assistant.log
 home-assistant_v2.db
 homebridge
+html5_push_registrations.conf
 icloud
 known_devices.yaml
 nest.conf
@@ -22,5 +23,6 @@ plex.conf
 pyozw.sqlite
 secrets.yaml
 tts
+www/google*
 zwcfg_*.xml
 zwscene.xml
