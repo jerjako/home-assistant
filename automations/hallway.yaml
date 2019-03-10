@@ -5,9 +5,10 @@
       entity_id: binary_sensor.hallway_door
       to: "on"
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Hallway - Door open
+        title: Hallway
+        message: Door open
     - service: xiaomi_aqara.play_ringtone
       data:
         gw_mac: !secret xiaomi_aqara_gateways_mac

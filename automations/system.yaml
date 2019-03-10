@@ -4,9 +4,10 @@
     - platform: homeassistant
       event: start
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: System - Started
+        title: System
+        message: Started
     - delay: 00:05  # Waits 5 minutes to starting HomeKit (Zwave and Wifi light fully ready)
     - service: homekit.start
 
@@ -16,9 +17,10 @@
     - platform: homeassistant
       event: shutdown
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: System - Shutdown
+        title: System
+        message: Shutdown
 
 - id: system_update_available
   alias: System Update available
@@ -26,9 +28,10 @@
     - platform: state
       entity_id: updater.updater
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: System - Update available
+        title: System
+        message: Update available
 
 - id: system_login_failed
   alias: System Login failed
@@ -37,9 +40,10 @@
     - platform: template
       value_template: "{{ states('persistent_notification.httplogin') != 'authentication' }}"
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: System - Login failed
+        title: System
+        message: Login failed
 
 - id: system_daily_backup
   alias: System Daily backup
@@ -50,9 +54,10 @@
     - service: hassio.snapshot_full
       data_template:
         name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
-    - service: notify.ios
-      data_template:
-        message: "System - Daily backup"
+    - service: notify.html5
+      data:
+        title: System
+        message: Daily backup
     - service: shell_command.delete_old_snapshots
     - delay: 00:30:00
     - service: hassio.addon_stdin

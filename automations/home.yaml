@@ -7,9 +7,10 @@
         entity_id: binary_sensor.home_switch_1
         click_type: single
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Test - Switch 1
+        title: Test
+        message: Switch 1
 
 - id: xiaomi_switch_2
   alias: Xiaomi Switch 2
@@ -20,9 +21,10 @@
         entity_id: binary_sensor.home_switch_2
         click_type: single
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Test - Switch 2
+        title: Test
+        message: Switch 2
 
 - id: cover_close
   alias: Cover close
@@ -38,9 +40,10 @@
            - cover.kitchen
            - cover.landing
            - cover.living_room
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Covers - Closed
+        title: Covers
+        message: Closed
 
 - id: leave_home
   alias: Leave home
@@ -52,9 +55,10 @@
       for:
         seconds: 10
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Test - Leave home
+        title: Test
+        message: Leave home
 
 - id: at_home
   alias: At home
@@ -64,9 +68,10 @@
       from: "off"
       to: "on"
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Test - At home
+        title: Test
+        message: At home
 
 - id: leave_office
   alias: Leave office
@@ -78,9 +83,10 @@
       for:
         seconds: 10
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Test - Leave office
+        title: Test
+        message: Leave office
 
 - id: at_office
   alias: At office
@@ -90,9 +96,10 @@
       from: "not_home"
       to: "scaleway"
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Test - At office
+        title: Test
+        message: At office
 
 - id: home_radiators_eco
   alias: Home Radiators eco
@@ -101,9 +108,10 @@
       entity_id: input_boolean.home_radiators
       to: "off"
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Radiators - Eco
+        title: Radiators
+        message: Eco
 
 - id: home_radiators_heat
   alias: Home Radiators heat
@@ -112,9 +120,10 @@
       entity_id: input_boolean.home_radiators
       to: "on"
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Radiators - Heat
+        title: Radiators
+        message: Heat
 
 # Radiator Schedule
 #  - At 3h00, 18° in the bedroom

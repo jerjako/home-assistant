@@ -33,6 +33,7 @@
       entity_id: binary_sensor.wc_water_leak
       to: "on"
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: WC - Water leak detected
+        title: WC
+        message: Water leak detected

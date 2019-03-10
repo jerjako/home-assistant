@@ -177,6 +177,7 @@
       entity_id: binary_sensor.bathroom_water_leak
       to: "on"
   action:
-    - service: notify.ios
+    - service: notify.html5
       data:
-        message: Bathroom - Water leak detected
+        title: Bathroom
+        message: Water leak detected
