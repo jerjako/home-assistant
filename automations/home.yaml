@@ -77,7 +77,7 @@
   alias: Leave office
   trigger:
     - platform: state
-      entity_id: device_tracker.iphonejerjako
+      entity_id: device_tracker.mi9_jerjako
       from: "scaleway"
       to: "not_home"
       for:
@@ -92,7 +92,7 @@
   alias: At office
   trigger:
     - platform: state
-      entity_id: device_tracker.iphonejerjako
+      entity_id: device_tracker.mi9_jerjako
       from: "not_home"
       to: "scaleway"
   action:

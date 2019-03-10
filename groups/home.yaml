@@ -69,7 +69,7 @@ default_view:
     - camera.xiaomi_mijia
     - sun.sun
     - sensor.yr_symbol
-    - device_tracker.iphonejerjako
+    - device_tracker.mi9_jerjako
     - device_tracker.karine_iphone
     - binary_sensor.home_presence_detection
     - sensor.travel_time_to_home
