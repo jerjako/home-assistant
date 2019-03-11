@@ -2,5 +2,5 @@
   sensors:
     home_presence_detection:
       friendly_name: Home presence detection
-      value_template: "{{ is_state('device_tracker.mi9_jerjako', 'home') or is_state('device_tracker.karine_iphone', 'home') }}"
+      value_template: "{{ is_state('device_tracker.jerjako_mi9', 'home') or is_state('device_tracker.karine_iphone', 'home') }}"
       device_class: presence

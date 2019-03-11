@@ -98,6 +98,8 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
 
+owntracks:
+
 device_tracker:
   - platform: icloud
     username: !secret device_tracker_icloud_username
