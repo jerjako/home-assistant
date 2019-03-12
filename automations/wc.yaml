@@ -1,5 +1,6 @@
 - id: turn_on_wc_lights_when_there_is_movement
   alias: Turn on WC lights when there is movement
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.wc_motion_sensor
@@ -16,6 +17,7 @@
 
 - id: turn_off_wc_lights_when_there_is_no_movement
   alias: Turn off WC lights when there is no movement
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.wc_motion_sensor
@@ -28,6 +30,7 @@
 
 - id: wc_water_leak
   alias: WC Water leak
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.wc_water_leak

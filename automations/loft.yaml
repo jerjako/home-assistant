@@ -1,5 +1,6 @@
 - id: loft_radiator
   alias: Loft radiator
+  initial_state: "on"
   trigger:
     platform: state
     entity_id: input_select.loft_radiator
@@ -41,6 +42,7 @@
 
 - id: loft_radiator_eco
   alias: Loft Radiator eco
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: input_boolean.home_radiators
@@ -53,6 +55,7 @@
 
 - id: loft_radiator_heat
   alias: Loft Radiator heat
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: input_boolean.home_radiators

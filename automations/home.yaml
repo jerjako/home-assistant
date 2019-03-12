@@ -1,5 +1,6 @@
 - id: xiaomi_switch_1
   alias: Xiaomi Switch 1
+  initial_state: "on"
   trigger:
     - platform: event
       event_type: xiaomi_aqara.click
@@ -14,6 +15,7 @@
 
 - id: xiaomi_switch_2
   alias: Xiaomi Switch 2
+  initial_state: "on"
   trigger:
     - platform: event
       event_type: xiaomi_aqara.click
@@ -28,6 +30,7 @@
 
 - id: cover_close
   alias: Cover close
+  initial_state: "on"
   trigger:
     - platform: sun
       event: sunset
@@ -47,6 +50,7 @@
 
 - id: leave_home
   alias: Leave home
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.home_presence_detection
@@ -62,6 +66,7 @@
 
 - id: at_home
   alias: At home
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.home_presence_detection
@@ -75,6 +80,7 @@
 
 - id: leave_office
   alias: Leave office
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: device_tracker.jerjako_mi9
@@ -90,6 +96,7 @@
 
 - id: at_office
   alias: At office
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: device_tracker.jerjako_mi9
@@ -103,6 +110,7 @@
 
 - id: home_radiators_eco
   alias: Home Radiators eco
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: input_boolean.home_radiators
@@ -115,6 +123,7 @@
 
 - id: home_radiators_heat
   alias: Home Radiators heat
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: input_boolean.home_radiators
@@ -133,6 +142,7 @@
 
 - id: home_radiators_schedule_eco
   alias: Home Radiators schedule eco
+  initial_state: "on"
   trigger:
     - platform: time
       at: "03:00:00"
@@ -225,6 +235,7 @@
 
 - id: home_radiators_schedule_heat
   alias: Home Radiators schedule heat
+  initial_state: "on"
   trigger:
     - platform: time
       at: "00:00:00"

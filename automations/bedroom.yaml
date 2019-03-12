@@ -1,5 +1,6 @@
 - id: bedroom_wake_up
   alias: Bedroom wake up
+  initial_state: "on"
   trigger:
     - platform: time
       at: !secret automation_week_wakeup_hour
@@ -37,6 +38,7 @@
 
 - id: bedroom_lights_asleep
   alias: Bedroom lights asleep
+  initial_state: "on"
   trigger:
     - platform: event
       event_type: xiaomi_aqara.click

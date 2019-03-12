@@ -1,5 +1,6 @@
 - id: hallway_door_open
   alias: Hallway Door open
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.hallway_door

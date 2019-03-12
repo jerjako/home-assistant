@@ -1,5 +1,6 @@
 - id: turn_on_lights_when_there_is_movement
   alias: Turn on lights when there is movement
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.bathroom_motion_sensor
@@ -16,6 +17,7 @@
 
 - id: turn_off_lights_when_there_is_no_movement
   alias: Turn off lights when there is no movement
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.bathroom_motion_sensor
@@ -39,6 +41,7 @@
 
 - id: turn_on_lights_when_humidity_is_over_the_normal 
   alias: Turn on lights when humidity is over the normal
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.bathroom_humidity_high
@@ -59,6 +62,7 @@
 
 - id: turn_off_lights_when_humidity_is_low
   alias: Turn off lights when humidity is low
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.bathroom_humidity_high
@@ -81,6 +85,7 @@
 
 - id: glass_on
   alias: Pair glass and lights - On
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: light.bathroom_lights
@@ -91,6 +96,7 @@
 
 - id: glass_off
   alias: Pair glass and lights - Off
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: light.bathroom_lights
@@ -101,6 +107,7 @@
 
 - id: bathroom_radiator
   alias: Bahroom radiator
+  initial_state: "on"
   trigger:
     platform: state
     entity_id: input_select.bathroom_radiator
@@ -142,6 +149,7 @@
 
 - id: bathroom_radiator_eco
   alias: Bathroom Radiator eco
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: input_boolean.home_radiators
@@ -157,6 +165,7 @@
 
 - id: bathroom_radiator_heat
   alias: Bathroom Radiator heat
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: input_boolean.home_radiators
@@ -172,6 +181,7 @@
 
 - id: bathroom_water_leak
   alias: Bathroom Water leak
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.bathroom_water_leak

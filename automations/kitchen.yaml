@@ -1,5 +1,6 @@
 - id: kitchen_water_leak
   alias: Kitchen Water leak
+  initial_state: "on"
   trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_water_leak
