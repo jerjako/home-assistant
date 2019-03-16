@@ -27,7 +27,6 @@
     - service: light.turn_on
       data:
         entity_id: light.bedroom_bedlights
-        state: on
         brightness: 255
         rgb_color: [221,167,79]
         transition: 1800
