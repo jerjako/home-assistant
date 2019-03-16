@@ -1,3 +1,8 @@
+kitchen_lights:
+  name: Lights
+  view: no
+  entities:
+    - light.kitchen_lights
 
 kitchen_door_cover:
   name: Door & Cover
@@ -7,13 +12,20 @@ kitchen_door_cover:
     - sensor.kitchen_door
     - cover.kitchen
 
+kitchen_automations:
+  name: Automations
+  view: no
+  entities:
+    - automation.kitchen_water_leak
+
 
 kitchen:
   name: Kitchen
   view: yes
   entities:
-    - light.kitchen_lights
+    - group.kitchen_lights
     - group.kitchen_door_cover
+    - group.kitchen_automations
     - sensor.kitchen_temperature
     - sensor.kitchen_humidity
     - sensor.fridge_temperature
@@ -23,4 +35,3 @@ kitchen:
     - binary_sensor.kitchen_water_leak
     - binary_sensor.kitchen_smoke
     - sensor.kitchen_smoke_temperature
-
