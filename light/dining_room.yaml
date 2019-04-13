@@ -14,5 +14,5 @@
 - platform: group
   name: Dining room Lights
   entities:
-    - light.yeelight_color2_7c49ebb72e7a
-    - light.yeelight_color2_7c49ebb72e78
+    - light.dining_room_1
+    - light.dining_room_2
