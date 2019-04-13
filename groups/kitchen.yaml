@@ -16,6 +16,7 @@ kitchen_automations:
   name: Automations
   view: no
   entities:
+    - automation.kitchen_cover_close
     - automation.kitchen_water_leak
 
 

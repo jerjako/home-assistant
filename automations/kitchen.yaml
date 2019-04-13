@@ -10,3 +10,18 @@
       data:
         title: Kitchen
         message: Water leak detected
+
+- id: kitchen_cover_close
+  alias: Kitchen Cover close
+  initial_state: "on"
+  trigger:
+    - platform: sun
+      event: sunset
+  action:
+    - condition: state
+      entity_id: sensor.kitchen_door
+      state: Closed
+    - service: cover.close_cover
+      data:
+         entity_id: 
+           - cover.kitchen

@@ -40,7 +40,6 @@
          entity_id: 
            - cover.bedroom
            - cover.desk
-           - cover.kitchen
            - cover.landing
            - cover.living_room
     - service: notify.html5
