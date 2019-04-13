@@ -156,13 +156,13 @@
       value_template: "{% if states.sensor.bedroom_temperature.state|float > 18 %}true{% else %}false{% endif %}"
 
     - platform: template # 07:00:00 - 20°
-      value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+      value_template: "{% if states.sensor.hallway_temperature.state|float > 20 %}true{% else %}false{% endif %}"
 
     - platform: template # 09:00:00 - 16°
-      value_template: "{% if states.sensor.living_room_temperature.state|float > 16 %}true{% else %}false{% endif %}"
+      value_template: "{% if states.sensor.hallway_temperature.state|float > 16 %}true{% else %}false{% endif %}"
 
     - platform: template # 17:30:00 - 20°
-      value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+      value_template: "{% if states.sensor.hallway_temperature.state|float > 20 %}true{% else %}false{% endif %}"
   condition:
     - condition: and
       conditions:
@@ -172,7 +172,7 @@
         - condition: or
           conditions:
             - condition: template
-              value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+              value_template: "{% if states.sensor.hallway_temperature.state|float > 20 %}true{% else %}false{% endif %}"
             - condition: template
               value_template: "{% if states.sensor.bedroom_temperature.state|float > 20 %}true{% else %}false{% endif %}"
             - condition: and
@@ -200,7 +200,7 @@
                     - thu
                     - fri
                 - condition: template
-                  value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+                  value_template: "{% if states.sensor.hallway_temperature.state|float > 20 %}true{% else %}false{% endif %}"
             - condition: and
               conditions:
                 - condition: time
@@ -213,7 +213,7 @@
                     - thu
                     - fri
                 - condition: template
-                  value_template: "{% if states.sensor.living_room_temperature.state|float > 16 %}true{% else %}false{% endif %}"
+                  value_template: "{% if states.sensor.hallway_temperature.state|float > 16 %}true{% else %}false{% endif %}"
             - condition: and
               conditions:
                 - condition: time
@@ -226,7 +226,7 @@
                     - thu
                     - fri
                 - condition: template
-                  value_template: "{% if states.sensor.living_room_temperature.state|float > 20 %}true{% else %}false{% endif %}"
+                  value_template: "{% if states.sensor.hallway_temperature.state|float > 20 %}true{% else %}false{% endif %}"
   action:
     - service: input_boolean.turn_off
       data:
@@ -248,19 +248,19 @@
       at: "17:30:00"
 
     - platform: template # 00:00:00 - 20°
-      value_template: "{% if states.sensor.bedroom_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+      value_template: "{% if states.sensor.bedroom_temperature.state|float < 19.8 %}true{% else %}false{% endif %}"
 
     - platform: template # 03:00:00 - 18°
       value_template: "{% if states.sensor.bedroom_temperature.state|float < 17.5 %}true{% else %}false{% endif %}"
     
     - platform: template # 07:00:00 - 20°
-      value_template: "{% if states.sensor.living_room_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+      value_template: "{% if states.sensor.hallway_temperature.state|float < 19.8 %}true{% else %}false{% endif %}"
     
     - platform: template # 09:00:00 - 16°
-      value_template: "{% if states.sensor.living_room_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
+      value_template: "{% if states.sensor.hallway_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
     
     - platform: template # 17:30:00 - 20°
-      value_template: "{% if states.sensor.living_room_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+      value_template: "{% if states.sensor.hallway_temperature.state|float < 19.8 %}true{% else %}false{% endif %}"
   condition:
     - condition: and
       conditions:
@@ -270,7 +270,7 @@
         - condition: or
           conditions:
             - condition: template
-              value_template: "{% if states.sensor.living_room_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
+              value_template: "{% if states.sensor.hallway_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
             - condition: template
               value_template: "{% if states.sensor.bedroom_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
             - condition: and
@@ -315,7 +315,7 @@
                     - thu
                     - fri
                 - condition: template
-                  value_template: "{% if states.sensor.living_room_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+                  value_template: "{% if states.sensor.hallway_temperature.state|float < 19.8 %}true{% else %}false{% endif %}"
             - condition: and
               conditions:
                 - condition: time
@@ -328,7 +328,7 @@
                     - thu
                     - fri
                 - condition: template
-                  value_template: "{% if states.sensor.living_room_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
+                  value_template: "{% if states.sensor.hallway_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
             - condition: and
               conditions:
                 - condition: time
@@ -341,7 +341,7 @@
                     - thu
                     - fri
                 - condition: template
-                  value_template: "{% if states.sensor.living_room_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+                  value_template: "{% if states.sensor.hallway_temperature.state|float < 19.8 %}true{% else %}false{% endif %}"
             - condition: and
               conditions:
                 - condition: time
@@ -354,7 +354,7 @@
                   entity_id: binary_sensor.home_presence_detection
                   state: "on"
                 - condition: template
-                  value_template: "{% if states.sensor.living_room_temperature.state|float < 19.5 %}true{% else %}false{% endif %}"
+                  value_template: "{% if states.sensor.hallway_temperature.state|float < 19.8 %}true{% else %}false{% endif %}"
   action:
     - service: input_boolean.turn_on
       data:
