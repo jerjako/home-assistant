@@ -24,7 +24,7 @@
   - type: last_boot
 
 - platform: waze_travel_time
-  origin: device_tracker.iphone_jerjako
+  origin: device_tracker.jerjako_mi9
   destination: zone.home
   region: EU
   name: Travel time to home
