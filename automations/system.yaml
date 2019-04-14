@@ -63,7 +63,7 @@
       data:
         title: System
         message: Daily backup
-    - service: shell_command.delete_old_snapshots
+    - service: clean_up_backups_service.clean_up
     - delay: 00:30:00
     - service: hassio.addon_stdin
       data:
