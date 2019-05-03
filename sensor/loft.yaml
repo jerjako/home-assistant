@@ -24,7 +24,7 @@
         {% elif is_state('binary_sensor.loft_window', 'on') %}
           Open
         {% endif %}
-      icon_template: >- # icon_template not working with entity_picture_template
+      entity_picture_template: >- # icon_template not working with entity_picture_template
         {% if is_state('binary_sensor.loft_window', 'off') %}
           /local/window_closed.png
         {% elif is_state('binary_sensor.loft_window', 'on') %}
