@@ -1,7 +1,17 @@
+dining_room_window_cover:
+  name: Window & Cover
+  view: no
+  control: hidden
+  entities:
+    - sensor.dining_room_window
+    - cover.dining_room
+
+
 dining_room:
   name: Dining room
   view: yes
   entities:
     - light.dining_room_lights
+    - group.dining_room_window_cover
     - sensor.dining_room_temperature
     - sensor.dining_room_humidity

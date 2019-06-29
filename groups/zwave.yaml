@@ -9,18 +9,18 @@ zwave_hallway:
   view: no
   entities:
 
+zwave_dining_room:
+  name: Dining room
+  view: no
+  entities:
+    - zwave.dining_room_cover
+
 zwave_living_room:
   name: Living room
   view: no
   entities:
     - zwave.living_room_box
     - zwave.living_room_tv
-    - zwave.living_room_cover
-
-zwave_dining_room:
-  name: Dining room
-  view: no
-  entities:
 
 zwave_kitchen:
   name: Kitchen

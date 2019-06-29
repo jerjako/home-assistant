@@ -16,7 +16,7 @@
         ringtone_id: 10
         ringtone_vol: 10
     - condition: state
-      entity_id: cover.living_room
+      entity_id: cover.dining_room
       state: "closed"
     - service: light.turn_on
       data:

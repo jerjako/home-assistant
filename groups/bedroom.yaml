@@ -13,6 +13,12 @@ bedroom_window_cover:
     - sensor.bedroom_window
     - cover.bedroom
 
+bedroom_room_apple_tv:
+  name: Apple TV
+  view: no
+  entities:
+    - remote.apple_tv
+
 
 bedroom:
   name: Bedroom
@@ -24,5 +30,6 @@ bedroom:
     - group.bedroom_window_cover
     - group.bedroom_automations
     - group.bedroom_scenes
+    - group.bedroom_room_apple_tv
     - sensor.bedroom_temperature
     - sensor.bedroom_humidity

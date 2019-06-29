@@ -126,11 +126,11 @@ homekit:
     include_entities:
       # Hallway
       - light.hallway_lights
-      # Living room
-      - light.living_room_lights
-      - cover.living_room
       # Dining room
       - light.dining_room_lights
+      - cover.dining_room
+      # Living room
+      - light.living_room_lights
       # Kitchen
       - light.kitchen_lights
       - cover.kitchen
@@ -155,14 +155,14 @@ homekit:
     # Hallway
     light.hallway_lights:
       name: Hallway lights
-    # Living room
-    light.living_room_lights:
-      name: Living room lights
-    cover.living_room:
-      name: Living room cover
     # Dining room
     light.dining_room_lights:
       name: Dining room lights
+    cover.dining_room:
+      name: Dining room cover
+    # Living room
+    light.living_room_lights:
+      name: Living room lights
     # Kitchen
     light.kitchen_lights:
       name: Kitchen lights
@@ -218,16 +218,16 @@ emulated_hue:
     light.hallway_lights:
       name: Hallway lights
       hidden: false
-    # Living room
-    light.living_room_lights:
-      name: Living room lights
-      hidden: false
-    cover.living_room:
-      name: Living room cover
-      hidden: false
     # Dining room
     light.dining_room_lights:
       name: Dining room lights
+      hidden: false
+    cover.dining_room:
+      name: Dining room cover
+      hidden: false
+    # Living room
+    light.living_room_lights:
+      name: Living room lights
       hidden: false
     # Kitchen
     light.kitchen_lights:
@@ -286,19 +286,19 @@ google_assistant:
       name: Lumières
       room: Entrée
       expose: true
-    # Living room
-    light.living_room_lights:
-      name: Lumières
-      room: Salon
-      expose: true
-    cover.living_room:
-      name: Volet
-      room: Salon
-      expose: true
     # Dining room
     light.dining_room_lights:
       name: Lumières
       room: Salle à manger
+      expose: true
+    cover.dining_room:
+      name: Volet
+      room: Salle à manger
+      expose: true
+    # Living room
+    light.living_room_lights:
+      name: Lumières
+      room: Salon
       expose: true
     # Kitchen
     light.kitchen_lights:

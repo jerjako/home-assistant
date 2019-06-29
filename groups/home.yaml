@@ -21,9 +21,9 @@ home_doors_windows_covers:
   control: hidden
   entities:
     - sensor.hallway_door
-    - sensor.living_room_window
-    - sensor.living_room_window
-    - cover.living_room
+    - sensor.dining_room_window
+    - sensor.dining_room_window
+    - cover.dining_room
     - sensor.kitchen_door
     - cover.kitchen
     - sensor.landing_window

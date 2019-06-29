@@ -7,6 +7,9 @@ light.yeelight_color2_7c49ebb72e78:
   friendly_name: Dining room 2
   hidden: true
 
+cover.dining_room:
+  friendly_name: Dining room Cover
+
 sensor.dining_room_temperature:
   friendly_name: Dining room Temp.
 sensor.dining_room_humidity:

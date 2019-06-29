@@ -2,9 +2,9 @@ group.home:
   order: 1
 group.hallway:
   order: 2
-group.living_room:
-  order: 3
 group.dining_room:
+  order: 3
+group.living_room:
   order: 4
 group.kitchen:
   order: 5

@@ -41,7 +41,7 @@
            - cover.bedroom
            - cover.desk
            - cover.landing
-           - cover.living_room
+           - cover.dining_room
     - service: notify.html5
       data:
         title: Covers

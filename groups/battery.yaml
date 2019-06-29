@@ -5,19 +5,19 @@ battery_hallway:
     - sensor.hallway_thermometer_battery
     - sensor.hallway_door_battery
 
-battery_living_room:
-  name: Living room
-  view: no
-  entities:
-    - sensor.living_room_thermometer_battery
-    - sensor.living_room_window_1_battery
-    - sensor.living_room_window_2_battery
-
 battery_dining_room:
   name: Dining room
   view: no
   entities:
     - sensor.dining_room_thermometer_battery
+    - sensor.dining_room_window_1_battery
+    - sensor.dining_room_window_2_battery
+
+battery_living_room:
+  name: Living room
+  view: no
+  entities:
+    - sensor.living_room_thermometer_battery
 
 battery_kitchen:
   name: Kitchen

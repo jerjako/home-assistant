@@ -5,9 +5,6 @@ light.yeelight_color2_7c49ebacd16b:
   friendly_name: Living room 1
   hidden: true
 
-cover.living_room:
-  friendly_name: Living room Cover
-
 switch.living_room_box:
   friendly_name: Box
   control: hidden
