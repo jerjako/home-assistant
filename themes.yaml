@@ -66,3 +66,165 @@ midnight:
   # Google colors
   google-red-500: '#E45E65'
   google-green-500: '#39E949'
+slate:
+  # Main colors
+  primary-color: '#2980b9'
+  accent-color: '#b58e31'
+  dark-primary-color: '#2980b9'
+  light-primary-color: '#2980b9'
+  # Text colors
+  primary-text-color: '#FFFFFF'
+  text-primary-color: 'var(--primary-text-color)'
+  secondary-text-color: '#b58e31'
+  disabled-text-color: '#777777'
+  label-badge-border-color: 'green'
+  # Sidebar
+  sidebar-icon-color: '#777777'
+  # Background colors
+  primary-background-color: '#222222'
+  secondary-background-color: '#222222'
+  divider-color: 'rgba(0, 0, 0, .12)'
+  table-row-background-color: '#292929'
+  table-row-alternative-background-color: '#292929'
+  # Nav Menu
+  paper-listbox-color: '#777777'
+  paper-listbox-background-color: '#141414'
+  paper-grey-50: 'var(--primary-text-color)'
+  paper-grey-200: '#222222'
+  # Paper card
+  paper-card-header-color: '#2980b9'
+  paper-card-background-color: '#292929'
+  paper-dialog-background-color: '#292929'
+  paper-item-icon-color: 'var(--primary-text-color)'
+  paper-item-icon-active-color: '#b58e31'
+  paper-item-icon_-_color: 'green'
+  paper-item-selected_-_background-color: '#292929'
+  paper-tabs-selection-bar-color: 'green'
+  # Labels
+  label-badge-red: 'var(--primary-color)'
+  label-badge-text-color: 'var(--primary-text-color)'
+  label-badge-background-color: '#222222'
+  # Switches
+  paper-toggle-button-checked-button-color: '#2980b9'
+  paper-toggle-button-checked-bar-color: '#2980b9'
+  paper-toggle-button-checked-ink-color: '#2980b9'
+  paper-toggle-button-unchecked-button-color: 'var(--disabled-text-color)'
+  paper-toggle-button-unchecked-bar-color: 'var(--disabled-text-color)'
+  paper-toggle-button-unchecked-ink-color: 'var(--disabled-text-color)'
+  # Sliders
+  paper-slider-knob-color: '#2980b9'
+  paper-slider-knob-start-color: '#2980b9'
+  paper-slider-pin-color: '#2980b9'
+  paper-slider-active-color: '#2980b9'
+  paper-slider-container-color: 'linear-gradient(var(--primary-background-color), var(--secondary-background-color)) no-repeat'
+  paper-slider-secondary-color: 'var(--secondary-background-color)'
+  paper-slider-disabled-active-color: 'var(--disabled-text-color)'
+  paper-slider-disabled-secondary-color: 'var(--disabled-text-color)'
+  # Google colors
+  google-red-500: '#b58e31'
+  google-green-500: '#2980b9'
+  #Changes to fix history/logbook menus
+  lumo-primary-text-color: '#2980b9'
+  lumo-secondary-text-color: '#2980b9'
+  lumo-primary-color: '#2980b9'
+  #Calendar day numbers
+  lumo-body-text-color: '#b58e31'
+  #Calendar/Date-Picker Background
+  lumo-base-color: '#222222'
+  #Month/Year header
+  lumo-header-text-color: 'var(--lumo-body-text-color)'
+  #DayOfWeek Header
+  lumo-tertiary-text-color: 'var(--lumo-body-text-color)'
+  lumo-shade: '#222222'
+  lumo-shade-90pct: 'rgba(34, 34, 34, .9)'
+  lumo-shade-80pct: 'rgba(34, 34, 34, .8)'
+  lumo-shade-70pct: 'rgba(34, 34, 34, .7)'
+  lumo-shade-60pct: 'rgba(34, 34, 34, .6)'
+  lumo-shade-50pct: 'rgba(34, 34, 34, .5)'
+  lumo-shade-40pct: 'rgba(34, 34, 34, .4)'
+  lumo-shade-30pct: 'rgba(34, 34, 34, .3)'
+  lumo-shade-20pct: 'rgba(34, 34, 34, .2)'
+  lumo-shade-10pct: 'rgba(34, 34, 34, .1)'
+  lumo-shade-5pct: 'rgba(34, 34, 34, .05)'
+  lumo-tint-5pct: '#222222'
+summer_breeze:
+  lovelace-background: 'center / cover no-repeat url("/local/background-summer_breeze.jpg") fixed' #Background-image
+  # Define basic colors
+  element-dark-color: "rgba(44,29,5,0.9)"                                                                   # nearly black
+  element-light-color: "rgb(47, 35, 23,0.6)"                                                                # Medium grey
+  element-medium-color: "rgba(44,29,5,0.7)"                                                                 # Light grey
+  accent-color: 'rgba(218,165,32,0.8)'                                                                      # dark-yellow
+  accent-color-darker: 'rgba(184,134,11,1)' 
+  background-color: '#F7F8F9'                                                                               # Light grey 
+  background-color-2: '#dedfe0'                                                                             # Light grey 
+  transparent-background-color: 'rgba(255,255,255,0.2)'                                                     # white transparent
+  #transparent-background-color-darker: 'rgba(89,87,86,0.15)'                                               # grey transparent
+  less-transparent-background-color: 'rgba(89,87,86,0.5)'                                                   # grey less transparent
+  non-transparent-background-color: '#A28E66'                                                               # non transparent yelowish grey
+  border-color: '#EAEAEA'                                                                                   # Light grey border
+  
+  # Header
+  primary-color: 'var(--non-transparent-background-color)'                                                  # color of the headers background, the highlighted element in the Sidebar, buttons in lovelace
+  text-primary-color: 'var(--element-medium-color)'
+  # Compact Custom Header
+  cch-background: 'var(--less-transparent-background-color)'
+  cch-button-color-menu: 'var(--element-dark-color)'
+
+  # Left Menu
+  paper-listbox-background-color: transparent #'var(--non-transparent-background-color)'                    # Background of the Menu in sidebar (containing shortcuts)
+
+  # UI
+  #paper-card-header-color: #'var(--element-dark-color)'                                                    # Title in settings - doesnt seem to have any effect
+  primary-background: 'var(--background-color)'                                                             # background of dialogs, title background in left menu)
+  sidebar-background: 'var(--background-color-2)'
+  app-toolbar-background-color: transparent
+
+  # Card
+  paper-card-background-color: 'var(--transparent-background-color)'                                        # Background of cards -> mostly transparent
+  ha-card-border-radius: '10px'                                                                             # rounded corners
+  #dark-primary-color: red #'var(--element-dark-color)'                                                     # doesnt seem to have any effect
+  #primary-element-dark-color: red #'var(--element-dark-color)'                                             # doesnt seem to have any effect
+  paper-listbox-color: 'var(--element-dark-color)'
+  light-primary-color: 'var(--accent-color)'
+  secondary-element-dark-color: green #'var(--element-light-color)'
+  paper-dialog-button-color: red #'var(--element-dark-color)'
+  secondary-background-color: transparent #'var(--less-transparent-background-color)'                       # secondary color that can be used by cards, e.g. custom updater card uses it to color every second row, also header of popups
+
+  paper-dialog-background-color: 'var(--background-color)'                                                  # background color of dialogs that appear when clicking on a entity
+  paper-dialog-color: 'var(--element-light-color)'                                                          # text color of these dialogs
+  paper-dialog-header-background: 'var(--element-dark-color)'
+  more-info-header-color: 'var(--element-dark-color)'
+  more-info-header-background: white #'var(--less-transparent-background-color)'
+
+  
+  # Icons
+  paper-item-icon-color: 'var(--element-light-color)'                                                       # Off
+  paper-item-icon-active-color: 'var(--accent-color-darker)'                                                # On (gets overriden by light color if its sent)
+  
+  # Switches
+  paper-toggle-button-checked-button-color: '#FFF'                                                          # Knob On
+  paper-toggle-button-checked-bar-color:  'var(--accent-color-darker)'                                      # Background On
+  paper-toggle-button-unchecked-button-color: '#FFF'                                                        # Knob Off
+  paper-toggle-button-unchecked-bar-color: 'var(--element-light-color)'                                     # Background Off
+                                                                              
+  
+  #slider
+  paper-slider-knob-color: 'white'                                                                          # color of the handle
+  paper-slider-container-color: 'rgba(44,29,5,0.2)'                                                         # color of the sliders line
+  paper-slider-active-color: 'rgba(44,29,5,0.4)'                                                            # color of the active part of the slider (left of the knob)
+  paper-slider-knob-start-color: 'rgba(255,255,255,0.6)'                                                    # color of the knob when beeing at 0
+  paper-slider-height: '5px'                                                                                # thickness of the sliders' line
+
+  #Progress
+  paper-progress-height: 7px                                                                                # height of the progress bars
+
+  # Shadows
+  shadow-elevation-2dp_-_box-shadow: 'inset 0px 0px 0px 1px var(--border-color)'
+  shadow-elevation-4dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-6dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-8dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-10dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-12dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-14dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-16dp_-_box-shadow: '0px 0px 0px 3px var(--light-color)'
+  ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.3)"
