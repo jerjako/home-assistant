@@ -2,3 +2,4 @@
   name: Bathroom Lights
   entities:
     - light.bathroom_1
+    - light.hue_lightstrip_plus_1

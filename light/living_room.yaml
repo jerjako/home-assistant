@@ -3,8 +3,3 @@
   entities:
     - light.living_room_1
     - light.living_room_2
-
-- platform: group
-  name: Living room Lightstrip
-  entities:
-    - light.hue_lightstrip_plus_1

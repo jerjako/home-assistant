@@ -128,7 +128,6 @@ homekit:
       - light.hallway_lights
       # Living room
       - light.living_room_lights
-      - light.living_room_lightstrip
       - cover.living_room
       # Dining room
       - light.dining_room_lights
@@ -222,9 +221,6 @@ emulated_hue:
     # Living room
     light.living_room_lights:
       name: Living room lights
-      hidden: false
-    light.living_room_lightstrip:
-      name: Living room lightstrip
       hidden: false
     cover.living_room:
       name: Living room cover

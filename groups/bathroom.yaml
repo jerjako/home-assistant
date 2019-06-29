@@ -36,8 +36,6 @@ bathroom_automations:
     - automation.bathroom_radiator
     - automation.bathroom_radiator_eco
     - automation.bathroom_radiator_heat
-    - automation.pair_glass_and_lights_on
-    - automation.pair_glass_and_lights_off
     - automation.bathroom_water_leak
 
 bathroom:

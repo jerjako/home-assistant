@@ -28,9 +28,16 @@
     - service: light.turn_on
       data:
         entity_id: light.bathroom_lights
+        brightness: 127
+        color_temp: 1
+        transition: 2
+    - delay: 00:00:2
+    - service: light.turn_on
+      data:
+        entity_id: light.bathroom_lights
         brightness: 255
-        rgb_color: [255, 255, 0]
-        transition: 5
+        color_temp: 1
+        transition: 2
     - delay: 00:00:30
     - condition: state
       entity_id: binary_sensor.bathroom_motion_sensor
@@ -82,28 +89,6 @@
       data_template:
         topic: 'cmnd/sonoff2/POWER'
         payload: 'OFF'
-
-- id: glass_on
-  alias: Pair glass and lights - On
-  initial_state: "on"
-  trigger:
-    - platform: state
-      entity_id: light.bathroom_lights
-      to: "on"
-  action:
-    - service: light.turn_on
-      entity_id: light.bathroom_glass
-
-- id: glass_off
-  alias: Pair glass and lights - Off
-  initial_state: "on"
-  trigger:
-    - platform: state
-      entity_id: light.bathroom_lights
-      to: "off"
-  action:
-    - service: light.turn_off
-      entity_id: light.bathroom_glass
 
 - id: bathroom_radiator
   alias: Bahroom radiator

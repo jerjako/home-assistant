@@ -4,11 +4,9 @@ home_lights:
   entities:
     - light.hallway_lights
     - light.living_room_lights
-    - light.living_room_lightstrip
     - light.dining_room_lights
     - light.kitchen_lights
     - light.bathroom_lights
-    - light.bathroom_glass
     - light.wc_lights
     - light.landing_lights
     - light.bedroom_lights
