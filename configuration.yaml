@@ -51,7 +51,8 @@ sun:
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 
 # Cloud
 cloud:
@@ -197,11 +198,11 @@ homekit:
     light.loft_lights:
       name: Loft lights
 
-influxdb:
-  host: !secret influxdb_host
-  username: !secret influxdb_username
-  password: !secret influxdb_password
-  database: !secret influxdb_database
+#influxdb:
+#  host: !secret influxdb_host
+#  username: !secret influxdb_username
+#  password: !secret influxdb_password
+#  database: !secret influxdb_database
 
 ifttt:
   key: !secret ifttt_key
