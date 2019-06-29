@@ -91,7 +91,7 @@
         payload: 'OFF'
 
 - id: bathroom_radiator
-  alias: Bahroom radiator
+  alias: Bathroom radiator
   initial_state: "on"
   trigger:
     platform: state
