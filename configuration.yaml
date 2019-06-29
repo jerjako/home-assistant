@@ -98,10 +98,6 @@ mqtt:
 owntracks:
 
 device_tracker:
-  - platform: icloud
-    username: !secret device_tracker_icloud_username
-    password: !secret device_tracker_icloud_password
-    account_name: !secret device_tracker_icloud_account_name
   - platform: netgear
     host: 192.168.1.1
     username: !secret device_tracker_netgear_username
