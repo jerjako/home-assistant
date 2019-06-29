@@ -4,14 +4,6 @@ living_room_lights:
   entities:
     - light.living_room_lights
 
-living_room_hdmi_cec:
-  name: HDMI CEC
-  view: no
-  entities:
-    - switch.hdmi_0
-    - switch.hdmi_1
-    - switch.hdmi_4
-
 living_room_switches:
   name: Switches
   view: no
@@ -19,19 +11,6 @@ living_room_switches:
   entities:
     - switch.living_room_box
     - switch.living_room_tv
-
-living_room_automations:
-  name: Automations
-  view: no
-  entities:
-    - automation.tv_cec_power
-    - automation.tv_on
-    - automation.tv_off
-
-living_room_remote:
-  name: Remote
-  entities:
-    - input_text.dummy_tiles
 
 living_room_devices:
   name: Devices
@@ -57,11 +36,8 @@ living_room:
   entities:
     - group.living_room_lights
     - group.living_room_devices
-    # - group.living_room_remote
     - group.living_room_fan
-    - group.living_room_hdmi_cec
     - group.living_room_switches
-    - group.living_room_automations
     - sensor.living_room_box_power
     - sensor.living_room_box_energy
     - sensor.living_room_tv_power
