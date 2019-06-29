@@ -3,8 +3,8 @@ home_lights:
   view: no
   entities:
     - light.hallway_lights
-    - light.living_room_lights
     - light.dining_room_lights
+    - light.living_room_lights
     - light.kitchen_lights
     - light.bathroom_lights
     - light.wc_lights
