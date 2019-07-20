@@ -5,11 +5,12 @@ bathroom_lights:
     - light.bathroom_lights
     - light.bathroom_glass
 
-bathroom_boiler:
-  name: Boiler
+bathroom_switches:
+  name: Switches
   view: no
   entities:
     - switch.boiler
+    - switch.bathroom_washing_machine
 
 bathroom_radiators:
   name: Radiator
@@ -29,14 +30,15 @@ bathroom_automations:
   name: Automations
   view: no
   entities:
-    - automation.turn_on_lights_when_there_is_movement
-    - automation.turn_on_lights_when_humidity_is_over_the_normal
-    - automation.turn_off_lights_when_there_is_no_movement
-    - automation.turn_off_lights_when_humidity_is_low
+    - automation.bathroom_turn_on_lights_when_there_is_movement
+    - automation.bathroom_turn_on_lights_when_humidity_is_over_the_normal
+    - automation.bathroom_turn_off_lights_when_there_is_no_movement
+    - automation.bathroom_turn_off_lights_when_humidity_is_low
     - automation.bathroom_radiator
     - automation.bathroom_radiator_eco
     - automation.bathroom_radiator_heat
     - automation.bathroom_water_leak
+    - automation.bathroom_notify_washing_machine_finished
 
 bathroom:
   name: Bathroom
@@ -44,7 +46,7 @@ bathroom:
   entities:
     - group.bathroom_lights
     - group.bathroom_cmv
-    - group.bathroom_boiler
+    - group.bathroom_switches
     - group.bathroom_radiators
     - group.bathroom_status
     - group.bathroom_automations
@@ -54,3 +56,4 @@ bathroom:
     - binary_sensor.bathroom_humidity_high
     - sensor.bathroom_power
     - binary_sensor.bathroom_water_leak
+    - sensor.bathroom_washing_machine_power

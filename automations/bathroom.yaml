@@ -1,5 +1,5 @@
-- id: turn_on_lights_when_there_is_movement
-  alias: Turn on lights when there is movement
+- id: bathroom_turn_on_lights_when_there_is_movement
+  alias: Bathroom Turn on lights when there is movement
   initial_state: "on"
   trigger:
     - platform: state
@@ -15,8 +15,8 @@
         brightness: 255
         color_temp: 1
 
-- id: turn_off_lights_when_there_is_no_movement
-  alias: Turn off lights when there is no movement
+- id: bathroom_turn_off_lights_when_there_is_no_movement
+  alias: Bathroom Turn off lights when there is no movement
   initial_state: "on"
   trigger:
     - platform: state
@@ -46,8 +46,8 @@
       data:
         entity_id: light.bathroom_lights
 
-- id: turn_on_lights_when_humidity_is_over_the_normal 
-  alias: Turn on lights when humidity is over the normal
+- id: bathroom_turn_on_lights_when_humidity_is_over_the_normal 
+  alias: Bathroom Turn on lights when humidity is over the normal
   initial_state: "on"
   trigger:
     - platform: state
@@ -67,8 +67,8 @@
         topic: 'cmnd/sonoff2/POWER'
         payload: 'ON'
 
-- id: turn_off_lights_when_humidity_is_low
-  alias: Turn off lights when humidity is low
+- id: bathroom_turn_off_lights_when_humidity_is_low
+  alias: Bathroom Turn off lights when humidity is low
   initial_state: "on"
   trigger:
     - platform: state
@@ -176,3 +176,18 @@
       data:
         title: Bathroom
         message: Water leak detected
+
+- id: bathroom_notify_washing_machine_finished
+  alias: Bathroom Notify Washing machine finished
+  initial_state: "on"
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.bathroom_washing_machine_power
+      below: 2 # average of 1.5w when off
+      for:
+        minutes: 2
+  action:
+    - service: notify.html5
+      data:
+        title: Bathroom
+        message: Washing machine finished

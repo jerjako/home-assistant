@@ -21,3 +21,11 @@
       unit_of_measurement: "%"
       value_template: "{{ states.binary_sensor.bathroom_water_leak.attributes.battery_level }}"
       device_class: battery
+
+- platform: template
+  sensors:
+    bathroom_washing_machine_power:
+      friendly_name: Washing machine power
+      unit_of_measurement: "w"
+      value_template: "{{ states.switch.bathroom_washing_machine.attributes.current_power_w }}"
+      device_class: power
