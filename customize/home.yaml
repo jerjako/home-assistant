@@ -26,6 +26,8 @@ group.system:
   order: 13
 group.zwave:
   order: 14
+group.zigbee:
+  order: 15
 
 sensor.yr_symbol:
   friendly_name: Weather

@@ -94,6 +94,13 @@ mqtt:
   broker: core-mosquitto
   username: !secret mqtt_username
   password: !secret mqtt_password
+  discovery: true
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
 
 owntracks:
 
@@ -363,6 +370,11 @@ clean_up_backups_service:
   host: !secret clean_up_backups_service_host
   token: !secret clean_up_backups_service_token
   number_of_backups_to_keep: 7
+
+timer:
+  zigbee_permit_join:
+    name: Time remaining
+    duration: 120
 
 # Config
 automation: !include_dir_merge_list automations/
