@@ -1,10 +1,10 @@
 192.168.1.28:
   name: Dining Room 1
   use_music_mode: False
-  save_on_change: False
+  save_on_change: True
   model: color2
 192.168.1.26:
   name: Dining Room 2
   use_music_mode: False
-  save_on_change: False
+  save_on_change: True
   model: color2
