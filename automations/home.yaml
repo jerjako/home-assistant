@@ -145,14 +145,8 @@
   alias: Home Radiators schedule eco
   initial_state: "on"
   trigger:
-    - platform: time
-      at: "03:00:00"
-    - platform: time
-      at: "07:00:00"
-    - platform: time
-      at: "09:00:00"
-    - platform: time
-      at: "17:30:00"
+    - platform: time_pattern
+      minutes: "/5"
 
     - platform: template # 03:00:00 - 18°
       value_template: "{% if states.sensor.bedroom_temperature.state|float > 18 %}true{% else %}false{% endif %}"
@@ -160,7 +154,7 @@
     - platform: template # 07:00:00 - 20°
       value_template: "{% if states.sensor.hallway_temperature.state|float > 20 %}true{% else %}false{% endif %}"
 
-    - platform: template # 09:00:00 - 16°
+    - platform: template # 09:30:00 - 16°
       value_template: "{% if states.sensor.hallway_temperature.state|float > 16 %}true{% else %}false{% endif %}"
 
     - platform: template # 17:30:00 - 20°
@@ -194,7 +188,7 @@
               conditions:
                 - condition: time
                   after: "07:00:00"
-                  before: "09:00:00"
+                  before: "09:30:00"
                   weekday:
                     - mon
                     - tue
@@ -206,7 +200,7 @@
             - condition: and
               conditions:
                 - condition: time
-                  after: "09:00:00"
+                  after: "09:30:00"
                   before: "17:30:00"
                   weekday:
                     - mon
@@ -238,16 +232,8 @@
   alias: Home Radiators schedule heat
   initial_state: "on"
   trigger:
-    - platform: time
-      at: "00:00:00"
-    - platform: time
-      at: "03:00:00"
-    - platform: time
-      at: "07:00:00"
-    - platform: time
-      at: "09:00:00"
-    - platform: time
-      at: "17:30:00"
+    - platform: time_pattern
+      minutes: "/5"
 
     - platform: template # 00:00:00 - 20°
       value_template: "{% if states.sensor.bedroom_temperature.state|float < 19.8 %}true{% else %}false{% endif %}"
@@ -258,7 +244,7 @@
     - platform: template # 07:00:00 - 20°
       value_template: "{% if states.sensor.hallway_temperature.state|float < 19.8 %}true{% else %}false{% endif %}"
     
-    - platform: template # 09:00:00 - 16°
+    - platform: template # 09:30:00 - 16°
       value_template: "{% if states.sensor.hallway_temperature.state|float < 15.5 %}true{% else %}false{% endif %}"
     
     - platform: template # 17:30:00 - 20°

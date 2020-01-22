@@ -4,13 +4,12 @@ light.yeelight_color2_7c49ebb734db:
   friendly_name: WC 1
   hidden: true
 
-sensor.wc_temp:
-  friendly_name: WC Temp.
-
 sensor.wc_temperature:
   friendly_name: WC Temp.
 sensor.wc_humidity:
   friendly_name: WC Humidity
+sensor.wc_motion_sensor_battery:
+  friendly_name: WC Motion sensor
 
 binary_sensor.wc_water_leak:
   friendly_name: WC Water leak
